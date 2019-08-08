@@ -1,8 +1,10 @@
 package com.rqy.domain;
 
+import com.rqy.mapper.TechnologyMapper;
+
 import java.math.BigDecimal;
 
-public class Technology {
+public class Technology  {
     private String technologyId;
 
     private String technologyName;

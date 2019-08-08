@@ -19,25 +19,28 @@ import javax.annotation.PostConstruct;
  */
 @EnableWebMvc
 @ComponentScan(value = "com.rqy.controller",
-        includeFilters =@ComponentScan.Filter(type = FilterType.ANNOTATION,classes = Controller.class) )
-public class SpringMvcConfig implements WebMvcConfigurer{
+        includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Controller.class))
+public class SpringMvcConfig implements WebMvcConfigurer {
 
     //注入本身已有的接口
     @Autowired
     ConfigurableConversionService conversionService;
+
     //把自定义的conversionService重新注册到bean中
     @Bean
     //保证conversionService的唯一性
     @Primary
-    public ConfigurableConversionService conversionService(){
+    public ConfigurableConversionService conversionService() {
         return conversionService;
     }
+
     //指定执行顺序
     @PostConstruct
-    public  void addConverters(){
+    public void addConverters() {
         String2DateConverter string2DateConverter = new String2DateConverter();
         conversionService.addConverter(string2DateConverter);
     }
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new MyFirstInterceptor());
@@ -53,10 +56,16 @@ public class SpringMvcConfig implements WebMvcConfigurer{
     }
     //配置视图解析器
     @Bean
-    public InternalResourceViewResolver internalResourceViewResolver(){
+    public InternalResourceViewResolver internalResourceViewResolver() {
         InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
         internalResourceViewResolver.setPrefix("/WEB-INF/jsp/");
         internalResourceViewResolver.setSuffix(".jsp");
         return internalResourceViewResolver;
+    }
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/css/**").addResourceLocations("/WEB-INF/css/");
+        registry.addResourceHandler("/image/**").addResourceLocations("/WEB-INF/image/");
+        registry.addResourceHandler("/js/**").addResourceLocations("/WEB-INF/js/");
     }
 }
