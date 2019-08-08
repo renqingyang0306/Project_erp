@@ -52,7 +52,7 @@
 	
     <div id="search_custom" style="float: right;">
         <input id="search_text_custom" class="easyui-searchbox"  
-            data-options="searcher:doSearch_custom,prompt:'请输入...',menu:'#menu_custom'"  
+            data-options="searcher:doSearch_custom,prompt:'请输入...',menu:'#menu_custom'"
             style="width:250px;vertical-align: middle;">
         </input>
         <div id="menu_custom" style="width:120px"> 
@@ -177,7 +177,7 @@ function doSearch_custom(value,name){ //用户输入用户名,点击搜素,触�
 	function updateCustomNote(){
 		$.get("custom/edit_judge",'',function(data){
     		if(data.msg != null){
-    			$.messager.alert('提示', data.msg);
+    			$.messager.confirm('提示', data.msg);
     		}else{
     			customNoteEditor.sync();
     			$.post("custom/update_note",$("#customNoteForm").serialize(), function(data){
