@@ -96,5 +96,12 @@
             <version>2.0</version>
             <scope>provided</scope>
         </dependency>
+        <!--  分页 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>5.1.2</version>
+        </dependency>
+
     </dependencies>
 </project>

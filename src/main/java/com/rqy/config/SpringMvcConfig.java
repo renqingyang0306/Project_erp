@@ -44,17 +44,18 @@ public class SpringMvcConfig implements WebMvcConfigurer{
         //registry.addInterceptor().addPathPatterns("/abc/**");
     }
 
-    //处理所有静态资源的配置
+    //处理静态资源
     @Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        configurer.enable();
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/css/**").addResourceLocations("/WEB-INF/css/");
+        registry.addResourceHandler("/image/**").addResourceLocations("/WEB-INF/image/");
+        registry.addResourceHandler("/js/**").addResourceLocations("/WEB-INF/js/");
     }
-
     //配置视图解析器
     @Bean
     public InternalResourceViewResolver internalResourceViewResolver(){
         InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
-        internalResourceViewResolver.setPrefix("/WEB-INF/views/");
+        internalResourceViewResolver.setPrefix("/WEB-INF/jsp/");
         internalResourceViewResolver.setSuffix(".jsp");
         return internalResourceViewResolver;
     }
