@@ -14,7 +14,7 @@ import java.util.List;
  * @date 2019/8/8 19:38
  */
 @Service
-public class QualityMonitoringServiceImpl implements QualityMonitoringService {
+public class UnqualityApplyServiceImpl implements UnqualityApplyService {
 
     @Autowired
     UnqualifyApplyMapper unqualifyApplyMapper;
@@ -30,13 +30,31 @@ public class QualityMonitoringServiceImpl implements QualityMonitoringService {
     }
 
     @Override
-    public List<UnqualifyApply> findPageUnqualifyApply(int pageNum,int pageSize) {
+    public List<UnqualifyApply> findPageUnqualifyApply(int page,int rows) {
         //查询条件
-        PageHelper.startPage(pageNum, pageSize);
+        PageHelper.startPage(page, rows);
         UnqualifyApplyExample unqualifyApplyExample = new UnqualifyApplyExample();
         //UnqualifyApplyExample.Criteria criteria = unqualifyApplyExample.createCriteria();
         List<UnqualifyApply> unqualifyApplies = unqualifyApplyMapper.selectByExample(unqualifyApplyExample);
 
         return unqualifyApplies;
+    }
+
+    @Override
+    public int insertUnqualifyApply(UnqualifyApply unqualifyApply) {
+        int insert = unqualifyApplyMapper.insert(unqualifyApply);
+        return insert;
+    }
+
+    @Override
+    public int updateUnqualifyApplyByUnqualifyApplyId(UnqualifyApply unqualifyApply) {
+        int update = unqualifyApplyMapper.updateByPrimaryKey(unqualifyApply);
+        return update;
+    }
+
+    @Override
+    public int deleteUnqualifyApply(String unqualifyApplyId) {
+        int delete = unqualifyApplyMapper.deleteByPrimaryKey(unqualifyApplyId);
+        return delete;
     }
 }
