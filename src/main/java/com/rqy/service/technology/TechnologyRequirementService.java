@@ -1,4 +1,4 @@
-package com.rqy.service;
+package com.rqy.service.technology;
 
 import com.rqy.domain.Technology;
 import com.rqy.domain.TechnologyExample;
@@ -16,4 +16,12 @@ import java.util.List;
  */
 public interface TechnologyRequirementService {
     List<TechnologyRequirement> selectByExample(TechnologyRequirementExample technologyRequirementExample);
+
+    List<TechnologyRequirement> selectLeftJoin();
+
+    int deleteByPrimaryKey(String ids);
+
+    int updateByPrimaryKeySelective(TechnologyRequirement technologyRequirement);
+
+    int insertSelective(TechnologyRequirement technologyRequirement);
 }

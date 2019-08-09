@@ -1,9 +1,7 @@
-package com.rqy.service;
+package com.rqy.service.technology;
 
+import com.rqy.domain.*;
 import com.rqy.domain.Process;
-import com.rqy.domain.ProcessExample;
-import com.rqy.domain.TechnologyPlan;
-import com.rqy.domain.TechnologyPlanExample;
 
 import java.util.List;
 
@@ -16,4 +14,10 @@ import java.util.List;
  */
 public interface ProcessService {
     List<Process> selectByExample(ProcessExample processExample);
+
+    int insertSelective(Process process);
+
+    int updateByPrimaryKeySelective(Process process);
+
+    int deleteByPrimaryKey(String ids);
 }

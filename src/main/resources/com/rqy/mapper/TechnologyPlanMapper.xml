@@ -3,6 +3,7 @@
 <mapper namespace="com.rqy.mapper.TechnologyPlanMapper">
   <resultMap id="BaseResultMap" type="com.rqy.domain.TechnologyPlan">
     <id column="technology_plan_id" jdbcType="VARCHAR" property="technologyPlanId" />
+    <result column="technology_name" jdbcType="VARCHAR" property="technologyName"/>
     <result column="technology_id" jdbcType="VARCHAR" property="technologyId" />
     <result column="batch_amount" jdbcType="INTEGER" property="batchAmount" />
     <result column="start_plan" jdbcType="TIMESTAMP" property="startPlan" />
@@ -73,6 +74,21 @@
     technology_plan_id, technology_id, batch_amount, start_plan, end_plan, commit_plan, 
     technology_plan_start, technology_plan_end
   </sql>
+  <select id="selectLeftJoin"  resultMap="BaseResultMap" >
+    select
+    tplan.technology_plan_id,
+    tplan.technology_id,
+    tplan.batch_amount,
+    tplan.start_plan,
+    tplan.end_plan,
+    tplan.commit_plan,
+    tplan.technology_plan_start,
+    tplan.technology_plan_end,
+    t.technology_name
+    from technology_plan tplan
+    left join technology t
+    on tplan.technology_id = t.technology_id
+  </select>
   <select id="selectByExample" parameterType="com.rqy.domain.TechnologyPlanExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
