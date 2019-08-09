@@ -1,8 +1,9 @@
-package com.rqy.domain;
+package com.rqy.domain.employee;
 
 import java.util.Date;
 
-public class Employee {
+public class EmployeePageView
+{
     private String empId;
 
     private String empName;
