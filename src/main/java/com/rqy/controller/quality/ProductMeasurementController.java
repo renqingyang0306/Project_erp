@@ -20,24 +20,5 @@ public class ProductMeasurementController {
         return "measurement_list";
     }
 
-    @RequestMapping("custom/get_data")
-    @ResponseBody
-    public List<Custom> findCustomList() {
 
-        return null;
-    }
-
-    @RequestMapping("product/get_data")
-    @ResponseBody
-    public List<Custom> findProductList() {
-
-        return null;
-    }
-
-    @RequestMapping("department/get_data")
-    @ResponseBody
-    public List<Custom> findDepartmentList() {
-
-        return null;
-    }
 }

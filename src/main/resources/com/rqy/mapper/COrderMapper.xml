@@ -14,6 +14,10 @@
     <result column="image" jdbcType="VARCHAR" property="image" />
     <result column="file" jdbcType="VARCHAR" property="file" />
     <result column="status" jdbcType="INTEGER" property="status" />
+    <!--封装Custom-->
+    <association property="custom" column="custom_id" select="com.rqy.mapper.CustomMapper.selectByPrimaryKey"/>
+    <!--封装product-->
+    <association property="product" column="product_id" select="com.rqy.mapper.ProductMapper.selectByPrimaryKey"/>
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>

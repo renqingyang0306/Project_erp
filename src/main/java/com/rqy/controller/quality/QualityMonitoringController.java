@@ -33,14 +33,6 @@ public class QualityMonitoringController {
         return modelAndView;
     }
 
-    @RequestMapping("department/get_data")
-    @ResponseBody
-    public List<UnqualifyApply> queryAllUnqualifyList() {
-        //ModelAndView modelAndView = new ModelAndView();
-        List<UnqualifyApply> unqualifyApply = qualityMonitoringService.findUnqualifyApply();
-        return unqualifyApply;
-
-    }
 
     @RequestMapping("unqualify/list")
     @ResponseBody

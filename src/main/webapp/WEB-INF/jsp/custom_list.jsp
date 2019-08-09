@@ -25,7 +25,7 @@
 
 <div  id="toolbar_custom" style=" height: 22px; padding: 3px 11px; background: #fafafa;">  
 	
-	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
+	<%--<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
 		<c:if test="${per=='custom:add' }" >
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="custom_add()">新增</a>  
@@ -42,9 +42,22 @@
 		        	 onclick="custom_delete()">删除</a>  
 		    </div>  
 		</c:if>
-	</c:forEach>
-	
-	<div class="datagrid-btn-separator"></div>  
+	</c:forEach>--%>
+
+	<div style="float: left;">
+		<a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="custom_add()">新增</a>
+	</div>
+	<div style="float: left;">
+		<a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit" onclick="custom_edit()">编辑</a>
+	</div>
+
+	<div style="float: left;">
+		<a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel"
+		   onclick="custom_delete()">删除</a>
+	</div>
+
+
+	<div class="datagrid-btn-separator"></div>
 	
 	<div style="float: left;">  
 		<a href="#" class="easyui-linkbutton" plain="true" icon="icon-reload" onclick="custom_reload()">刷新</a>  
@@ -62,7 +75,7 @@
     </div>  
 
 </div>
-
+<%--编辑加载的请求--%>
 <div id="customEditWindow" class="easyui-window" title="编辑客户" 
 	data-options="modal:true,closed:true,resizable:true,iconCls:'icon-save',href:'custom/edit'" 
 	style="width:65%;height:80%;padding:10px;">
@@ -191,8 +204,9 @@ function doSearch_custom(value,name){ //用户输入用户名,点击搜素,触�
     			});
     		}
     	});
+
 	}
-	
+	/*获取checkbox对应的id值 的字符串*/
 	function getCustomSelectionsIds(){
 		var customList = $("#customList");
 		var sels = customList.datagrid("getSelections");
@@ -232,13 +246,13 @@ function doSearch_custom(value,name){ //用户输入用户名,点击搜素,触�
     	    	}
     	    	
     	    	$("#customEditWindow").window({
-    	    		onLoad :function(){
-    	    			//回显数据
-    	    			var data = $("#customList").datagrid("getSelections")[0];
-    	    			$("#customEditForm").form("load", data);
-    	    			customEditEditor.html(data.note);
-    	    		}
-    	    	}).window("open");
+                    onLoad :function(){
+                        //回显数据
+                        var data = $("#customList").datagrid("getSelections")[0];
+                        $("#customEditForm").form("load", data);
+                        customEditEditor.html(data.note);
+                    }
+                }).window("open");
        		}
        	});
     }
