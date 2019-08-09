@@ -36,7 +36,7 @@ public class UnqualityApplyServiceImpl implements UnqualityApplyService {
         UnqualifyApplyExample unqualifyApplyExample = new UnqualifyApplyExample();
         //UnqualifyApplyExample.Criteria criteria = unqualifyApplyExample.createCriteria();
         List<UnqualifyApply> unqualifyApplies = unqualifyApplyMapper.selectByExample(unqualifyApplyExample);
-
+//        List<UnqualifyApply> unqualifyApplies = unqualifyApplyMapper.selectByExampleLiftJoin(unqualifyApplyExample);
         return unqualifyApplies;
     }
 

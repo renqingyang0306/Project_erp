@@ -38,6 +38,10 @@ public class UnqualityApplyController {
     @ResponseBody
     public List<UnqualifyApply> queryPageUnqualifyList(@RequestParam("page")int page,@RequestParam("rows")int rows) {
         List<UnqualifyApply> unqualifyApply = unqualityApplyService.findPageUnqualifyApply(page,rows);
+        for (UnqualifyApply apply : unqualifyApply) {
+            String productId = apply.getProductId();
+
+        }
         return unqualifyApply;
     }
 
