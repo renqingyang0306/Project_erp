@@ -52,6 +52,16 @@ public class SpringConfig {
     //将拦截器设置到sqlSessionFactroy中
         sqlSessionFactoryBean.setPlugins(new Interceptor[] {pageInterceptor});
         sqlSessionFactoryBean.setDataSource(dataSource);
+        PageInterceptor pageInterceptor = new PageInterceptor();
+        //创建插件需要的参数集合
+        Properties properties = new Properties();
+        //配置数据库方言 为oracle
+        properties.setProperty("helperDialect", "mysql");
+        //配置分页的合理化数据
+        properties.setProperty("reasonable", "true");
+        pageInterceptor.setProperties(properties);
+        //将拦截器设置到sqlSessionFactroy中
+        sqlSessionFactoryBean.setPlugins(new Interceptor[] {pageInterceptor});
         return sqlSessionFactoryBean;
     }
     //MapperScannerConfigurer

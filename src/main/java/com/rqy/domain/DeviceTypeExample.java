@@ -115,7 +115,7 @@ public class DeviceTypeExample {
             return (Criteria) this;
         }
 
-        public Criteria andDeviceTypeIdEqualTo(String value) {
+        public Criteria andDeviceTypeIdEqualTo(Integer value) {
             addCriterion("device_type_id =", value, "deviceTypeId");
             return (Criteria) this;
         }

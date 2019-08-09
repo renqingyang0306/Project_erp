@@ -88,6 +88,12 @@
       order by ${orderByClause}
     </if>
   </select>
+  <select id="selectByIdLike" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from technology
+    where technology_id like #{id}
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

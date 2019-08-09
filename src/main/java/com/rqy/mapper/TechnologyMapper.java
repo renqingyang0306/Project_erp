@@ -17,6 +17,8 @@ public interface TechnologyMapper {
 
     int insertSelective(Technology record);
 
+    List<Technology> selectByIdLike(String id);
+
     List<Technology> selectByExample(TechnologyExample example);
 
     Technology selectByPrimaryKey(String technologyId);

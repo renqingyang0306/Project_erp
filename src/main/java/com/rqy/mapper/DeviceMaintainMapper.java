@@ -15,6 +15,8 @@ public interface DeviceMaintainMapper {
 
     int insert(DeviceMaintain record);
 
+    List<DeviceMaintain> selectByLike(String deviceFaultId);
+
     int insertSelective(DeviceMaintain record);
 
     List<DeviceMaintain> selectByExample(DeviceMaintainExample example);

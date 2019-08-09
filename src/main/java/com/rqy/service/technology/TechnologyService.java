@@ -1,4 +1,4 @@
-package com.rqy.service;
+package com.rqy.service.technology;
 
 import com.rqy.domain.Technology;
 import com.rqy.domain.TechnologyExample;
@@ -15,4 +15,15 @@ import java.util.List;
 public interface TechnologyService {
 
     List<Technology> selectByExample(TechnologyExample technologyExample);
+
+
+
+    int insertSelective(Technology technology);
+
+    int updateByPrimaryKeySelective(Technology technology);
+
+    int deleteByPrimaryKey(String ids);
+
+    List<Technology> selectByIdLike(String id);
+
 }

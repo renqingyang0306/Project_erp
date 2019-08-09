@@ -19,6 +19,8 @@ public interface DeviceCheckMapper {
 
     List<DeviceCheck> selectByExample(DeviceCheckExample example);
 
+    List<DeviceCheck> selectByLike(String deviceTypeName);
+
     DeviceCheck selectByPrimaryKey(String deviceCheckId);
 
     int updateByExampleSelective(@Param("record") DeviceCheck record, @Param("example") DeviceCheckExample example);

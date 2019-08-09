@@ -115,7 +115,7 @@ public class DeviceFaultExample {
             return (Criteria) this;
         }
 
-        public Criteria andDeviceFaultIdEqualTo(String value) {
+        public Criteria andDeviceFaultIdEqualTo(Integer value) {
             addCriterion("device_fault_id =", value, "deviceFaultId");
             return (Criteria) this;
         }

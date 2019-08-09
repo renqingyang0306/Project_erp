@@ -18,6 +18,7 @@ public interface DeviceFaultMapper {
     int insertSelective(DeviceFault record);
 
     List<DeviceFault> selectByExample(DeviceFaultExample example);
+    List<DeviceFault> selectByLike(String deviceName);
 
     DeviceFault selectByPrimaryKey(String deviceFaultId);
 

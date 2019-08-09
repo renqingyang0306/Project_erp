@@ -1,11 +1,9 @@
-package com.rqy.service.ServiceImpl;
+package com.rqy.service.technology;
 
 import com.rqy.domain.TechnologyRequirement;
 import com.rqy.domain.TechnologyRequirementExample;
-import com.rqy.mapper.TechnologyMapper;
-import com.rqy.mapper.TechnologyPlanMapper;
 import com.rqy.mapper.TechnologyRequirementMapper;
-import com.rqy.service.TechnologyRequirementService;
+import com.rqy.service.technology.TechnologyRequirementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,5 +25,23 @@ public class TechnologyRequirementServiceImpl implements TechnologyRequirementSe
     @Override
     public List<TechnologyRequirement> selectByExample(TechnologyRequirementExample technologyRequirementExample) {
         return technologyRequirementMapper.selectByExample(technologyRequirementExample);
+    }
+    public List<TechnologyRequirement> selectLeftJoin() {
+        return technologyRequirementMapper.selectLeftJoin();
+    }
+
+    @Override
+    public int deleteByPrimaryKey(String ids) {
+        return technologyRequirementMapper.deleteByPrimaryKey(ids);
+    }
+
+    @Override
+    public int updateByPrimaryKeySelective(TechnologyRequirement technologyRequirement) {
+        return technologyRequirementMapper.updateByPrimaryKeySelective(technologyRequirement);
+    }
+
+    @Override
+    public int insertSelective(TechnologyRequirement technologyRequirement) {
+        return technologyRequirementMapper.insertSelective(technologyRequirement);
     }
 }

@@ -3,6 +3,17 @@ package com.rqy.domain;
 import java.util.Date;
 
 public class TechnologyPlan {
+    //增加一个technologyName
+    private String technologyName;
+
+    public String getTechnologyName() {
+        return technologyName;
+    }
+
+    public void setTechnologyName(String technologyName) {
+        this.technologyName = technologyName;
+    }
+
     private String technologyPlanId;
 
     private String technologyId;
