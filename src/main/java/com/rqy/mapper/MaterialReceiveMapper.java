@@ -21,6 +21,9 @@ public interface MaterialReceiveMapper {
 
     MaterialReceive selectByPrimaryKey(String receiveId);
 
+    //新增的通过外键materialId
+
+
     int updateByExampleSelective(@Param("record") MaterialReceive record, @Param("example") MaterialReceiveExample example);
 
     int updateByExample(@Param("record") MaterialReceive record, @Param("example") MaterialReceiveExample example);
