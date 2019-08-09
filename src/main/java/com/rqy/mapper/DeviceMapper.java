@@ -12,6 +12,7 @@ public interface DeviceMapper {
     int deleteByExample(DeviceExample example);
 
     int deleteByPrimaryKey(String deviceId);
+    List<Device> selectByLike(String deviceTypeName);
 
     int insert(Device record);
 

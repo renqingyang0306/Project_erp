@@ -14,6 +14,8 @@
           <element id="module-output" name="Project_erp" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:5.1.8" />
+          <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:1.2" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.1.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.1.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.1.8.RELEASE" />

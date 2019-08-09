@@ -24,7 +24,27 @@ public class Device {
 
     private String deviceKeeperId;
 
+    private String deviceKeeper;
+
+    private String deviceTypeName;
+
     private String note;
+
+    public String getDeviceKeeper() {
+        return deviceKeeper;
+    }
+
+    public void setDeviceKeeper(String deviceKeeper) {
+        this.deviceKeeper = deviceKeeper;
+    }
+
+    public String getDeviceTypeName() {
+        return deviceTypeName;
+    }
+
+    public void setDeviceTypeName(String deviceTypeName) {
+        this.deviceTypeName = deviceTypeName;
+    }
 
     public String getDeviceId() {
         return deviceId;

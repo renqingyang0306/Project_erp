@@ -9,6 +9,7 @@
     <result column="device_maintain_result" jdbcType="VARCHAR" property="deviceMaintainResult" />
     <result column="device_maintain_cost" jdbcType="DECIMAL" property="deviceMaintainCost" />
     <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="emp_name" jdbcType="VARCHAR" property="deviceMaintainEmp" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -69,8 +70,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    device_maintain_id, device_fault_id, device_maintain_emp_id, device_maintain_date, 
-    device_maintain_result, device_maintain_cost, note
+    d.device_maintain_id, d.device_fault_id, d.device_maintain_emp_id, d.device_maintain_date,
+    d.device_maintain_result, d.device_maintain_cost, note,e.emp_name
   </sql>
   <select id="selectByExample" parameterType="com.rqy.domain.DeviceMaintainExample" resultMap="BaseResultMap">
     select
@@ -78,7 +79,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from device_maintain
+    from device_maintain d inner join employee e on d.device_maintain_emp_id = e.emp_id
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -86,6 +87,10 @@
       order by ${orderByClause}
     </if>
   </select>
+
+
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
