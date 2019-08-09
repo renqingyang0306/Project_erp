@@ -10,8 +10,8 @@
          <tr>
         	<th data-options="field:'ck',checkbox:true"></th>
         	<th data-options="field:'receiveId',align:'center',width:100">物料收入编号</th>
-            <th data-options="field:'material',width:100,align:'center',formatter:formatMaterial">物料</th>
-            <th data-options="field:'ammount',align:'center',width:100">收入数量</th>
+            <th data-options="field:'materialId',width:100,align:'center',formatter:formatMaterial">物料</th>
+            <th data-options="field:'amount',align:'center',width:100">收入数量</th>
             <th data-options="field:'receiveDate',width:130,align:'center',formatter:TAOTAO.formatDateTime">
 				收入日期
 			</th>
@@ -186,9 +186,9 @@ function doSearch_materialReceive(value,name){ //用户输入用户名,点击搜
 	}
 	
 	//格式化物料信息
-	function formatMaterial(value, row, index){ 
-		if(value.materialId !=null && value.materialId != ''){
-			return "<a href=javascript:openMaterialReceiveMaterial("+index+")>"+value.materialId+"</a>";
+	function formatMaterial(value, row, index){
+		if(value !=null && value!= ''){
+			return "<a href=javascript:openMaterialReceiveMaterial("+index+")>"+value+"</a>";
 		}else{
 			return "无";
 		}
@@ -200,7 +200,7 @@ function doSearch_materialReceive(value,name){ //用户输入用户名,点击搜
 		var row = onMaterialReceiveClickRow(index);
 		$("#materialInfo").dialog({
     		onOpen :function(){
-    			$.get("material/get/"+row.material.materialId,'',function(data){
+    			$.get("material/get/"+row.materialId,'',function(data){
     				materialReceiveMaterialEditor = TAOTAO.createEditor("#materialReceiveMaterialEditForm [name=note]");	
 		    		//回显数据
 		    		$("#materialReceiveMaterialEditForm").form("load", data);

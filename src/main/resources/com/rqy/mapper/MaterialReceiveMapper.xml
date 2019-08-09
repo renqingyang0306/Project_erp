@@ -9,6 +9,8 @@
     <result column="sender" jdbcType="VARCHAR" property="sender" />
     <result column="receiver" jdbcType="VARCHAR" property="receiver" />
     <result column="note" jdbcType="VARCHAR" property="note" />
+    <!--新增的，通过表materialId查找material对象-->
+    <!--<collection property="material" select="com.rqy.mapper.MaterialMapper.selectByPrimaryKey" column="material_id"/>-->
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
