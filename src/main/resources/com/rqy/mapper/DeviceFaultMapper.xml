@@ -8,6 +8,7 @@
     <result column="device_fault_detail" jdbcType="VARCHAR" property="deviceFaultDetail" />
     <result column="device_fault_date" jdbcType="TIMESTAMP" property="deviceFaultDate" />
     <result column="device_fault_maintenance" jdbcType="VARCHAR" property="deviceFaultMaintenance" />
+    <result column="device_name" jdbcType="VARCHAR" property="deviceName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -68,8 +69,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    device_fault_id, device_id, device_fault_cause, device_fault_detail, device_fault_date, 
-    device_fault_maintenance
+    f.device_fault_id, f.device_id, f.device_fault_cause, f.device_fault_detail, f.device_fault_date,
+    f.device_fault_maintenance,d.device_name
   </sql>
   <select id="selectByExample" parameterType="com.rqy.domain.DeviceFaultExample" resultMap="BaseResultMap">
     select
@@ -77,7 +78,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from device_fault
+    from device_fault f inner join device d on d.device_id=f.device_id
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -85,6 +86,18 @@
       order by ${orderByClause}
     </if>
   </select>
+
+
+  <select id="selectByLike" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from device_fault f inner join device d on d.device_id=f.device_id
+    where d.device_name like #{deviceName,jdbcType=VARCHAR}
+  </select>
+
+
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

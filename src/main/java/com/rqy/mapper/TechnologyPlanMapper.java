@@ -18,6 +18,7 @@ public interface TechnologyPlanMapper {
     int insertSelective(TechnologyPlan record);
 
     List<TechnologyPlan> selectByExample(TechnologyPlanExample example);
+    List<TechnologyPlan> selectLeftJoin();
 
     TechnologyPlan selectByPrimaryKey(String technologyPlanId);
 

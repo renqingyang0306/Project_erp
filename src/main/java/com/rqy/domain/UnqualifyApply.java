@@ -19,6 +19,42 @@ public class UnqualifyApply {
 
     private String note;
 
+    private String productName;
+
+    private String empName;
+
+    @Override
+    public String toString() {
+        return "UnqualifyApply{" +
+                "unqualifyApplyId='" + unqualifyApplyId + '\'' +
+                ", productId='" + productId + '\'' +
+                ", unqualifyItem='" + unqualifyItem + '\'' +
+                ", unqualifyCount=" + unqualifyCount +
+                ", assemblyDate=" + assemblyDate +
+                ", empId='" + empId + '\'' +
+                ", applyDate=" + applyDate +
+                ", note='" + note + '\'' +
+                ", productName='" + productName + '\'' +
+                ", empName='" + empName + '\'' +
+                '}';
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public String getEmpName() {
+        return empName;
+    }
+
+    public void setEmpName(String empName) {
+        this.empName = empName;
+    }
+
     public String getUnqualifyApplyId() {
         return unqualifyApplyId;
     }

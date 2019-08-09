@@ -3,6 +3,17 @@ package com.rqy.domain;
 import java.util.Date;
 
 public class TechnologyRequirement {
+
+    private String technologyName;
+
+    public String getTechnologyName() {
+        return technologyName;
+    }
+
+    public void setTechnologyName(String technologyName) {
+        this.technologyName = technologyName;
+    }
+
     private String technologyRequirementId;
 
     private String technologyId;

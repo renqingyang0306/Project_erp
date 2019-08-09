@@ -69,7 +69,7 @@ public class CustomController {
         }else {
             map.put("status","302");
         }
-        return  map ;
+        return map ;
     }
     //编辑跳转页面操作
     @RequestMapping("edit")
