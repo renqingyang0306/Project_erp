@@ -15,6 +15,25 @@ public class DeviceCheck {
 
     private String deviceCheckFaultId;
 
+    private String deviceCheckEmp;
+    private String deviceName;
+
+    public String getDeviceCheckEmp() {
+        return deviceCheckEmp;
+    }
+
+    public void setDeviceCheckEmp(String deviceCheckEmp) {
+        this.deviceCheckEmp = deviceCheckEmp;
+    }
+
+    public String getDeviceName() {
+        return deviceName;
+    }
+
+    public void setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+    }
+
     public String getDeviceCheckId() {
         return deviceCheckId;
     }
