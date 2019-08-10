@@ -28,4 +28,7 @@ public interface COrderMapper {
     int updateByPrimaryKeySelective(COrder record);
 
     int updateByPrimaryKey(COrder record);
+
+    List<COrder> findAllOrderByCustomName(String example);
+    List<COrder> findAllOrderByProductName(String s);
 }

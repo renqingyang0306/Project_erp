@@ -70,6 +70,32 @@
   <sql id="Base_Column_List">
     technology_requirement_id, technology_id, requirement, add_time, revise_time
   </sql>
+  <select id="selectByIdLike" resultMap="BaseResultMap">
+    select
+    treq.technology_requirement_id,
+    treq.technology_id,
+    treq.requirement,
+    treq.add_time,
+    treq.revise_time,
+    t.technology_name
+    from technology_requirement treq
+    left join technology t
+    on treq.technology_id = t.technology_id
+    where treq.technology_requirement_id like #{id}
+  </select>
+  <select id="selectByNameLike" resultMap="BaseResultMap">
+     select
+    treq.technology_requirement_id,
+    treq.technology_id,
+    treq.requirement,
+    treq.add_time,
+    treq.revise_time,
+    t.technology_name
+    from technology_requirement treq
+    left join technology t
+    on treq.technology_id = t.technology_id
+    where t.technology_name like #{name}
+  </select>
   <select id="selectLeftJoin"  resultMap="BaseResultMap" >
     select
     treq.technology_requirement_id,

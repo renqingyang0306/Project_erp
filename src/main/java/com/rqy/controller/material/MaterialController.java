@@ -66,7 +66,7 @@ public class MaterialController {
     public String edit(){
         return "material_edit";
     }
-    //编辑操作
+    //编辑后提交操作
     @RequestMapping("update_all")
     @ResponseBody
     public Map update_all(Material material){
@@ -157,7 +157,7 @@ public class MaterialController {
         return pageBean;
     }
 
-    //新增里面物料id需要对应material表
+    //materialReceive新增里面物料id需要对应material表
     @RequestMapping("get_data")
     @ResponseBody
     public List<Material> get_data(){

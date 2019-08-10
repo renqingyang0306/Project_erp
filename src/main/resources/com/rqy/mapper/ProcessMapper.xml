@@ -68,6 +68,18 @@
   <sql id="Base_Column_List">
     process_id, technology_plan_id, sequence, quota
   </sql>
+  <select id="selectByIdLike" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from process
+    where process_id like #{id}
+  </select>
+  <select id="selectByTechnologyPlanIdLike" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from process
+    where technology_plan_id like #{pid}
+  </select>
   <select id="selectByExample" parameterType="com.rqy.domain.ProcessExample" resultMap="BaseResultMap">
     select
     <if test="distinct">

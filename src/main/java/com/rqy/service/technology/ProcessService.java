@@ -19,5 +19,11 @@ public interface ProcessService {
 
     int updateByPrimaryKeySelective(Process process);
 
-    int deleteByPrimaryKey(String ids);
+    int deleteByPrimaryKey(String[] ids);
+
+    List<Process> selectByIdLike(String id);
+
+    List<Process> selectByTechnologyPlanIdLike(String pid);
+
+    Process selectByPrimaryKey(String id);
 }

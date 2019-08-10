@@ -67,4 +67,24 @@ public class OrderServiceImpl implements OrderService {
         List<COrder> cOrders = cOrderMapper.selectByExample(cOrderExample);
         return cOrders;
     }
+
+    @Override
+    public List<COrder> findAllOrderByCustomName(int page, int rows, String searchValue) {
+        //将参数传给方法实现分页
+        PageHelper.startPage(page, rows);
+        List<COrder> cOrders = cOrderMapper.findAllOrderByCustomName(searchValue);
+        return cOrders;
+    }
+
+    @Override
+    public List<COrder> findAllOrderByProductName(int page, int rows, String s) {
+        //将参数传给方法实现分页
+        PageHelper.startPage(page, rows);
+        List<COrder> cOrders = cOrderMapper.findAllOrderByProductName(s);
+        return cOrders;
+    }
+    @Override
+    public List<COrder> selectByExample(COrderExample cOrderExample) {
+        return cOrderMapper.selectByExample(cOrderExample);
+    }
 }

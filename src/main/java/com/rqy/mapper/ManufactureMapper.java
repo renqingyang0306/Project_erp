@@ -28,4 +28,6 @@ public interface ManufactureMapper {
     int updateByPrimaryKeySelective(Manufacture record);
 
     int updateByPrimaryKey(Manufacture record);
+
+    List<Manufacture> findAllManufactureByTechnologyName(String s);
 }

@@ -35,7 +35,29 @@ public class ProcessServiceImpl implements ProcessService {
     }
 
     @Override
-    public int deleteByPrimaryKey(String ids) {
-        return processMapper.deleteByPrimaryKey(ids);
+    public int deleteByPrimaryKey(String[] ids) {
+        int j = 0;
+        for (int i = 0; i < ids.length ; i++){
+            processMapper.deleteByPrimaryKey(ids[i]);
+            j++;
+        }
+        return j;
+    }
+
+    @Override
+    public List<Process> selectByIdLike(String id) {
+        String idLike = "%" + id + "%";
+        return processMapper.selectByIdLike(idLike);
+    }
+
+    @Override
+    public List<Process> selectByTechnologyPlanIdLike(String pid) {
+        String pidLike = "%" + pid + "%";
+        return processMapper.selectByTechnologyPlanIdLike(pidLike);
+    }
+
+    @Override
+    public Process selectByPrimaryKey(String id) {
+        return processMapper.selectByPrimaryKey(id);
     }
 }

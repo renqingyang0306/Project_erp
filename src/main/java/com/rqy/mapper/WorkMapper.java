@@ -28,4 +28,8 @@ public interface WorkMapper {
     int updateByPrimaryKeySelective(Work record);
 
     int updateByPrimaryKey(Work record);
+
+    List<Work> findAllWorkByProductName(String s);
+
+    List<Work> findAllWorkByDeviceName(String s);
 }

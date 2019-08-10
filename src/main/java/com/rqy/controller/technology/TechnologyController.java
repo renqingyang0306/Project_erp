@@ -2,14 +2,13 @@ package com.rqy.controller.technology;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.rqy.domain.Custom;
-import com.rqy.domain.Device;
 import com.rqy.domain.Technology;
 import com.rqy.domain.TechnologyExample;
 import com.rqy.service.technology.TechnologyService;
 import com.rqy.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,8 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static java.lang.System.out;
 
 /**
  * Created by IntelliJ IDEA
@@ -39,6 +36,15 @@ public class TechnologyController {
 
         return "technology_list";
     }
+
+    //通过id查询process对象
+    @RequestMapping("get/{id}")
+    @ResponseBody
+    public Technology get(@PathVariable String id){
+        Technology technology  = technologyService.selectByPrimaryKey(id);
+        return technology;
+    }
+
     /*模糊查询*/
     @RequestMapping("search_technology_by_technologyId")
     @ResponseBody
@@ -55,7 +61,22 @@ public class TechnologyController {
         pageResult.setRows(technologies);
         return pageResult;
     }
-
+    /*模糊查询*/
+    @RequestMapping("search_technology_by_technologyName")
+    @ResponseBody
+    public PageBean<Technology> search_technology_by_technologyName(
+            @RequestParam(value = "searchValue")String name,@RequestParam(value = "page") int page, @RequestParam(value = "rows") int rows
+    ){
+        //模糊查询
+        PageHelper.startPage(page,rows);
+        List<Technology> technologies = technologyService.selectByNameLike(name);
+        PageInfo<Technology> pageInfo = new PageInfo<>(technologies);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean();
+        pageResult.setTotal(total);
+        pageResult.setRows(technologies);
+        return pageResult;
+    }
 
 
 
@@ -94,15 +115,26 @@ public class TechnologyController {
 
     /*接受insert的数据，执行添加操作*/
     @RequestMapping("insert")
+    @ResponseBody
     public Map insert(Technology technology){
         int i = technologyService.insertSelective(technology);
         Map<String,String> map = new HashMap<>();
-        if (i == 1){
+        if (i != 0){
             map.put("status","200");
+            map.put("msg","ok");
         }else {
             map.put("status","302");
         }
         return  map;
+    }
+
+    //insert的下拉框
+    @RequestMapping("get_data")
+    @ResponseBody
+    public List<Technology> get_data(){
+        TechnologyExample technologyExample = new TechnologyExample();
+        List<Technology> technologies = technologyService.selectByExample(technologyExample);
+        return technologies;
     }
 
     //修改前的判断
@@ -139,10 +171,10 @@ public class TechnologyController {
     }
     @RequestMapping("delete_batch")
     @ResponseBody
-    public Map delete_batch(String ids){
+    public Map delete_batch(String[] ids){
         int i = technologyService.deleteByPrimaryKey(ids);
         Map<String,Object> map=new HashMap<>();
-        if (i == 1){
+        if (i != 0){
             map.put("status","200");
         }else {
             map.put("status","302");

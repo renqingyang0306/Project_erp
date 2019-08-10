@@ -8,6 +8,8 @@
     <result column="launch_quantity" jdbcType="INTEGER" property="launchQuantity" />
     <result column="begin_date" jdbcType="TIMESTAMP" property="beginDate" />
     <result column="end_date" jdbcType="TIMESTAMP" property="endDate" />
+    <association property="cOrder" column="order_id" select="com.rqy.mapper.COrderMapper.selectByPrimaryKey"/>
+    <association property="technology" column="technology_id" select="com.rqy.mapper.TechnologyMapper.selectByPrimaryKey"/>
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -84,6 +86,19 @@
       order by ${orderByClause}
     </if>
   </select>
+
+
+  <sql id="Base_Column_List1">
+    manufacture_sn, order_id, m.technology_id, launch_quantity, begin_date, end_date
+  </sql>
+  <select id="findAllManufactureByTechnologyName" parameterType="string" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List1" />
+    from manufacture m, technology t
+    WHERE  m.technology_id=t.technology_id AND  t.technology_name LIKE #{name}
+  </select>
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

@@ -3,6 +3,7 @@ package com.rqy.controller.technology;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.rqy.domain.Technology;
+import com.rqy.domain.TechnologyExample;
 import com.rqy.domain.TechnologyPlan;
 import com.rqy.domain.TechnologyPlanExample;
 import com.rqy.service.technology.TechnologyPlanService;
@@ -27,6 +28,39 @@ public class TechnologyPlanController {
     @RequestMapping("find")
     public String technologyPlanFind() {
         return "technologyPlan_list";
+    }
+
+    /*模糊查询*/
+    @RequestMapping("search_technologyPlan_by_technologyPlanId")
+    @ResponseBody
+    public PageBean<TechnologyPlan> search_technologyPlan_by_technologyPlanId(
+            @RequestParam(value = "searchValue")String id,@RequestParam(value = "page") int page, @RequestParam(value = "rows") int rows
+    ){
+        //模糊查询
+        PageHelper.startPage(page,rows);
+        List<TechnologyPlan> technologyPlans = technologyPlanService.selectByIdLike(id);
+        PageInfo<TechnologyPlan> pageInfo = new PageInfo<>(technologyPlans);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean();
+        pageResult.setTotal(total);
+        pageResult.setRows(technologyPlans);
+        return pageResult;
+    }
+    /*模糊查询*/
+    @RequestMapping("search_technologyPlan_by_technologyName")
+    @ResponseBody
+    public PageBean<TechnologyPlan> search_technologyPlan_by_technologyName(
+            @RequestParam(value = "searchValue")String name,@RequestParam(value = "page") int page, @RequestParam(value = "rows") int rows
+    ){
+        //模糊查询
+        PageHelper.startPage(page,rows);
+        List<TechnologyPlan> technologyPlans = technologyPlanService.selectByNameLike(name);
+        PageInfo<TechnologyPlan> pageInfo = new PageInfo<>(technologyPlans);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean();
+        pageResult.setTotal(total);
+        pageResult.setRows(technologyPlans);
+        return pageResult;
     }
 
     @RequestMapping("list")
@@ -61,16 +95,28 @@ public class TechnologyPlanController {
 
     /*接受insert的数据，执行添加操作*/
     @RequestMapping("insert")
+    @ResponseBody
     public Map insert(TechnologyPlan technologyPlan){
         int i = technologyPlanService.insertSelective(technologyPlan);
         Map<String,String> map = new HashMap<>();
         if (i == 1){
             map.put("status","200");
+            map.put("msg","ok");
         }else {
             map.put("status","302");
         }
         return map;
     }
+
+    //给process的下拉框
+    //insert的下拉框
+    @RequestMapping("get_data")
+    @ResponseBody
+    public List<TechnologyPlan> get_data(){
+        List<TechnologyPlan> technologyPlans = technologyPlanService.selectByExample(new TechnologyPlanExample());
+        return technologyPlans;
+    }
+
 
     //修改前的判断
     @RequestMapping("edit_judge")
@@ -106,10 +152,10 @@ public class TechnologyPlanController {
     }
     @RequestMapping("delete_batch")
     @ResponseBody
-    public Map delete_batch(String ids){
+    public Map delete_batch(String[] ids){
         int i = technologyPlanService.deleteByPrimaryKey(ids);
         Map<String,Object> map=new HashMap<>();
-        if (i == 1){
+        if (i != 0){
             map.put("status","200");
         }else {
             map.put("status","302");

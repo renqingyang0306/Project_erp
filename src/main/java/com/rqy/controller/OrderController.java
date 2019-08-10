@@ -8,6 +8,7 @@ import com.rqy.service.OrderService;
 import com.rqy.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -57,10 +58,10 @@ public class OrderController {
 
         return  pageBean;
     }
-    /*@RequestMapping("search_order_by_orderCustom")
+    @RequestMapping("search_order_by_orderProduct")
     @ResponseBody
-    public PageBean<COrder> search_order_by_orderCustom(int page,int rows,String searchValue){
-        List<COrder> cOrders = orderService.findAllOrderByCustomName( page,rows,searchValue);
+    public PageBean<COrder> search_order_by_orderProduct(int page,int rows,String searchValue){
+        List<COrder> cOrders = orderService.findAllOrderByProductName( page,rows,"%"+searchValue+"%");
         //查询到的数据给到PageInfo  pagehelper的封装的对象，只需要把结果集给到该对象，
         // 就可以通过该对象get方法拿到总页数，总记录数，
         PageInfo<COrder> pageInfo=new PageInfo<>(cOrders);
@@ -68,7 +69,19 @@ public class OrderController {
         PageBean<COrder> pageBean=new PageBean<>(cOrders,pageInfo.getTotal());
 
         return  pageBean;
-    }*/
+    }
+    @RequestMapping("search_order_by_orderCustom")
+    @ResponseBody
+    public PageBean<COrder> search_order_by_orderCustom(int page,int rows,String searchValue){
+        List<COrder> cOrders = orderService.findAllOrderByCustomName( page,rows,"%"+searchValue+"%");
+        //查询到的数据给到PageInfo  pagehelper的封装的对象，只需要把结果集给到该对象，
+        // 就可以通过该对象get方法拿到总页数，总记录数，
+        PageInfo<COrder> pageInfo=new PageInfo<>(cOrders);
+        //在自定义一个分页对象，就可以传入页面需要的list集合，和total，同时json形式返回
+        PageBean<COrder> pageBean=new PageBean<>(cOrders,pageInfo.getTotal());
+
+        return  pageBean;
+    }
     //修改前的判断
     @RequestMapping("edit_judge")
     @ResponseBody
@@ -159,6 +172,20 @@ public class OrderController {
             map.put("status","302");
         }
         return  map ;
+    }
+    //客户信息，用于查询查询全部数据填充下拉列表的
+    @RequestMapping("get_data")
+    @ResponseBody
+    public List<COrder> get_data(){
+        List<COrder> cOrders = orderService.selectByExample( new COrderExample());
+        return  cOrders;
+    }
+    //通过id查询Order
+    @RequestMapping("get/{id}")
+    @ResponseBody
+    public COrder get(@PathVariable String id){
+        COrder order = orderService.selectByPrimaryKey(id);
+        return order;
     }
 
 }

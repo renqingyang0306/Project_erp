@@ -30,4 +30,8 @@ public interface TechnologyRequirementMapper {
     int updateByPrimaryKey(TechnologyRequirement record);
 
     List<TechnologyRequirement> selectLeftJoin();
+
+    List<TechnologyRequirement> selectByIdLike(String id);
+
+    List<TechnologyRequirement> selectByNameLike(String name);
 }

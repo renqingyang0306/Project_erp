@@ -1,5 +1,6 @@
 package com.rqy.service.technology;
 
+import com.rqy.domain.TechnologyPlan;
 import com.rqy.domain.TechnologyRequirement;
 import com.rqy.domain.TechnologyRequirementExample;
 import com.rqy.mapper.TechnologyRequirementMapper;
@@ -31,8 +32,13 @@ public class TechnologyRequirementServiceImpl implements TechnologyRequirementSe
     }
 
     @Override
-    public int deleteByPrimaryKey(String ids) {
-        return technologyRequirementMapper.deleteByPrimaryKey(ids);
+    public int deleteByPrimaryKey(String[] ids) {
+        int j = 0;
+        for (int i = 0; i < ids.length ; i++){
+            technologyRequirementMapper.deleteByPrimaryKey(ids[i]);
+            j++;
+        }
+        return j;
     }
 
     @Override
@@ -43,5 +49,19 @@ public class TechnologyRequirementServiceImpl implements TechnologyRequirementSe
     @Override
     public int insertSelective(TechnologyRequirement technologyRequirement) {
         return technologyRequirementMapper.insertSelective(technologyRequirement);
+    }
+
+    @Override
+    public List<TechnologyRequirement> selectByIdLike(String id) {
+        String idLike = "%" + id + "%";
+
+        return technologyRequirementMapper.selectByIdLike(idLike);
+    }
+
+    @Override
+    public List<TechnologyRequirement> selectByNameLike(String name) {
+        String nameLike = "%" + name + "%";
+
+        return technologyRequirementMapper.selectByNameLike(nameLike);
     }
 }
