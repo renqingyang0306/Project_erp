@@ -67,16 +67,39 @@ public class MaterialReceiveController {
         HashMap<String, Object> map = new HashMap<>();
         return map;
     }
-    //可选择（一个或多个，故用deleteByExample方法）删除操作
+    //可选择（一个或多个）删除操作
     @RequestMapping("delete_batch")
     @ResponseBody
     public Map delete_batch(String ids){
-        MaterialReceiveExample example = new MaterialReceiveExample();
+//        MaterialReceiveExample example = new MaterialReceiveExample();
         //将ids字符串转化为数组
         String[] split = ids.split(",");
-        List<String> list = new ArrayList<>(Arrays.asList(split));
-        example.createCriteria().andMaterialIdIn(list);
-        int i = materialReceiveService.deleteByExample(example);
+//        List<String> list = new ArrayList<>(Arrays.asList(split));
+//        example.createCriteria().andMaterialIdIn(list);
+        HashMap<String, Object> map = new HashMap<>();
+        for(String s : split){
+            int i = materialReceiveService.deleteByPrimaryKey(s);
+            if(i != 0){
+                map.put("status","200");
+            }else {
+                map.put("status","302");
+            }
+        }
+        return map;
+    }
+
+    //编辑前的判断
+    @RequestMapping("edit_judge")
+    @ResponseBody
+    public Map edit_judge(){
+        HashMap<String, Object> map = new HashMap<>();
+        return map;
+    }
+    //只进行备注修改
+    @RequestMapping("update_note")
+    @ResponseBody
+    public Map update_note(MaterialReceive materialReceive){
+        int i = materialReceiveService.updateByPrimaryKeySelective(materialReceive);
         HashMap<String, Object> map = new HashMap<>();
         if(i != 0){
             map.put("status","200");
@@ -84,5 +107,47 @@ public class MaterialReceiveController {
             map.put("status","302");
         }
         return map;
+    }
+    //点击编辑后跳转jsp页面
+    @RequestMapping("edit")
+    public String edit(){
+        return "materialReceive_edit";
+    }
+    //编辑跳转后提交
+    @RequestMapping("update_all")
+    @ResponseBody
+    public Map update_all(MaterialReceive materialReceive){
+        int i = materialReceiveService.updateByPrimaryKey(materialReceive);
+        HashMap<String, Object> map = new HashMap<>();
+        if(i != 0){
+            map.put("status","200");
+        } else {
+            map.put("status","302");
+        }
+        return map;
+    }
+
+    /**
+     * 模糊查询
+     * */
+    @RequestMapping("search_materialReceive_by_receiveId")
+    @ResponseBody
+    public PageBean<MaterialReceive> search_materialReceive_by_receiveId(int page,int rows,String searchValue){
+        MaterialReceiveExample example = new MaterialReceiveExample();
+        example.createCriteria().andReceiveIdLike("%" + searchValue + "%");
+        List<MaterialReceive> receives = materialReceiveService.findAllMaterialReceiveByReceiveidOrMaterialid(page, rows, example);
+        PageInfo<MaterialReceive> pageInfo = new PageInfo<>(receives);
+        PageBean<MaterialReceive> pageBean = new PageBean<>(receives, pageInfo.getTotal());
+        return pageBean;
+    }
+    @RequestMapping("search_materialReceive_by_materialId")
+    @ResponseBody
+    public PageBean<MaterialReceive> search_materialReceive_by_materialId(int page,int rows,String searchValue){
+        MaterialReceiveExample example = new MaterialReceiveExample();
+        example.createCriteria().andMaterialIdLike("%" + searchValue + "%");
+        List<MaterialReceive> receives = materialReceiveService.findAllMaterialReceiveByReceiveidOrMaterialid(page, rows, example);
+        PageInfo<MaterialReceive> pageInfo = new PageInfo<>(receives);
+        PageBean<MaterialReceive> pageBean = new PageBean<>(receives, pageInfo.getTotal());
+        return pageBean;
     }
 }

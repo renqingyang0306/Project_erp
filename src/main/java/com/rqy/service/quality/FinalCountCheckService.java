@@ -12,6 +12,9 @@ public interface FinalCountCheckService {
     List<FinalCountCheck> findFinalCountCheckList();
     List<FinalCountCheck> findPageFinalCountCheck(int page,int rows);
 
+    List<FinalCountCheck> searchPageFinalCountCheckByFCountCheckId(String fCountCheckId, int page,int rows);
+    List<FinalCountCheck> searchPageFinalCountCheckByOrderId(String orderId, int page,int rows);
+
     int insertFinalCountCheck(FinalCountCheck finalCountCheck);
     int updateFinalCountCheckByFCountCheckId(FinalCountCheck finalCountCheck);
     int deleteFinalCountCheck(String fCountCheckId);

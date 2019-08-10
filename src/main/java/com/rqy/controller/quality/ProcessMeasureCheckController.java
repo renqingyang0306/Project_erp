@@ -1,7 +1,9 @@
 package com.rqy.controller.quality;
 
+import com.github.pagehelper.PageInfo;
 import com.rqy.domain.ProcessMeasureCheck;
 import com.rqy.service.quality.ProcessMeasureCheckService;
+import com.rqy.utils.PageBean;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,11 +31,24 @@ public class ProcessMeasureCheckController {
 
     @RequestMapping("p_measure_check/list")
     @ResponseBody
-    public List<ProcessMeasureCheck> findProcessMeasureCheckList(@RequestParam("page")int page, @RequestParam("rows")int rows) {
+    public PageBean findProcessMeasureCheckList(@RequestParam("page")int page, @RequestParam("rows")int rows) {
         List<ProcessMeasureCheck> processMeasureCheckList = processMeasureCheckService.findPageProcessMeasureCheck(page,rows);
-        return processMeasureCheckList;
+        PageInfo<ProcessMeasureCheck> pageInfo = new PageInfo<>(processMeasureCheckList);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(processMeasureCheckList,total);
+        return pageResult;
     }
 
+    @RequestMapping("p_measure_check/search_pMeasureCheck_by_pMeasureCheckId")
+    @ResponseBody
+    public PageBean searchProcessMeasureCheckBypMeasureCheckId(@RequestParam("searchValue")String searchValue, @RequestParam("page")int page,@RequestParam("rows")int rows) {
+
+        List<ProcessMeasureCheck> processMeasureChecks = processMeasureCheckService.searchPageProcessMeasureCheckByPMeansureCheckId(searchValue, page, rows);
+        PageInfo<ProcessMeasureCheck> pageInfo = new PageInfo(processMeasureChecks);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(processMeasureChecks,total);
+        return pageResult;
+    }
 
     @RequestMapping("pMeasureCheck/add_judge")
     @ResponseBody

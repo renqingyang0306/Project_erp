@@ -12,6 +12,9 @@ public interface ProcessCountCheckService {
     List<ProcessCountCheck> findProcessCountCheckList();
     List<ProcessCountCheck> findPageProcessCountCheck(int page,int rows);
 
+    List<ProcessCountCheck> searchPageProcessCountCheckByPCountCheckId(String pCountCheckId, int page,int rows);
+
+
     int insertProcessCountCheck(ProcessCountCheck processCountCheck);
     int updateProcessCountCheckByPCountCheckId(ProcessCountCheck processCountCheck);
     int deleteProcessCountCheck(String pCountCheckId);

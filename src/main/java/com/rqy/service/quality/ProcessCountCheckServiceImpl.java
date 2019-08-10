@@ -23,7 +23,7 @@ public class ProcessCountCheckServiceImpl implements ProcessCountCheckService {
     public List<ProcessCountCheck> findProcessCountCheckList() {
         ProcessCountCheckExample processCountCheckExample = new ProcessCountCheckExample();
         processCountCheckExample.createCriteria().andPCountCheckIdIsNotNull();
-        List<ProcessCountCheck> processCountChecks = processCountCheckMapper.selectByExample(processCountCheckExample);
+        List<ProcessCountCheck> processCountChecks = processCountCheckMapper.selectByExampleLiftJoin(processCountCheckExample);
 
         return processCountChecks;
     }
@@ -32,7 +32,18 @@ public class ProcessCountCheckServiceImpl implements ProcessCountCheckService {
     public List<ProcessCountCheck> findPageProcessCountCheck(int page, int rows) {
         PageHelper.startPage(page,rows);
         ProcessCountCheckExample processCountCheckExample = new ProcessCountCheckExample();
-        List<ProcessCountCheck> processCountChecks = processCountCheckMapper.selectByExample(processCountCheckExample);
+        List<ProcessCountCheck> processCountChecks = processCountCheckMapper.selectByExampleLiftJoin(processCountCheckExample);
+        return processCountChecks;
+    }
+
+    @Override
+    public List<ProcessCountCheck> searchPageProcessCountCheckByPCountCheckId(String pCountCheckId, int page, int rows) {
+        //查询条件
+        PageHelper.startPage(page, rows);
+        ProcessCountCheckExample processCountCheckExample = new ProcessCountCheckExample();
+        pCountCheckId = "%" + pCountCheckId + "%";
+        processCountCheckExample.createCriteria().andPCountCheckIdLike(pCountCheckId);
+        List<ProcessCountCheck> processCountChecks = processCountCheckMapper.selectByExampleLiftJoin(processCountCheckExample);
         return processCountChecks;
     }
 

@@ -4,9 +4,9 @@ import com.github.pagehelper.PageHelper;
 import com.rqy.domain.Work;
 import com.rqy.domain.WorkExample;
 import com.rqy.mapper.WorkMapper;
+import com.rqy.service.WorkServcie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import sun.security.krb5.internal.PAData;
 
 import java.util.List;
 
@@ -16,6 +16,7 @@ import java.util.List;
  * @date 2019/8/10 12:05
  */
 @Component
+
 public class WorkServcieImpl implements WorkServcie{
 
     @Autowired
@@ -63,7 +64,6 @@ public class WorkServcieImpl implements WorkServcie{
         List<Work> works = workMapper.selectByExample(workExample);
         return works;
     }
-
     @Override
     public List<Work> findAllWorkByIdOrProcessId(int page, int rows, WorkExample workExample) {
         PageHelper.startPage(page,rows);

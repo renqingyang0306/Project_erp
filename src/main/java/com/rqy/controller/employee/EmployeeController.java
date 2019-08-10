@@ -40,7 +40,7 @@ public class EmployeeController
         //获取的信息，不仅仅包含employeeList;
         List<Employee> employeeList = employeeService.selectByExample(employeeExample);
         PageInfo<Employee> employeePageInfo = new PageInfo<Employee>(employeeList);
-        PageBean<Employee> pageBean = new PageBean<Employee>( employeeList,employeePageInfo.getTotal());
+        PageBean<Employee> pageBean = new PageBean<Employee>(employeeList,employeePageInfo.getTotal());
         return pageBean;
     }
 

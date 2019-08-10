@@ -18,6 +18,7 @@ public interface FinalCountCheckMapper {
     int insertSelective(FinalCountCheck record);
 
     List<FinalCountCheck> selectByExample(FinalCountCheckExample example);
+    List<FinalCountCheck> selectByExampleLiftJoin(FinalCountCheckExample example);
 
     FinalCountCheck selectByPrimaryKey(String fCountCheckId);
 

@@ -1,6 +1,7 @@
 package com.rqy.service.quality;
 
 import com.github.pagehelper.PageHelper;
+import com.rqy.domain.FinalCountCheckExample;
 import com.rqy.domain.FinalMeasuretCheck;
 import com.rqy.domain.FinalMeasuretCheckExample;
 import com.rqy.mapper.FinalMeasuretCheckMapper;
@@ -23,7 +24,7 @@ public class FinalMeasuretCheckServiceImpl implements FinalMeasuretCheckService 
         FinalMeasuretCheckExample finalMeasuretCheckExample = new FinalMeasuretCheckExample();
         FinalMeasuretCheckExample.Criteria criteria = finalMeasuretCheckExample.createCriteria();
         criteria.andOrderIdIsNotNull();
-        List<FinalMeasuretCheck> finalMeasuretChecks = finalMeasuretCheckMapper.selectByExample(finalMeasuretCheckExample);
+        List<FinalMeasuretCheck> finalMeasuretChecks = finalMeasuretCheckMapper.selectByExampleLiftJoin(finalMeasuretCheckExample);
 
         return finalMeasuretChecks;
     }
@@ -32,7 +33,31 @@ public class FinalMeasuretCheckServiceImpl implements FinalMeasuretCheckService 
     public List<FinalMeasuretCheck> findPageFinalMeasuretCheck(int page, int rows) {
         PageHelper.startPage(page,rows);
         FinalMeasuretCheckExample finalMeasuretCheckExample = new FinalMeasuretCheckExample();
-        List<FinalMeasuretCheck> finalMeasuretChecks = finalMeasuretCheckMapper.selectByExample(finalMeasuretCheckExample);
+        List<FinalMeasuretCheck> finalMeasuretChecks = finalMeasuretCheckMapper.selectByExampleLiftJoin(finalMeasuretCheckExample);
+        return finalMeasuretChecks;
+    }
+
+    @Override
+    public List<FinalMeasuretCheck> searchPageFinalMeasuretCheckByFMeasureCheckId(String fMeansureCheckId, int page, int rows) {
+        //查询条件
+        PageHelper.startPage(page,rows);
+        FinalMeasuretCheckExample finalMeasuretCheckExample = new FinalMeasuretCheckExample();
+        fMeansureCheckId = "%" + fMeansureCheckId + "%";
+        finalMeasuretCheckExample.createCriteria().andFMeasureCheckIdLike(fMeansureCheckId);
+        List<FinalMeasuretCheck> finalMeasuretChecks = finalMeasuretCheckMapper.selectByExampleLiftJoin(finalMeasuretCheckExample);
+
+        return finalMeasuretChecks;
+    }
+
+    @Override
+    public List<FinalMeasuretCheck> searchPageFinalMeasuretCheckByOrderId(String orderId, int page, int rows) {
+        //查询条件
+        PageHelper.startPage(page,rows);
+        FinalMeasuretCheckExample finalMeasuretCheckExample = new FinalMeasuretCheckExample();
+        orderId = "%" + orderId + "%";
+        finalMeasuretCheckExample.createCriteria().andOrderIdLike(orderId);
+        List<FinalMeasuretCheck> finalMeasuretChecks = finalMeasuretCheckMapper.selectByExampleLiftJoin(finalMeasuretCheckExample);
+
         return finalMeasuretChecks;
     }
 

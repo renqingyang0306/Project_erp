@@ -20,6 +20,7 @@ public interface UnqualifyApplyMapper {
     List<UnqualifyApply> selectByExample(UnqualifyApplyExample example);
 
     List<UnqualifyApply> selectByExampleLiftJoin(UnqualifyApplyExample example);
+    List<UnqualifyApply> searchByProductNameLiftJoin(String produceName);
 
     UnqualifyApply selectByPrimaryKey(String unqualifyApplyId);
 

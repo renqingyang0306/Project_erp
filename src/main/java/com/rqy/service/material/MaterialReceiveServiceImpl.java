@@ -1,5 +1,6 @@
 package com.rqy.service.material;
 
+import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.rqy.domain.MaterialReceive;
 import com.rqy.domain.MaterialReceiveExample;
@@ -41,4 +42,27 @@ public class MaterialReceiveServiceImpl implements MaterialReceiveService {
     public int deleteByExample(MaterialReceiveExample example) {
         return materialReceiveMapper.deleteByExample(example);
     }
+
+    @Override
+    public int deleteByPrimaryKey(String receiveId) {
+        return materialReceiveMapper.deleteByPrimaryKey(receiveId);
+    }
+
+    @Override
+    public List<MaterialReceive> findAllMaterialReceiveByReceiveidOrMaterialid(int page, int rows, MaterialReceiveExample example) {
+        PageHelper.startPage(page,rows);
+        List<MaterialReceive> materialReceives = materialReceiveMapper.selectByExample(example);
+        return materialReceives;
+    }
+
+    @Override
+    public int updateByPrimaryKeySelective(MaterialReceive record) {
+        return materialReceiveMapper.updateByPrimaryKeySelective(record);
+    }
+
+    @Override
+    public int updateByPrimaryKey(MaterialReceive record) {
+        return materialReceiveMapper.updateByPrimaryKey(record);
+    }
+
 }

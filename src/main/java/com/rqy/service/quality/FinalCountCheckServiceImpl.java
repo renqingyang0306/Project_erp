@@ -33,7 +33,29 @@ public class FinalCountCheckServiceImpl implements FinalCountCheckService {
     public List<FinalCountCheck> findPageFinalCountCheck(int page, int rows) {
         PageHelper.startPage(page,rows);
         FinalCountCheckExample finalCountCheckExample = new FinalCountCheckExample();
-        List<FinalCountCheck> finalCountChecks = finalCountCheckMapper.selectByExample(finalCountCheckExample);
+        List<FinalCountCheck> finalCountChecks = finalCountCheckMapper.selectByExampleLiftJoin(finalCountCheckExample);
+        return finalCountChecks;
+    }
+
+    @Override
+    public List<FinalCountCheck> searchPageFinalCountCheckByFCountCheckId(String fCountCheckId, int page, int rows) {
+        //查询条件
+        PageHelper.startPage(page,rows);
+        FinalCountCheckExample finalCountCheckExample = new FinalCountCheckExample();
+        fCountCheckId = "%" + fCountCheckId + "%";
+        finalCountCheckExample.createCriteria().andFCountCheckIdLike(fCountCheckId);
+        List<FinalCountCheck> finalCountChecks = finalCountCheckMapper.selectByExampleLiftJoin(finalCountCheckExample);
+        return finalCountChecks;
+    }
+
+    @Override
+    public List<FinalCountCheck> searchPageFinalCountCheckByOrderId(String orderId, int page, int rows) {
+        //查询条件
+        PageHelper.startPage(page,rows);
+        FinalCountCheckExample finalCountCheckExample = new FinalCountCheckExample();
+        orderId = "%" + orderId + "%";
+        finalCountCheckExample.createCriteria().andOrderIdLike(orderId);
+        List<FinalCountCheck> finalCountChecks = finalCountCheckMapper.selectByExampleLiftJoin(finalCountCheckExample);
         return finalCountChecks;
     }
 

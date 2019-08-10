@@ -1,8 +1,11 @@
 package com.rqy.controller.quality;
 
+import com.github.pagehelper.PageInfo;
 import com.rqy.domain.UnqualifyApply;
 import com.rqy.service.quality.UnqualityApplyService;
+import com.rqy.utils.PageBean;
 import org.apache.ibatis.annotations.Param;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +23,8 @@ import java.util.*;
 //@RequestMapping("unqualify")
 public class UnqualityApplyController {
 
+    //Logger logger = Logger.getLogger(this.getClass());
+
     @Autowired
     UnqualityApplyService unqualityApplyService;
 
@@ -36,13 +41,35 @@ public class UnqualityApplyController {
 
     @RequestMapping("unqualify/list")
     @ResponseBody
-    public List<UnqualifyApply> queryPageUnqualifyList(@RequestParam("page")int page,@RequestParam("rows")int rows) {
+    public PageBean queryPageUnqualifyList(@RequestParam("page")int page,@RequestParam("rows")int rows) {
         List<UnqualifyApply> unqualifyApply = unqualityApplyService.findPageUnqualifyApply(page,rows);
-        for (UnqualifyApply apply : unqualifyApply) {
-            String productId = apply.getProductId();
+        PageInfo<UnqualifyApply> pageInfo = new PageInfo<>(unqualifyApply);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(unqualifyApply,total);
+        return pageResult;
+    }
 
-        }
-        return unqualifyApply;
+    @RequestMapping("unqualify/search_unqualify_by_unqualifyId")
+    @ResponseBody
+    public PageBean searchPageUnqualifyByUnqualifyId(@RequestParam("searchValue")String searchValue, @RequestParam("page")int page,@RequestParam("rows")int rows) {
+
+        List<UnqualifyApply> unqualifyApply = unqualityApplyService.searchPageUnqualifyApplyByUnqualifyId(searchValue,page,rows);
+        PageInfo<UnqualifyApply> pageInfo = new PageInfo(unqualifyApply);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(unqualifyApply,total);
+        return pageResult;
+    }
+
+    @RequestMapping("unqualify/search_unqualify_by_productName")
+    @ResponseBody
+    public PageBean searchPageUnqualifyByProductName(@RequestParam("searchValue")String searchValue, @RequestParam("page")int page,@RequestParam("rows")int rows) {
+        List<UnqualifyApply> unqualifyApplies = unqualityApplyService.searchPageUnqualifyApplyByProductName(searchValue, page, rows);
+        PageInfo<UnqualifyApply> pageInfo = new PageInfo(unqualifyApplies);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(unqualifyApplies,total);
+        //logger.info(unqualifyApplies);
+        return pageResult;
+
     }
 
     @RequestMapping("unqualify/add_judge")
