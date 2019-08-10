@@ -74,6 +74,38 @@
     technology_plan_id, technology_id, batch_amount, start_plan, end_plan, commit_plan, 
     technology_plan_start, technology_plan_end
   </sql>
+  <select id="selectByIdLike" resultMap="BaseResultMap">
+     select
+    tplan.technology_plan_id,
+    tplan.technology_id,
+    tplan.batch_amount,
+    tplan.start_plan,
+    tplan.end_plan,
+    tplan.commit_plan,
+    tplan.technology_plan_start,
+    tplan.technology_plan_end,
+    t.technology_name
+    from technology_plan tplan
+    left join technology t
+    on tplan.technology_id = t.technology_id
+    where tplan.technology_plan_id like #{id}
+  </select>
+  <select id="selectByNameLike" resultMap="BaseResultMap">
+     select
+    tplan.technology_plan_id,
+    tplan.technology_id,
+    tplan.batch_amount,
+    tplan.start_plan,
+    tplan.end_plan,
+    tplan.commit_plan,
+    tplan.technology_plan_start,
+    tplan.technology_plan_end,
+    t.technology_name
+    from technology_plan tplan
+    left join technology t
+    on tplan.technology_id = t.technology_id
+    where t.technology_name like #{name}
+  </select>
   <select id="selectLeftJoin"  resultMap="BaseResultMap" >
     select
     tplan.technology_plan_id,

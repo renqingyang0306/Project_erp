@@ -107,11 +107,13 @@ public class ProcessController {
 
     /*接受insert的数据，执行添加操作*/
     @RequestMapping("insert")
+    @ResponseBody
     public Map insert(Process process){
         int i = processService.insertSelective(process);
         Map<String,String> map = new HashMap<>();
         if (i == 1){
             map.put("status","200");
+            map.put("msg","ok");
         }else {
             map.put("status","302");
         }
