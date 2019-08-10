@@ -20,23 +20,37 @@
 
 <div  id="toolbar_user" style=" height: 22px; padding: 3px 11px; background: #fafafa;">  
 	
-	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
-		<c:if test="${per=='user:add' }" >
+	<%--<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
+		<c:if test="${per=='sysuser:add' }" >
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="user_add()">新增</a>  
 		    </div>  
 		</c:if>
-		<c:if test="${per=='user:edit' }" >
+		<c:if test="${per=='sysuser:edit' }" >
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit" onclick="user_edit()">编辑</a>  
 		    </div>  
 		</c:if>
-		<c:if test="${per=='user:delete' }" >
+		<c:if test="${per=='sysuser:delete' }" >
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel" onclick="user_delete()">删除</a>  
 		    </div>  
 		</c:if>
-	</c:forEach>
+	</c:forEach>--%>
+
+
+				<div style="float: left;">
+					<a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="user_add()">新增</a>
+				</div>
+
+				<div style="float: left;">
+					<a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit" onclick="user_edit()">编辑</a>
+				</div>
+
+				<div style="float: left;">
+					<a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel" onclick="user_delete()">删除</a>
+				</div>
+
 	
 	<div class="datagrid-btn-separator"></div>  
 	
@@ -73,7 +87,7 @@ function doSearch_user(value,name){ //用户输入用户名,点击搜素,触发�
 	if(value == null || value == ''){
 		$("#userList").datagrid({
 	        title:'用户列表', singleSelect:false, collapsible:true, pagination:true, rownumbers:true, method:'get',
-			nowrap:true, toolbar:"toolbar_user", url:'user/list', method:'get', loadMsg:'数据加载中......',
+			nowrap:true, toolbar:"toolbar_user", url:'sysuser/list', method:'get', loadMsg:'数据加载中......',
 			fitColumns:true,
 	        columns : [ [ 
 				{field : 'ck', checkbox:true },
@@ -87,7 +101,7 @@ function doSearch_user(value,name){ //用户输入用户名,点击搜素,触发�
 	}else{
 		$("#userList").datagrid({  
 	        title:'用户列表', singleSelect:false, collapsible:true, pagination:true, rownumbers:true, method:'get',
-			nowrap:true, toolbar:"toolbar_user", url:'user/search_user_by_'+name+'?searchValue='+value,
+			nowrap:true, toolbar:"toolbar_user", url:'sysuser/search_user_by_'+name+'?searchValue='+value,
 			loadMsg:'数据加载中......', fitColumns:true,
 	        columns : [ [ 
 				{field : 'ck', checkbox:true },
@@ -173,7 +187,8 @@ function formatUserStatus(value){
     }
     
     function user_add(){
-    	$.get("user/add_judge",'',function(data){
+    	$.get("sysuser/add_judge",'',function(data){
+
        		if(data.msg != null){
        			$.messager.alert('提示', data.msg);
        		}else{
@@ -183,7 +198,7 @@ function formatUserStatus(value){
     }
     
     function user_edit(){
-    	$.get("user/edit_judge",'',function(data){
+    	$.get("sysuser/edit_judge",'',function(data){
        		if(data.msg != null){
        			$.messager.alert('提示', data.msg);
        		}else{
@@ -210,7 +225,7 @@ function formatUserStatus(value){
     }
     
     function user_delete(){
-    	$.get("user/delete_judge",'',function(data){
+    	$.get("sysuser/delete_judge",'',function(data){
       		if(data.msg != null){
       			$.messager.alert('提示', data.msg);
       		}else{
@@ -222,7 +237,7 @@ function formatUserStatus(value){
             	$.messager.confirm('确认','确定删除ID为 '+ids+' 的用户吗？',function(r){
             	    if (r){
             	    	var params = {"ids":ids};
-                    	$.post("user/delete_batch",params, function(data){
+                    	$.post("sysuser/delete_batch",params, function(data){
                 			if(data.status == 200){
                 				$.messager.alert('提示','删除用户成功!',undefined,function(){
                 					$("#userList").datagrid("reload");

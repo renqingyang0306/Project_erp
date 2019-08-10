@@ -195,7 +195,7 @@
 			$(obj).remove();
 
 		}
-        //This is for showing Old files to user.
+        //This is for showing Old files to sysuser.
         this.createProgress = function (filename,filepath,filesize) {
             var pd = new createProgressDiv(this, s);
             pd.progressDiv.show();
