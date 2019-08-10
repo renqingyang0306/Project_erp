@@ -1,4 +1,4 @@
-package com.rqy.domain;
+package com.rqy.domain.department;
 
 import java.util.ArrayList;
 import java.util.List;

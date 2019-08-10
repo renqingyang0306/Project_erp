@@ -1,4 +1,4 @@
-package com.rqy.mapper;
+package com.rqy.service.department;
 
 import com.rqy.domain.department.Department;
 import com.rqy.domain.department.DepartmentExample;
@@ -6,7 +6,8 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface DepartmentMapper {
+public interface DepartmentService
+{
     long countByExample(DepartmentExample example);
 
     int deleteByExample(DepartmentExample example);
@@ -28,6 +29,5 @@ public interface DepartmentMapper {
     int updateByPrimaryKeySelective(Department record);
 
     int updateByPrimaryKey(Department record);
-
 
 }

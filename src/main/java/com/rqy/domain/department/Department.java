@@ -1,4 +1,4 @@
-package com.rqy.domain;
+package com.rqy.domain.department;
 
 public class Department {
     private String departmentId;

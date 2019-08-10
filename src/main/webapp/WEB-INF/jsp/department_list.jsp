@@ -18,7 +18,7 @@
 
 <div  id="toolbar_department" style=" height: 22px; padding: 3px 11px; background: #fafafa;">  
 	
-	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
+	<%--<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
 		<c:if test="${per=='department:add' }" >
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="department_add()">新增</a>  
@@ -36,7 +36,22 @@
 		        	onclick="department_delete()">删除</a>  
 		    </div>  
 		</c:if>
-	</c:forEach>
+	</c:forEach>--%>
+
+				<div style="float: left;">
+					<a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="department_add()">新增</a>
+				</div>
+
+				<div style="float: left;">
+					<a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit"
+					   onclick="department_edit()">编辑</a>
+				</div>
+
+				<div style="float: left;">
+					<a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel"
+					   onclick="department_delete()">删除</a>
+				</div>
+
 	
 	<div class="datagrid-btn-separator"></div>  
 	
@@ -92,7 +107,7 @@ function doSearch_department(value,name){ //用户输入用户名,点击搜素,�
 		$("#departmentList").datagrid({
 	        title:'部门列表', singleSelect:false, collapsible:true, pagination:true, rownumbers:true, 
 	        	method:'get', nowrap:true,  
-	        toolbar:"toolbar_department", url:'department/list', method:'get', loadMsg:'数据加载中......', 
+	        toolbar:"toolbar_department", url:'department/list', method:'get', loadMsg:'数据加载中......',
 	        	fitColumns:true,//允许表格自动缩放,以适应父容器  
 	        columns : [ [ 
 	             	{field : 'ck', checkbox:true }, 
@@ -105,7 +120,7 @@ function doSearch_department(value,name){ //用户输入用户名,点击搜素,�
 		$("#departmentList").datagrid({  
 	        title:'部门列表', singleSelect:false, collapsible:true, pagination:true, rownumbers:true, 
 	        	method:'get', nowrap:true,  
-	        toolbar:"toolbar_department", url:'department/search_department_by_'+name+'?searchValue='+value, 
+	        toolbar:"toolbar_department", url:'department/search_department_by_'+name+'?searchValue='+value,
 	        	loadMsg:'数据加载中......', fitColumns:true,//允许表格自动缩放,以适应父容器  
 	        columns : [ [ 
 					{field : 'ck', checkbox:true }, 

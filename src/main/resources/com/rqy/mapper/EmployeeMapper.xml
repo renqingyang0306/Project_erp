@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rqy.mapper.EmployeeMapper">
-  <resultMap id="BaseResultMap" type="com.rqy.domain.Employee">
+  <resultMap id="BaseResultMap" type="com.rqy.domain.employee.Employee">
     <id column="emp_id" jdbcType="VARCHAR" property="empId" />
     <result column="emp_name" jdbcType="VARCHAR" property="empName" />
     <result column="sex" jdbcType="CHAR" property="sex" />
@@ -15,7 +15,43 @@
     <result column="graduate_school" jdbcType="VARCHAR" property="graduateSchool" />
     <result column="education_form" jdbcType="VARCHAR" property="educationForm" />
     <result column="department_id" jdbcType="VARCHAR" property="departmentId" />
+    <association property="department" column="department_id" select="com.rqy.mapper.DepartmentMapper.selectByPrimaryKey"/>
   </resultMap>
+<!--    分页查询员工-->
+  <!--<select id="selectEmployeeByPage" resultMap="employeeResultMapper">
+    select
+    <include refid="Base_Column_List"/>
+    from employee
+    <where>
+      <if test="employee.empId != null">
+        emp_id like #{employee.empId}
+      </if>
+      <if test="employee.empName != null">
+        and emp_name like #{employee.empName}
+      </if>
+    </where>
+  </select>
+
+  <select id="selectEmployeeByPage" parameterMap="com.rqy.domain.employee.EmployeePageView" resultMap="BaseResultMap">
+    select
+          e.emp_id,
+          e.emp_name,
+          e.sex,
+          e.id_code,
+          e.birthday,
+          e.join_date,
+          e.status,
+          e.education,
+          e.degree,
+          e.major,
+          e.graduate_school,
+          e.education_form,
+          d.department_name
+          from employee e
+          left join department d on e.department_id = d.department_id
+          limit #{rows} offset #{offset}
+  </select>-->
+
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -78,7 +114,7 @@
     emp_id, emp_name, sex, id_code, birthday, join_date, status, education, degree, major, 
     graduate_school, education_form, department_id
   </sql>
-  <select id="selectByExample" parameterType="com.rqy.domain.EmployeeExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.rqy.domain.employee.EmployeeExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -102,13 +138,13 @@
     delete from employee
     where emp_id = #{empId,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.rqy.domain.EmployeeExample">
+  <delete id="deleteByExample" parameterType="com.rqy.domain.employee.EmployeeExample">
     delete from employee
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.rqy.domain.Employee">
+  <insert id="insert" parameterType="com.rqy.domain.employee.Employee">
     insert into employee (emp_id, emp_name, sex, 
       id_code, birthday, join_date, 
       status, education, degree, 
@@ -120,7 +156,7 @@
       #{major,jdbcType=VARCHAR}, #{graduateSchool,jdbcType=VARCHAR}, #{educationForm,jdbcType=VARCHAR}, 
       #{departmentId,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.rqy.domain.Employee">
+  <insert id="insertSelective" parameterType="com.rqy.domain.employee.Employee">
     insert into employee
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="empId != null">
@@ -205,7 +241,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.rqy.domain.EmployeeExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.rqy.domain.employee.EmployeeExample" resultType="java.lang.Long">
     select count(*) from employee
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -277,7 +313,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.rqy.domain.Employee">
+  <update id="updateByPrimaryKeySelective" parameterType="com.rqy.domain.employee.Employee">
     update employee
     <set>
       <if test="empName != null">
@@ -319,7 +355,7 @@
     </set>
     where emp_id = #{empId,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.rqy.domain.Employee">
+  <update id="updateByPrimaryKey" parameterType="com.rqy.domain.employee.Employee">
     update employee
     set emp_name = #{empName,jdbcType=VARCHAR},
       sex = #{sex,jdbcType=CHAR},
@@ -335,4 +371,5 @@
       department_id = #{departmentId,jdbcType=VARCHAR}
     where emp_id = #{empId,jdbcType=VARCHAR}
   </update>
+
 </mapper>
