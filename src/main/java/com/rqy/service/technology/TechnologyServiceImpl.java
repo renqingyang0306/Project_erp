@@ -37,15 +37,33 @@ public class TechnologyServiceImpl implements TechnologyService {
     }
 
     /*delete*/
-    public int deleteByPrimaryKey(String ids){
-        return technologyMapper.deleteByPrimaryKey(ids);
+    public int deleteByPrimaryKey(String[] ids){
+        int j = 0;
+        for (int i = 0; i < ids.length ; i++){
+            technologyMapper.deleteByPrimaryKey(ids[i]);
+            j++;
+        }
+
+        return j;
     }
 
     @Override
     public List<Technology> selectByIdLike(String id) {
-        String idlike = "%" + id + "%";
+        String idLike = "%" + id + "%";
 
-        return technologyMapper.selectByIdLike(idlike);
+        return technologyMapper.selectByIdLike(idLike);
+    }
+
+    @Override
+    public List<Technology> selectByNameLike(String name) {
+        String nameLike = "%" + name + "%";
+
+        return technologyMapper.selectByNameLike(nameLike);
+    }
+
+    @Override
+    public Technology selectByPrimaryKey(String id) {
+        return technologyMapper.selectByPrimaryKey(id);
     }
 }
 

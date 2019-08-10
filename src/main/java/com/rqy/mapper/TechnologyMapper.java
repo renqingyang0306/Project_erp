@@ -11,7 +11,7 @@ public interface TechnologyMapper {
 
     int deleteByExample(TechnologyExample example);
 
-    int deleteByPrimaryKey(String technologyId);
+    int deleteByPrimaryKey(String ids);
 
     int insert(Technology record);
 
@@ -30,4 +30,6 @@ public interface TechnologyMapper {
     int updateByPrimaryKeySelective(Technology record);
 
     int updateByPrimaryKey(Technology record);
+
+    List<Technology> selectByNameLike(String name);
 }

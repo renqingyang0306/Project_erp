@@ -19,9 +19,14 @@ public interface TechnologyRequirementService {
 
     List<TechnologyRequirement> selectLeftJoin();
 
-    int deleteByPrimaryKey(String ids);
+    int deleteByPrimaryKey(String[] ids);
 
     int updateByPrimaryKeySelective(TechnologyRequirement technologyRequirement);
 
     int insertSelective(TechnologyRequirement technologyRequirement);
+
+    List<TechnologyRequirement> selectByNameLike(String name);
+
+    List<TechnologyRequirement> selectByIdLike(String id);
+
 }
