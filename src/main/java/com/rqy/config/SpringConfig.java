@@ -31,7 +31,7 @@ public class SpringConfig {
     public DataSource druidDatasource(){
         DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        druidDataSource.setUrl("jdbc:mysql://localhost:3306/production_ssm?characterEncoding=utf8");
+        druidDataSource.setUrl("jdbc:mysql://localhost:3306/production_ssm");
         druidDataSource.setUsername("root");
         druidDataSource.setPassword("123456");
         return druidDataSource;
@@ -42,16 +42,18 @@ public class SpringConfig {
     public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource){
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
+        //分页 以下
         PageInterceptor pageInterceptor = new PageInterceptor();
         //创建插件需要的参数集合
-        Properties properties = new Properties();
+                Properties properties = new Properties();
         //配置数据库方言 为oracle
-        properties.setProperty("helperDialect", "mysql");
+                properties.setProperty("helperDialect", "mysql");
         //配置分页的合理化数据
-        properties.setProperty("reasonable", "true");
-        pageInterceptor.setProperties(properties);
+                properties.setProperty("reasonable", "true");
+                pageInterceptor.setProperties(properties);
         //将拦截器设置到sqlSessionFactroy中
-        sqlSessionFactoryBean.setPlugins(new Interceptor[] {pageInterceptor});
+                sqlSessionFactoryBean.setPlugins(new Interceptor[] {pageInterceptor});
+        //以上
         return sqlSessionFactoryBean;
     }
     //MapperScannerConfigurer

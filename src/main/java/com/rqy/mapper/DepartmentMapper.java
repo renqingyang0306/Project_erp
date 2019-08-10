@@ -1,7 +1,7 @@
 package com.rqy.mapper;
 
-import com.rqy.domain.Department;
-import com.rqy.domain.DepartmentExample;
+import com.rqy.domain.department.Department;
+import com.rqy.domain.department.DepartmentExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -28,4 +28,6 @@ public interface DepartmentMapper {
     int updateByPrimaryKeySelective(Department record);
 
     int updateByPrimaryKey(Department record);
+
+
 }

@@ -19,6 +19,8 @@ public interface UnqualifyApplyMapper {
 
     List<UnqualifyApply> selectByExample(UnqualifyApplyExample example);
 
+    List<UnqualifyApply> selectByExampleLiftJoin(UnqualifyApplyExample example);
+
     UnqualifyApply selectByPrimaryKey(String unqualifyApplyId);
 
     int updateByExampleSelective(@Param("record") UnqualifyApply record, @Param("example") UnqualifyApplyExample example);
