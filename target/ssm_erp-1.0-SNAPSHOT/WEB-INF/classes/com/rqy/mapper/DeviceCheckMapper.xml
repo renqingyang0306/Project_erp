@@ -8,6 +8,8 @@
     <result column="device_check_date" jdbcType="TIMESTAMP" property="deviceCheckDate" />
     <result column="device_check_result" jdbcType="VARCHAR" property="deviceCheckResult" />
     <result column="device_check_fault_id" jdbcType="VARCHAR" property="deviceCheckFaultId" />
+    <result column="emp_name" jdbcType="VARCHAR" property="deviceCheckEmp" />
+    <result column="device_name" jdbcType="VARCHAR" property="deviceName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -68,8 +70,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    device_check_id, device_id, device_check_emp_id, device_check_date, device_check_result, 
-    device_check_fault_id
+    c.device_check_id, c.device_id, c.device_check_emp_id, c.device_check_date, c.device_check_result,
+    c.device_check_fault_id,e.emp_name,d.device_name
   </sql>
   <select id="selectByExample" parameterType="com.rqy.domain.DeviceCheckExample" resultMap="BaseResultMap">
     select
@@ -77,7 +79,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from device_check
+    from device_check c inner join employee e on c.device_check_emp_id = e.emp_id inner join device d on c.device_id = d.device_id
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -85,6 +87,19 @@
       order by ${orderByClause}
     </if>
   </select>
+
+
+  <select id="selectByLike" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from device_check c inner join employee e on c.device_check_emp_id = e.emp_id inner join device d on c.device_id = d.device_id
+    where d.device_name like #{deviceName,jdbcType=VARCHAR}
+  </select>
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

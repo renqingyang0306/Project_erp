@@ -73,7 +73,29 @@
     unqualify_apply_id, product_id, unqualify_item, unqualify_count, assembly_date, emp_id, 
     apply_date, note
   </sql>
-  <select id="selectByExample" parameterType="com.rqy.domain.UnqualifyApplyExample" resultMap="BaseResultMap">
+
+  <select id="selectByExample" resultType="com.rqy.domain.UnqualifyApplyExample">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    pro.product_Name as productName,
+    emp.emp_name as empName
+    from unqualify_apply unq
+    left join product pro on unq.product_id = pro.product_id
+    left join employee emp on unq.emp_id = emp.emp_id
+    where
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+
+
+  <select id="selectByExampleLiftJoin" parameterType="com.rqy.domain.UnqualifyApplyExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -87,6 +109,7 @@
       order by ${orderByClause}
     </if>
   </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

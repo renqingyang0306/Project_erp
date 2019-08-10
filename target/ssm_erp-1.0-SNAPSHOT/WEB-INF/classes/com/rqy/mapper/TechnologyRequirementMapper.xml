@@ -3,6 +3,7 @@
 <mapper namespace="com.rqy.mapper.TechnologyRequirementMapper">
   <resultMap id="BaseResultMap" type="com.rqy.domain.TechnologyRequirement">
     <id column="technology_requirement_id" jdbcType="VARCHAR" property="technologyRequirementId" />
+    <result column="technology_name" jdbcType="VARCHAR" property="technologyName"/>
     <result column="technology_id" jdbcType="VARCHAR" property="technologyId" />
     <result column="requirement" jdbcType="VARCHAR" property="requirement" />
     <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
@@ -69,6 +70,18 @@
   <sql id="Base_Column_List">
     technology_requirement_id, technology_id, requirement, add_time, revise_time
   </sql>
+  <select id="selectLeftJoin"  resultMap="BaseResultMap" >
+    select
+    treq.technology_requirement_id,
+    treq.technology_id,
+    treq.requirement,
+    treq.add_time,
+    treq.revise_time,
+    t.technology_name
+    from technology_requirement treq
+    left join technology t
+    on treq.technology_id = t.technology_id
+  </select>
   <select id="selectByExample" parameterType="com.rqy.domain.TechnologyRequirementExample" resultMap="BaseResultMap">
     select
     <if test="distinct">

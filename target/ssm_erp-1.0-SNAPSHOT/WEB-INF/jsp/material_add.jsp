@@ -78,8 +78,11 @@
 		$.post("material/insert",$("#materialAddForm").serialize(), function(data){
 			if(data.status == 200){
 				$.messager.alert('提示','新增成功!');
+				// clearMaterialForm();
+				// updateMaterialForm();
 				clearMaterialForm();
-				updateMaterialForm();	
+				$("#materialAddForm").window('close');
+				$("#materialList").datagrid("reload");
 			}else{
 				$.messager.alert('提示',data.msg);
 			}  

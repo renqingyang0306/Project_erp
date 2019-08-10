@@ -100,10 +100,8 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.rqy.domain.Material">
-    insert into material (material_id, material_type, status, 
-      remaining, note)
-    values (#{materialId,jdbcType=VARCHAR}, #{materialType,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
-      #{remaining,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR})
+    insert into material (material_id, material_type, status, remaining, note)
+    values (#{materialId,jdbcType=VARCHAR}, #{materialType,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{remaining,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.rqy.domain.Material">
     insert into material

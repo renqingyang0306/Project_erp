@@ -5,7 +5,7 @@ import com.github.pagehelper.PageInfo;
 import com.rqy.domain.DeviceFault;
 import com.rqy.domain.DeviceFaultExample;
 import com.rqy.service.device.DeviceFaultService;
-import com.rqy.util.PageBean;
+import com.rqy.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
