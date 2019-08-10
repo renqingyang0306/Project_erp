@@ -1,4 +1,4 @@
-package com.rqy.mapper;
+package com.rqy.service;
 
 import com.rqy.domain.Manufacture;
 import com.rqy.domain.ManufactureExample;
@@ -6,28 +6,29 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface ManufactureMapper {
-    long countByExample(ManufactureExample example);
-
+/**
+ * @author 任清阳
+ * @Email 1277409109@qq.com
+ * @date 2019/8/10 18:05
+ */
+public interface ManufactureService {
     int deleteByExample(ManufactureExample example);
 
     int deleteByPrimaryKey(String manufactureSn);
 
     int insert(Manufacture record);
 
-    int insertSelective(Manufacture record);
-
     List<Manufacture> selectByExample(ManufactureExample example);
 
     Manufacture selectByPrimaryKey(String manufactureSn);
-
-    int updateByExampleSelective(@Param("record") Manufacture record, @Param("example") ManufactureExample example);
-
-    int updateByExample(@Param("record") Manufacture record, @Param("example") ManufactureExample example);
 
     int updateByPrimaryKeySelective(Manufacture record);
 
     int updateByPrimaryKey(Manufacture record);
 
-    List<Manufacture> findAllManufactureByTechnologyName(String s);
+    List<Manufacture> findAllManufacture(int page, int rows);
+
+    List<Manufacture> findAllManufactureByIdOrOrderId(int page, int rows, ManufactureExample manufactureExample);
+
+    List<Manufacture> findAllManufactureByTechnologyName(int page, int rows, String s);
 }

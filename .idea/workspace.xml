@@ -7,154 +7,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81248d72-c465-416d-9b5d-06601d145298" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Project_erp_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Project_erp_war.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Project_erp_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Project_erp_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_11.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_11.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_7.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_7.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_8.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_api_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_api_2_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_3_0_alpha_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_3_0_alpha_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_16.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_8_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_8_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_0_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_0_2_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_8_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_8_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_8_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_8_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_8_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_8_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_8_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_8_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_8_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_8_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_8_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_8_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_8_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_8_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_8_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_8_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_8_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_8_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_8_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_8_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/ManufactureController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/TaskController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/WorkController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/service/ManufactureService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/service/ManufactureServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/service/TaskService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/service/TaskServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/service/WorkServcie.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/service/WorkServcieImpl.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Project_erp.iml" afterPath="$PROJECT_DIR$/Project_erp.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/config/SpringMvcConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/config/SpringMvcConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/department/DepartmentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/department/DepartmentController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceCheckController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceCheckController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceContorller.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceContorller.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceFaultController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceFaultController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceMaintainController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceMaintainController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceTypeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceTypeController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/employee/EmployeeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/employee/EmployeeController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/TechnologyController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/TechnologyController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/TechnologyPlanController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/TechnologyPlanController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/TechnologyRequirementController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/TechnologyRequirementController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/util/PageBean.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/DepartmentMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/DeviceCheckMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/DeviceCheckMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/DeviceFaultMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/DeviceFaultMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/DeviceMaintainMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/DeviceMaintainMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/config/SpringConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/config/SpringConfig.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/OrderController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/OrderController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/ProductController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/ProcessController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/ProcessController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/domain/Manufacture.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/domain/Manufacture.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/domain/Work.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/domain/Work.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/mapper/COrderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/mapper/COrderMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/mapper/ManufactureMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/mapper/ManufactureMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/mapper/ProcessMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/mapper/ProcessMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/mapper/WorkMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/mapper/WorkMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/service/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/service/OrderService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/service/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/service/OrderServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/service/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/service/ProductService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/service/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/service/ProductServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/service/technology/ProcessService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/service/technology/ProcessService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rqy/service/technology/ProcessServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/rqy/service/technology/ProcessServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/COrderMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/COrderMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/DeviceMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/DeviceMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/ManufactureMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/ManufactureMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/WorkMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/WorkMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manufacture_list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manufacture_list.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/product_list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/product_list.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/task_list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/task_list.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/work_list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/work_list.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/COrderMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/COrderMapper.xml" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/DeviceMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/DeviceMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/EmployeeMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/EmployeeMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/MaterialMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/MaterialMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/TechnologyMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/TechnologyMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/TechnologyPlanMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/TechnologyPlanMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/TechnologyRequirementMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/TechnologyRequirementMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/UnqualifyApplyMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/UnqualifyApplyMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rqy/mapper/WorkMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/rqy/mapper/WorkMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/config/SpringConfig.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/config/SpringConfig.class" />
       <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/OrderController.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/OrderController.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/ProcessController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/TechnologyController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/TechnologyPlanController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/TechnologyRequirementController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/material/MaterialController.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/material/MaterialController.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/material/MaterialReceiveController.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/material/MaterialReceiveController.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/quality/ProductMeasurementController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/quality/QualityMonitoringController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/Department.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DepartmentExample$Criteria.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DepartmentExample$Criterion.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DepartmentExample$GeneratedCriteria.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DepartmentExample.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/Device.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/Device.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceCheck.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceCheck.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceExample$Criteria.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceExample$Criteria.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceExample$GeneratedCriteria.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceFault.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceFault.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceFaultExample$Criteria.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceFaultExample$Criteria.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceFaultExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceFaultExample$GeneratedCriteria.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceMaintain.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceMaintain.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceTypeExample$Criteria.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceTypeExample$Criteria.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceTypeExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/DeviceTypeExample$GeneratedCriteria.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/Employee.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/EmployeeExample$Criteria.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/EmployeeExample$Criterion.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/EmployeeExample$GeneratedCriteria.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/EmployeeExample.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/TechnologyPlan.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/TechnologyPlan.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/TechnologyRequirement.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/TechnologyRequirement.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/UnqualifyApply.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/UnqualifyApply.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DepartmentMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DepartmentMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DepartmentMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceCheckMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceCheckMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceCheckMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceCheckMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceFaultMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceFaultMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceFaultMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceFaultMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceMaintainMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceMaintainMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceMaintainMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceMaintainMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/controller/ProductController.class" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/Work.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/domain/Work.class" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/COrderMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/COrderMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/COrderMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/COrderMapper.xml" />
       <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/DeviceMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/EmployeeMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/EmployeeMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/EmployeeMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/EmployeeMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/MaterialMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/MaterialMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/TechnologyMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/TechnologyMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/TechnologyMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/TechnologyMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/TechnologyPlanMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/TechnologyPlanMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/TechnologyPlanMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/TechnologyPlanMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/TechnologyRequirementMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/TechnologyRequirementMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/TechnologyRequirementMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/TechnologyRequirementMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/UnqualifyApplyMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/UnqualifyApplyMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/UnqualifyApplyMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/UnqualifyApplyMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/ProcessMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/ProcessMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/WorkMapper.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/WorkMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/WorkMapper.xml" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/mapper/WorkMapper.xml" />
       <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/OrderService.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/OrderService.class" />
       <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/OrderServiceImpl.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/OrderServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/ProcessService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/ServiceImpl/ProcessServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/ServiceImpl/TechnologyPlanServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/ServiceImpl/TechnologyRequirementServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/ServiceImpl/TechnologyServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/TechnologyPlanService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/TechnologyRequirementService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/TechnologyService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/material/MaterialReceiveService.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/material/MaterialReceiveService.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/material/MaterialReceiveServiceImpl.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/material/MaterialReceiveServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/material/MaterialService.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/material/MaterialService.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/material/MaterialServiceImpl.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/material/MaterialServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/quality/QualityMonitoringService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/quality/QualityMonitoringServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/department_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/department_list.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/deviceCheck.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/deviceCheck.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/deviceFault.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/deviceFault.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/deviceList.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/deviceList.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/deviceMaintain.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/deviceMaintain.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/deviceType.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/deviceType.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/employee_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/employee_list.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/f_count_check_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/f_count_check_list.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/materialReceive_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/materialReceive_list.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/material_add.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/material_add.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/material_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/material_list.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/measurement_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/measurement_list.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/p_count_check_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/p_count_check_list.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/p_measure_check_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/p_measure_check_list.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/process_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/process_list.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/technologyPlan_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/technologyPlan_list.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/technologyRequirement_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/technologyRequirement_list.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/technology_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/technology_list.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/unqualify_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/unqualify_list.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/ProductService.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/ProductService.class" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/ProductServiceImpl.class" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/classes/com/rqy/service/ProductServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/product_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/product_list.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/work_list.jsp" afterPath="$PROJECT_DIR$/target/ssm_erp-1.0-SNAPSHOT/WEB-INF/jsp/work_list.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -179,29 +84,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/OrderController.java">
+      <file leaf-file-name="WorkController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/WorkController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="94">
+              <caret line="162" column="5" lean-forward="true" selection-start-line="148" selection-start-column="4" selection-end-line="162" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#735#736#0" expanded="true" />
-                <element signature="e#771#772#0" expanded="true" />
-                <element signature="e#3217#3218#0" expanded="true" />
-                <element signature="e#3254#3255#0" expanded="true" />
-                <element signature="e#3846#3847#0" expanded="true" />
-                <element signature="e#3882#3883#0" expanded="true" />
+                <element signature="e#975#976#0" expanded="true" />
+                <element signature="e#1010#1011#0" expanded="true" />
+                <element signature="e#2091#2092#0" expanded="true" />
+                <element signature="e#2127#2128#0" expanded="true" />
+                <element signature="e#2714#2715#0" expanded="true" />
+                <element signature="e#2749#2750#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/ProductController.java">
+      <file leaf-file-name="ManufactureController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/ManufactureController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="424">
+              <caret line="164" column="5" lean-forward="true" selection-start-line="150" selection-start-column="3" selection-end-line="164" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1104#1105#0" expanded="true" />
+                <element signature="e#1146#1147#0" expanded="true" />
+                <element signature="e#2318#2319#0" expanded="true" />
+                <element signature="e#2361#2362#0" expanded="true" />
+                <element signature="e#2976#2977#0" expanded="true" />
+                <element signature="e#3018#3019#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/TaskController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-82">
+              <caret line="151" column="50" lean-forward="false" selection-start-line="151" selection-start-column="44" selection-end-line="151" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#945#946#0" expanded="true" />
+                <element signature="e#980#981#0" expanded="true" />
+                <element signature="e#2061#2062#0" expanded="true" />
+                <element signature="e#2097#2098#0" expanded="true" />
+                <element signature="e#2684#2685#0" expanded="true" />
+                <element signature="e#2719#2720#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4684">
+              <caret line="287" column="11" lean-forward="true" selection-start-line="287" selection-start-column="11" selection-end-line="287" selection-end-column="11" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task_list.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/task_list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="58" column="47" lean-forward="false" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -219,25 +172,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>customList</find>
-      <find>sync</find>
-      <find>customNoteForm</find>
-      <find>formatCustomStatus</find>
-      <find>formatCustomNote</find>
-      <find>openCustomNote</find>
-      <find>updateCustomNote</find>
-      <find>edit</find>
-      <find>getSelections</find>
-      <find>custom_edit</find>
-      <find>customNoteDialog</find>
-      <find>customEditWindow</find>
-      <find>customEditEditor</find>
-      <find>customEditForm</find>
-      <find>submitCustomEditForm</find>
-      <find>customAddWindow</find>
-      <find>customAddForm</find>
       <find>doSearch_custom</find>
-      <find>BaseResultMap</find>
       <find>formatCustom</find>
       <find>openOrderCustom</find>
       <find>openOrderNote</find>
@@ -249,6 +184,24 @@
       <find>orderAddWindow</find>
       <find>get_data</find>
       <find>add</find>
+      <find>Base_Column_List</find>
+      <find>BaseResultMap</find>
+      <find>SELECT</find>
+      <find>formatWorkProcess</find>
+      <find>deviceList/get</find>
+      <find>openWorkDevice</find>
+      <find>selectByPrimaryKey</find>
+      <find>openWorkProcess</find>
+      <find>formatTaskWork</find>
+      <find>openTaskWork</find>
+      <find>formatTaskManufacture</find>
+      <find>formatManuOrder</find>
+      <find>openTaskManufacture</find>
+      <find>technology</find>
+      <find>ManuTechnology</find>
+      <find>formatManuTechnology</find>
+      <find>openManuOrder</find>
+      <find>HomeFuncSearch</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -262,38 +215,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/mapper/SysUserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/intercepter/MyFirstInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/SysUserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/config/AppInitialize.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/exception/CustomExceptionResolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/config/SpringConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/utils/PageBean.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/custom_list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/domain/COrder.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/COrderMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/order_list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/CustomService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/CustomServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/CustomController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/ProductService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/quality/ProductMeasurementController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/quality/QualityMonitoringController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/renyqingyang.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/config/SpringMvcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/department/DepartmentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceCheckController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceContorller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceFaultController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceMaintainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceTypeController.java" />
@@ -301,6 +232,40 @@
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/TechnologyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/TechnologyPlanController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/TechnologyRequirementController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/CustomController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/mapper/COrderMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/product_list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/domain/Work.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/work_list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceContorller.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/DeviceMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/technology/ProcessServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/ProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/WorkServcie.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/WorkController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/mapper/WorkMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/WorkServcieImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/COrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/WorkMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/manufacture.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/Task.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/Manufacture.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/domain/Manufacture.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/ManufactureController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/ManufactureService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/ManufactureServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/mapper/ManufactureMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/rqy/mapper/ManufactureMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manufacture_list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/task_list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/controller/TaskController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/TaskService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rqy/service/TaskServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -336,7 +301,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="271" />
     <option name="y" value="14" />
     <option name="width" value="1682" />
@@ -445,7 +410,8 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="rqy" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="technology" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project_erp" type="b2602c69:ProjectViewProjectNode" />
@@ -455,7 +421,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="rqy" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project_erp" type="b2602c69:ProjectViewProjectNode" />
@@ -496,6 +462,15 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Project_erp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project_erp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -513,18 +488,22 @@
     <property name="project.structure.proportion" value="0.15234375" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="cu&#9;FILE&#9;file://F:/rqy/IdeaProjects/Project_erp/src/main/webapp/WEB-INF/jsp/custom_list.jsp" />
+    <property name="SearchEverywhereHistoryKey" value="StatementH&#9;PSI&#9;JAVA://org.apache.ibatis.executor.statement.StatementHandler&#10;cu&#9;FILE&#9;file://F:/rqy/IdeaProjects/Project_erp/src/main/webapp/WEB-INF/jsp/custom_list.jsp" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\rqy\IdeaProjects\Project_erp\src\main\resources\com\rqy" />
-      <recent name="F:\rqy\IdeaProjects\Project_erp\src\main\java\com\rqy" />
-      <recent name="F:\rqy\IdeaProjects\Project_erp\src\main\java\com\rqy\mapper" />
-      <recent name="F:\rqy\IdeaProjects\Project_erp\src\main\resources" />
-      <recent name="F:\rqy\IdeaProjects\Project_erp\src\main\webapp\WEB-INF" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\rqy\IdeaProjects\Project_erp\src\main\webapp\WEB-INF\jsp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.rqy.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\rqy\IdeaProjects\Project_erp\src\main\java\com\rqy\mapper" />
+      <recent name="F:\rqy\IdeaProjects\Project_erp\src\main\java\com\rqy\service\technology" />
+      <recent name="F:\rqy\IdeaProjects\Project_erp\src\main\java\com\rqy\controller\technology" />
+      <recent name="F:\rqy\IdeaProjects\Project_erp\src\main\resources\com\rqy\mapper" />
+      <recent name="F:\rqy\IdeaProjects\Project_erp\src\main\java\com\rqy\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -710,7 +689,7 @@
       <workItem from="1565240986626" duration="858000" />
       <workItem from="1565242075682" duration="27555000" />
       <workItem from="1565313974552" duration="36456000" />
-      <workItem from="1565400593709" duration="3062000" />
+      <workItem from="1565400593709" duration="27653000" />
     </task>
     <task id="LOCAL-00001" summary="rqy commit Project_erp">
       <created>1565246321557</created>
@@ -751,10 +730,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67931000" />
+    <option name="totallyTimeSpent" value="92522000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -768,17 +748,18 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38958097" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32304037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3227633" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2434881" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29218572" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2785957" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19527897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18776824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -786,7 +767,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -805,378 +785,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="101" column="34" lean-forward="false" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/custom_add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="113" column="5" lean-forward="true" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/custom_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="134" column="87" lean-forward="false" selection-start-line="134" selection-start-column="76" selection-end-line="134" selection-end-column="87" />
-          <folding>
-            <marker date="1565340171533" expanded="false" signature="1896:1908" ph="..." />
-            <marker date="1565340171533" expanded="false" signature="2105:2117" ph="..." />
-            <marker date="1565340171533" expanded="false" signature="2318:2330" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="74" column="79" lean-forward="false" selection-start-line="74" selection-start-column="75" selection-end-line="74" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/custom_edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/mapper/COrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="29" column="42" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="29" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/order_edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="112" column="32" lean-forward="false" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/converter/String2DateConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/config/SpringConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/mapper/CustomMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/CustomService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="57" lean-forward="false" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/mapper/ProductMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="43" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="29" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/quality/ProductMeasurementController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/quality/QualityMonitoringController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/order_add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-878">
-          <caret line="26" column="17" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="26" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/CustomServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="49" column="23" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="49" selection-end-column="23" />
-          <folding>
-            <element signature="e#566#567#0" expanded="false" />
-            <element signature="e#630#631#0" expanded="false" />
-            <element signature="e#710#711#0" expanded="false" />
-            <element signature="e#770#771#0" expanded="false" />
-            <element signature="e#1476#1477#0" expanded="false" />
-            <element signature="e#1547#1548#0" expanded="false" />
-            <element signature="e#1613#1614#0" expanded="false" />
-            <element signature="e#1675#1676#0" expanded="false" />
-            <element signature="e#1729#1730#0" expanded="false" />
-            <element signature="e#1779#1780#0" expanded="false" />
-            <element signature="e#1847#1848#0" expanded="false" />
-            <element signature="e#1911#1912#0" expanded="false" />
-            <element signature="e#1982#1983#0" expanded="false" />
-            <element signature="e#2042#2043#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="65" column="41" lean-forward="false" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#968#969#0" expanded="false" />
-            <element signature="e#1028#1029#0" expanded="false" />
-            <element signature="e#1095#1096#0" expanded="false" />
-            <element signature="e#1158#1159#0" expanded="false" />
-            <element signature="e#1212#1213#0" expanded="false" />
-            <element signature="e#1262#1263#0" expanded="false" />
-            <element signature="e#1332#1333#0" expanded="false" />
-            <element signature="e#1382#1383#0" expanded="false" />
-            <element signature="e#1457#1458#0" expanded="false" />
-            <element signature="e#1528#1529#0" expanded="false" />
-            <element signature="e#1594#1595#0" expanded="false" />
-            <element signature="e#1656#1657#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/order_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="48" />
-          <folding>
-            <marker date="1565356644948" expanded="true" signature="14036:14076" ph="..." />
-            <marker date="1565356644948" expanded="true" signature="14573:14618" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/domain/COrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/rqy/mapper/COrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="19" column="111" lean-forward="false" selection-start-line="19" selection-start-column="93" selection-end-line="19" selection-end-column="111" />
-          <folding>
-            <marker date="1565354506754" expanded="true" signature="4348:4462" ph="select from c_order" />
-            <marker date="1565354506754" expanded="true" signature="4547:4615" ph="delete from c_order... " />
-            <marker date="1565354506754" expanded="true" signature="4709:4728" ph="delete from c_order... " />
-            <marker date="1565354506754" expanded="true" signature="4898:5452" ph="insert into c_order... " />
-            <marker date="1565354506754" expanded="true" signature="7578:7606" ph="select count... c_order" />
-            <marker date="1565354506754" expanded="true" signature="9276:9925" ph="update c_order... " />
-            <marker date="1565354506754" expanded="true" signature="10126:11242" ph="update c_order... " />
-            <marker date="1565354506754" expanded="true" signature="11332:11900" ph="update c_order... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/CustomController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="82" column="57" lean-forward="false" selection-start-line="82" selection-start-column="57" selection-end-line="82" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#840#841#0" expanded="false" />
-            <element signature="e#877#878#0" expanded="false" />
-            <element signature="e#2190#2191#0" expanded="false" />
-            <element signature="e#2228#2229#0" expanded="false" />
-            <element signature="e#2823#2824#0" expanded="false" />
-            <element signature="e#2860#2861#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/ProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#532#533#0" expanded="false" />
-            <element signature="e#593#594#0" expanded="false" />
-            <element signature="e#662#663#0" expanded="false" />
-            <element signature="e#728#729#0" expanded="false" />
-            <element signature="e#783#784#0" expanded="false" />
-            <element signature="e#834#835#0" expanded="false" />
-            <element signature="e#916#917#0" expanded="false" />
-            <element signature="e#977#978#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1116#1117#0" expanded="false" />
-            <element signature="e#1192#1193#0" expanded="false" />
-            <element signature="e#1250#1251#0" expanded="false" />
-            <element signature="e#1317#1318#0" expanded="false" />
-            <element signature="e#1380#1381#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/util/PageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/utils/PageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/renyqingyang.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/config/SpringMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/department/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="45" column="91" lean-forward="true" selection-start-line="45" selection-start-column="91" selection-end-line="45" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceCheckController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1763">
-          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceContorller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceFaultController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceMaintainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/device/RespondMsg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/employee/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="42" column="102" lean-forward="false" selection-start-line="42" selection-start-column="102" selection-end-line="42" selection-end-column="102" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/material/MaterialController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/material/MaterialReceiveController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/material/MaterialConsumeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -1225,24 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/TechnologyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/ProcessController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1024">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/TechnologyRequirementController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1680">
@@ -1259,27 +854,510 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/OrderController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/config/SpringConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="378">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/mapper/COrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/CustomServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="49" column="23" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="49" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/domain/Work.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/CustomController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="46" selection-start-column="3" selection-end-line="52" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="e#3217#3218#0" expanded="true" />
-            <element signature="e#3254#3255#0" expanded="true" />
-            <element signature="e#3846#3847#0" expanded="true" />
-            <element signature="e#3882#3883#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/device/DeviceContorller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="171" column="6" lean-forward="false" selection-start-line="171" selection-start-column="6" selection-end-line="172" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/rqy/mapper/DeviceMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="98" column="34" lean-forward="true" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
+          <folding>
+            <marker date="1565423594954" expanded="true" signature="4921:5174" ph="select from device" />
+            <marker date="1565423594954" expanded="true" signature="5284:5528" ph="select from device" />
+            <marker date="1565423594954" expanded="true" signature="5642:5758" ph="select from device" />
+            <marker date="1565423594954" expanded="true" signature="5843:5912" ph="delete from device... " />
+            <marker date="1565423594954" expanded="true" signature="6006:6024" ph="delete from device... " />
+            <marker date="1565423594954" expanded="true" signature="6194:6866" ph="insert into device... " />
+            <marker date="1565423594954" expanded="true" signature="9146:9173" ph="select count... device" />
+            <marker date="1565423594954" expanded="true" signature="10964:11717" ph="update device... " />
+            <marker date="1565423594954" expanded="true" signature="11918:13168" ph="update device... " />
+            <marker date="1565423594954" expanded="true" signature="13258:13937" ph="update device... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/ProcessController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="79" column="55" lean-forward="true" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/technology/ProcessService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/mapper/ProcessMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/technology/ProcessServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/product_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-814">
+          <caret line="69" column="48" lean-forward="false" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/converter/String2DateConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="30" column="48" lean-forward="false" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="22">
+          <caret line="159" column="80" lean-forward="false" selection-start-line="159" selection-start-column="80" selection-end-line="159" selection-end-column="80" />
+          <folding>
+            <element signature="e#1013#1014#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2801#2802#0" expanded="true" />
+            <element signature="e#2839#2840#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.2/mybatis-3.5.2.jar!/org/apache/ibatis/executor/statement/StatementHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="5" column="44" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/ProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="65" column="105" lean-forward="false" selection-start-line="65" selection-start-column="91" selection-end-line="65" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/WorkServcie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/mapper/WorkMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="75" column="23" lean-forward="true" selection-start-line="72" selection-start-column="7" selection-end-line="75" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/rqy/mapper/COrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="104" column="10" lean-forward="true" selection-start-line="104" selection-start-column="10" selection-end-line="104" selection-end-column="10" />
+          <folding>
+            <marker date="1565430345646" expanded="true" signature="4513:4599" ph="select from c_order" />
+            <marker date="1565430345646" expanded="true" signature="4513:4659" ph="select from c_order" />
+            <marker date="1565430345646" expanded="true" signature="4937:5087" ph="select from c_order" />
+            <marker date="1565430345646" expanded="true" signature="5201:5315" ph="select from c_order" />
+            <marker date="1565430345646" expanded="true" signature="5400:5468" ph="delete from c_order... " />
+            <marker date="1565430345646" expanded="true" signature="5562:5581" ph="delete from c_order... " />
+            <marker date="1565430345646" expanded="true" signature="5751:6305" ph="insert into c_order... " />
+            <marker date="1565430345646" expanded="true" signature="8431:8459" ph="select count... c_order" />
+            <marker date="1565430345646" expanded="true" signature="10129:10778" ph="update c_order... " />
+            <marker date="1565430345646" expanded="true" signature="10979:12095" ph="update c_order... " />
+            <marker date="1565430345646" expanded="true" signature="12185:12753" ph="update c_order... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/work_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3714">
+          <caret line="51" column="48" lean-forward="false" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="48" />
+          <folding>
+            <marker date="1565410905460" expanded="true" signature="12166:12206" ph="..." />
+            <marker date="1565410905460" expanded="true" signature="12706:12751" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2722">
+          <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#3873#3874#0" expanded="true" />
+            <element signature="e#3910#3911#0" expanded="true" />
+            <element signature="e#4502#4503#0" expanded="true" />
+            <element signature="e#4538#4539#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/deviceMaintain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/measurement_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/mapper/TaskMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="29" column="40" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="29" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/domain/Manufacture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="33" />
+          <folding>
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/rqy/mapper/WorkMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2024">
+          <caret line="96" column="41" lean-forward="true" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
+          <folding>
+            <marker date="1565430483684" expanded="true" signature="4108:4170" ph="select from work" />
+            <marker date="1565430483684" expanded="true" signature="4108:4248" ph="select from work" />
+            <marker date="1565430483684" expanded="true" signature="4470:4532" ph="select from work" />
+            <marker date="1565430483684" expanded="true" signature="4470:4615" ph="select from work" />
+            <marker date="1565430483684" expanded="true" signature="4728:4837" ph="select from work" />
+            <marker date="1565430483684" expanded="true" signature="4922:4985" ph="delete from work... " />
+            <marker date="1565430483684" expanded="true" signature="5077:5093" ph="delete from work... " />
+            <marker date="1565430483684" expanded="true" signature="5261:5569" ph="insert into work... " />
+            <marker date="1565430483684" expanded="true" signature="6843:6868" ph="select count... work" />
+            <marker date="1565430483684" expanded="true" signature="7915:8262" ph="update work... " />
+            <marker date="1565430483684" expanded="true" signature="8461:9039" ph="update work... " />
+            <marker date="1565430483684" expanded="true" signature="9127:9435" ph="update work... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/technology/TechnologyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-984">
+          <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/WorkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="162" column="5" lean-forward="true" selection-start-line="148" selection-start-column="4" selection-end-line="162" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+            <element signature="e#2091#2092#0" expanded="true" />
+            <element signature="e#2127#2128#0" expanded="true" />
+            <element signature="e#2714#2715#0" expanded="true" />
+            <element signature="e#2749#2750#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/WorkServcieImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="78" column="21" lean-forward="true" selection-start-line="75" selection-start-column="8" selection-end-line="78" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#1280#1281#0" expanded="true" />
+            <element signature="e#1344#1345#0" expanded="true" />
+            <element signature="e#1404#1405#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/mapper/ManufactureMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="31" column="56" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/rqy/mapper/ManufactureMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding>
+            <marker date="1565439057632" expanded="true" signature="4048:4212" ph="select from manufacture" />
+            <marker date="1565439057632" expanded="true" signature="4325:4455" ph="select from manufacture" />
+            <marker date="1565439057632" expanded="true" signature="4540:4624" ph="delete from manufacture... " />
+            <marker date="1565439057632" expanded="true" signature="4723:4746" ph="delete from manufacture... " />
+            <marker date="1565439057632" expanded="true" signature="4921:5263" ph="insert into manufacture... " />
+            <marker date="1565439057632" expanded="true" signature="6607:6639" ph="select count... manufacture" />
+            <marker date="1565439057632" expanded="true" signature="7731:8112" ph="update manufacture... " />
+            <marker date="1565439057632" expanded="true" signature="8318:8934" ph="update manufacture... " />
+            <marker date="1565439057632" expanded="true" signature="9029:9371" ph="update manufacture... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/ManufactureService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manufacture_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+          <folding>
+            <marker date="1565440386143" expanded="true" signature="12366:12406" ph="..." />
+            <marker date="1565440386143" expanded="true" signature="12898:12943" ph="..." />
+            <marker date="1565440386143" expanded="true" signature="13270:13315" ph="..." />
+            <marker date="1565440386143" expanded="true" signature="13477:13522" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/ManufactureController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="164" column="5" lean-forward="true" selection-start-line="150" selection-start-column="3" selection-end-line="164" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#2318#2319#0" expanded="true" />
+            <element signature="e#2361#2362#0" expanded="true" />
+            <element signature="e#2976#2977#0" expanded="true" />
+            <element signature="e#3018#3019#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/task_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="58" column="47" lean-forward="false" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/TaskService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/ManufactureServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1348">
+          <caret line="72" column="67" lean-forward="false" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+            <element signature="e#932#933#0" expanded="true" />
+            <element signature="e#1469#1470#0" expanded="true" />
+            <element signature="e#1536#1537#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/service/TaskServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#1036#1037#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="e#1238#1239#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rqy/controller/TaskController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-82">
+          <caret line="151" column="50" lean-forward="false" selection-start-line="151" selection-start-column="44" selection-end-line="151" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#2061#2062#0" expanded="true" />
+            <element signature="e#2097#2098#0" expanded="true" />
+            <element signature="e#2684#2685#0" expanded="true" />
+            <element signature="e#2719#2720#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4684">
+          <caret line="287" column="11" lean-forward="true" selection-start-line="287" selection-start-column="11" selection-end-line="287" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

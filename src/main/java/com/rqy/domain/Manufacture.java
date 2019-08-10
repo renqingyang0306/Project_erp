@@ -14,6 +14,24 @@ public class Manufacture {
     private Date beginDate;
 
     private Date endDate;
+    private COrder cOrder;
+    private Technology technology;
+
+    public COrder getcOrder() {
+        return cOrder;
+    }
+
+    public void setcOrder(COrder cOrder) {
+        this.cOrder = cOrder;
+    }
+
+    public Technology getTechnology() {
+        return technology;
+    }
+
+    public void setTechnology(Technology technology) {
+        this.technology = technology;
+    }
 
     public String getManufactureSn() {
         return manufactureSn;

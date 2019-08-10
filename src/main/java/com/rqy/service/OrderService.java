@@ -25,4 +25,10 @@ public interface OrderService {
     int updateByPrimaryKey(COrder record);
 
     List<COrder> findAllOrderById(int page, int rows, COrderExample cOrderExample);
+
+    List<COrder> findAllOrderByCustomName(int page, int rows, String searchValue);
+
+    List<COrder> findAllOrderByProductName(int page, int rows, String s);
+
+    List<COrder> selectByExample(COrderExample cOrderExample);
 }

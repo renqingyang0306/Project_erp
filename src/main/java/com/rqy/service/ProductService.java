@@ -25,4 +25,8 @@ public interface ProductService {
     int updateByPrimaryKeySelective(Product record);
 
     int updateByPrimaryKey(Product record);
+
+    List<Product> findAllProduct(int page, int rows);
+
+    List<Product> findAllProductByIdOrNameOrType(int page, int rows, ProductExample productExample);
 }

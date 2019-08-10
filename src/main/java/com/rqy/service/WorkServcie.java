@@ -1,4 +1,4 @@
-package com.rqy.mapper;
+package com.rqy.service;
 
 import com.rqy.domain.Work;
 import com.rqy.domain.WorkExample;
@@ -6,30 +6,32 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface WorkMapper {
-    long countByExample(WorkExample example);
-
+/**
+ * @author 任清阳
+ * @Email 1277409109@qq.com
+ * @date 2019/8/10 12:05
+ */
+public interface WorkServcie {
     int deleteByExample(WorkExample example);
 
     int deleteByPrimaryKey(String workId);
 
     int insert(Work record);
 
-    int insertSelective(Work record);
 
     List<Work> selectByExample(WorkExample example);
 
     Work selectByPrimaryKey(String workId);
 
-    int updateByExampleSelective(@Param("record") Work record, @Param("example") WorkExample example);
-
-    int updateByExample(@Param("record") Work record, @Param("example") WorkExample example);
-
     int updateByPrimaryKeySelective(Work record);
 
     int updateByPrimaryKey(Work record);
 
-    List<Work> findAllWorkByProductName(String s);
+    List<Work> findAllWork(int page, int rows);
 
-    List<Work> findAllWorkByDeviceName(String s);
+    List<Work> findAllWorkByIdOrProcessId(int page, int rows, WorkExample workExample);
+
+    List<Work> findAllWorkByProductName(int page, int rows, String s);
+
+    List<Work> findAllWorkByDeviceName(int page, int rows, String s);
 }
