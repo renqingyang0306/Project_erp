@@ -4,15 +4,9 @@ import com.github.pagehelper.PageHelper;
 import com.rqy.domain.Work;
 import com.rqy.domain.WorkExample;
 import com.rqy.mapper.WorkMapper;
-<<<<<<< HEAD
 import com.rqy.service.WorkServcie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-=======
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import sun.security.krb5.internal.PAData;
->>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 
 import java.util.List;
 
@@ -22,11 +16,8 @@ import java.util.List;
  * @date 2019/8/10 12:05
  */
 @Component
-<<<<<<< HEAD
-public class WorkServcieImpl implements WorkServcie {
-=======
+
 public class WorkServcieImpl implements WorkServcie{
->>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 
     @Autowired
     WorkMapper workMapper;
@@ -73,9 +64,6 @@ public class WorkServcieImpl implements WorkServcie{
         List<Work> works = workMapper.selectByExample(workExample);
         return works;
     }
-<<<<<<< HEAD
-=======
-
     @Override
     public List<Work> findAllWorkByIdOrProcessId(int page, int rows, WorkExample workExample) {
         PageHelper.startPage(page,rows);
@@ -98,5 +86,4 @@ public class WorkServcieImpl implements WorkServcie{
         List<Work> works = workMapper.findAllWorkByDeviceName(s);
         return works;
     }
->>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 }

@@ -23,7 +23,7 @@ import java.util.*;
 //@RequestMapping("unqualify")
 public class UnqualityApplyController {
 
-    Logger logger = Logger.getLogger(this.getClass());
+    //Logger logger = Logger.getLogger(this.getClass());
 
     @Autowired
     UnqualityApplyService unqualityApplyService;
@@ -67,7 +67,7 @@ public class UnqualityApplyController {
         PageInfo<UnqualifyApply> pageInfo = new PageInfo(unqualifyApplies);
         long total = pageInfo.getTotal();
         PageBean pageResult = new PageBean(unqualifyApplies,total);
-        logger.info(unqualifyApplies);
+        //logger.info(unqualifyApplies);
         return pageResult;
 
     }

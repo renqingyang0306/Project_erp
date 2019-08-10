@@ -31,8 +31,6 @@ public class ProcessController {
     @Autowired
     ProcessService processService;
 
-<<<<<<< HEAD
-=======
     //通过id查询process对象
     @RequestMapping("get/{id}")
     @ResponseBody
@@ -40,8 +38,7 @@ public class ProcessController {
         Process process = processService.selectByPrimaryKey(id);
         return process;
     }
-
->>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
+    
     //填充下拉表get_data
     @RequestMapping("get_data")
     @ResponseBody

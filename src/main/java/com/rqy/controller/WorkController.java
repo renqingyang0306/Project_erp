@@ -146,8 +146,7 @@ public class WorkController {
         Work work = workServcie.selectByPrimaryKey(id);
         return work;
     }
-<<<<<<< HEAD
-=======
+
     //模糊查询search_work_by_workId，workProduct,workDevice,workProcess
     @RequestMapping("search_work_by_workId")
     @ResponseBody
@@ -201,5 +200,4 @@ public class WorkController {
 
         return  pageBean;
     }
->>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 }

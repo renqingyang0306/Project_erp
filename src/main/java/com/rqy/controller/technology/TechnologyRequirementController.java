@@ -108,7 +108,8 @@ public class TechnologyRequirementController {
     }
     @RequestMapping("delete_batch")
     @ResponseBody
-    public Map delete_batch(String ids){
+    public Map delete_batch(String[] ids){
+
         int i = technologyRequirementService.deleteByPrimaryKey(ids);
         Map<String,Object> map=new HashMap<>();
         if (i == 1){
