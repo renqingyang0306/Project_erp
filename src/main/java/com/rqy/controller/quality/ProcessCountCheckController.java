@@ -1,7 +1,9 @@
 package com.rqy.controller.quality;
 
+import com.github.pagehelper.PageInfo;
 import com.rqy.domain.ProcessCountCheck;
 import com.rqy.service.quality.ProcessCountCheckService;
+import com.rqy.utils.PageBean;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,9 +32,22 @@ public class ProcessCountCheckController {
 
     @RequestMapping("p_count_check/list")
     @ResponseBody
-    public List<ProcessCountCheck> findProcessCountCheckList(@RequestParam("page")int page, @RequestParam("rows")int rows) {
+    public PageBean findProcessCountCheckList(@RequestParam("page")int page, @RequestParam("rows")int rows) {
         List<ProcessCountCheck> processCountCheckList = processCountCheckService.findPageProcessCountCheck(page,rows);
-        return processCountCheckList;
+        PageInfo<ProcessCountCheck> pageInfo = new PageInfo<>(processCountCheckList);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(processCountCheckList,total);
+        return pageResult;
+    }
+
+    @RequestMapping("p_count_check/search_pCountCheck_by_pCountCheckId")
+    @ResponseBody
+    public PageBean searchProcessCountCheckBypCountCheckId(@RequestParam("searchValue")String searchValue, @RequestParam("page")int page,@RequestParam("rows")int rows) {
+        List<ProcessCountCheck> processCountChecks = processCountCheckService.searchPageProcessCountCheckByPCountCheckId(searchValue, page, rows);
+        PageInfo<ProcessCountCheck> pageInfo = new PageInfo(processCountChecks);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(processCountChecks,total);
+        return pageResult;
     }
 
     @RequestMapping("pCountCheck/add_judge")

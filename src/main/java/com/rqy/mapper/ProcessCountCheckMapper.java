@@ -18,6 +18,7 @@ public interface ProcessCountCheckMapper {
     int insertSelective(ProcessCountCheck record);
 
     List<ProcessCountCheck> selectByExample(ProcessCountCheckExample example);
+    List<ProcessCountCheck> selectByExampleLiftJoin(ProcessCountCheckExample example);
 
     ProcessCountCheck selectByPrimaryKey(String pCountCheckId);
 

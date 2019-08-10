@@ -18,6 +18,7 @@ public interface FinalMeasuretCheckMapper {
     int insertSelective(FinalMeasuretCheck record);
 
     List<FinalMeasuretCheck> selectByExample(FinalMeasuretCheckExample example);
+    List<FinalMeasuretCheck> selectByExampleLiftJoin(FinalMeasuretCheckExample example);
 
     FinalMeasuretCheck selectByPrimaryKey(String fMeasureCheckId);
 

@@ -14,6 +14,7 @@
     <result column="emp_id" jdbcType="VARCHAR" property="empId" />
     <result column="result" jdbcType="VARCHAR" property="result" />
     <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -91,6 +92,36 @@
       order by ${orderByClause}
     </if>
   </select>
+
+
+  <select id="selectByExampleLiftJoin" parameterType="com.rqy.domain.FinalCountCheckExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    fcc.f_count_check_id,
+    fcc.order_id,
+    fcc.check_item,
+    fcc.sample,
+    fcc.check_number,
+    fcc.unqualify,
+    fcc.qualify,
+    fcc.cdate,
+    fcc.measure_data,
+    fcc.emp_id,
+    fcc.result,
+    fcc.note,
+    emp.emp_name
+    from final_count_check fcc
+    left join employee emp on fcc.emp_id = emp.emp_id
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

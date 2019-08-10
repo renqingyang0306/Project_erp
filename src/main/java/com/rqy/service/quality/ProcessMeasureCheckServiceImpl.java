@@ -32,8 +32,19 @@ public class ProcessMeasureCheckServiceImpl implements ProcessMeasureCheckServic
         //查询条件
         PageHelper.startPage(page, rows);
         ProcessMeasureCheckExample processMeasureCheckExample = new ProcessMeasureCheckExample();
-        List<ProcessMeasureCheck> processMeasureChecks = processMeasureCheckMapper.selectByExample(processMeasureCheckExample);
+        List<ProcessMeasureCheck> processMeasureChecks = processMeasureCheckMapper.selectByExampleLiftJoin(processMeasureCheckExample);
 
+        return processMeasureChecks;
+    }
+
+    @Override
+    public List<ProcessMeasureCheck> searchPageProcessMeasureCheckByPMeansureCheckId(String pMeansureCheckId, int page, int rows) {
+        //查询条件
+        PageHelper.startPage(page, rows);
+        ProcessMeasureCheckExample processMeasureCheckExample = new ProcessMeasureCheckExample();
+        pMeansureCheckId = "%" + pMeansureCheckId + "%";
+        processMeasureCheckExample.createCriteria().andPMeasureCheckIdLike(pMeansureCheckId);
+        List<ProcessMeasureCheck> processMeasureChecks = processMeasureCheckMapper.selectByExampleLiftJoin(processMeasureCheckExample);
         return processMeasureChecks;
     }
 

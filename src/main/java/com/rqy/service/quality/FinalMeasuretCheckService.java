@@ -12,6 +12,10 @@ public interface FinalMeasuretCheckService {
     List<FinalMeasuretCheck> findFinalMeasuretCheckList();
     List<FinalMeasuretCheck> findPageFinalMeasuretCheck(int page,int rows);
 
+    List<FinalMeasuretCheck> searchPageFinalMeasuretCheckByFMeasureCheckId(String fMeansureCheckId, int page,int rows);
+    List<FinalMeasuretCheck> searchPageFinalMeasuretCheckByOrderId(String orderId, int page,int rows);
+
+
     int insertFinalMeasuretCheck(FinalMeasuretCheck finalMeasuretCheck);
     int updateFinalMeasuretCheckByFMeasureCheckId(FinalMeasuretCheck finalMeasuretCheck);
     int deleteFinalMeasuretCheck(String fMeasureCheckId);

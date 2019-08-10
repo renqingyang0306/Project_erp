@@ -10,6 +10,9 @@
     <result column="emp_id" jdbcType="VARCHAR" property="empId" />
     <result column="apply_date" jdbcType="TIMESTAMP" property="applyDate" />
     <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -74,28 +77,56 @@
     apply_date, note
   </sql>
 
-  <select id="selectByExample" resultType="com.rqy.domain.UnqualifyApplyExample">
-    select
-    <if test="distinct">
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    pro.product_Name as productName,
-    emp.emp_name as empName
-    from unqualify_apply unq
-    left join product pro on unq.product_id = pro.product_id
-    left join employee emp on unq.emp_id = emp.emp_id
-    where
+  <select id="selectByExampleLiftJoin" parameterType="com.rqy.domain.UnqualifyApplyExample" resultMap="BaseResultMap">
+  select
+  <if test="distinct">
+    distinct
+  </if>
+  unq.unqualify_apply_id,
+  unq.product_id,
+  unq.unqualify_item,
+  unq.unqualify_count,
+  unq.assembly_date,
+  unq.emp_id,
+  unq.apply_date,
+  unq.note,
+  pro.product_name,
+  emp.emp_name
+  from unqualify_apply unq
+  left join product pro on unq.product_id = pro.product_id
+  left join employee emp on unq.emp_id = emp.emp_id
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
     <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
+</select>
+
+  <select id="searchByProductNameLiftJoin" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    unq.unqualify_apply_id,
+    unq.product_id,
+    unq.unqualify_item,
+    unq.unqualify_count,
+    unq.assembly_date,
+    unq.emp_id,
+    unq.apply_date,
+    unq.note,
+    pro.product_name,
+    emp.emp_name
+    from unqualify_apply unq
+    left join product pro on unq.product_id = pro.product_id
+    left join employee emp on unq.emp_id = emp.emp_id
+    where pro.product_name like #{productName,jdbcType=VARCHAR};
+
   </select>
 
 
-  <select id="selectByExampleLiftJoin" parameterType="com.rqy.domain.UnqualifyApplyExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.rqy.domain.UnqualifyApplyExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct

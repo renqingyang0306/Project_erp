@@ -1,8 +1,10 @@
 package com.rqy.controller.quality;
 
+import com.github.pagehelper.PageInfo;
 import com.rqy.domain.FinalCountCheck;
 import com.rqy.domain.FinalCountCheckExample;
 import com.rqy.service.quality.FinalCountCheckService;
+import com.rqy.utils.PageBean;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,9 +33,32 @@ public class FinalCountCheckController {
 
     @RequestMapping("f_count_check/list")
     @ResponseBody
-    public List<FinalCountCheck> findFinalCountCheckList(@RequestParam("page")int page, @RequestParam("rows")int rows) {
+    public PageBean findFinalCountCheckList(@RequestParam("page")int page, @RequestParam("rows")int rows) {
         List<FinalCountCheck> finalCountCheckList = finalCountCheckService.findPageFinalCountCheck(page, rows);
-        return finalCountCheckList;
+        PageInfo<FinalCountCheck> pageInfo = new PageInfo<>(finalCountCheckList);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(finalCountCheckList,total);
+        return pageResult;
+    }
+
+    @RequestMapping("f_count_check/search_fCountCheck_by_fCountCheckId")
+    @ResponseBody
+    public PageBean searchFinalCountCheckByFCountCheckId(@RequestParam("searchValue")String searchValue,@RequestParam("page")int page, @RequestParam("rows")int rows) {
+        List<FinalCountCheck> finalCountChecks = finalCountCheckService.searchPageFinalCountCheckByFCountCheckId(searchValue, page, rows);
+        PageInfo<FinalCountCheck> pageInfo = new PageInfo(finalCountChecks);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(finalCountChecks,total);
+        return pageResult;
+    }
+
+    @RequestMapping("f_count_check/search_fCountCheck_by_orderId")
+    @ResponseBody
+    public PageBean searchFinalCountCheckByOrderId(@RequestParam("searchValue")String searchValue,@RequestParam("page")int page, @RequestParam("rows")int rows) {
+        List<FinalCountCheck> finalCountChecks = finalCountCheckService.searchPageFinalCountCheckByOrderId(searchValue, page, rows);
+        PageInfo<FinalCountCheck> pageInfo = new PageInfo(finalCountChecks);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(finalCountChecks,total);
+        return pageResult;
     }
 
     @RequestMapping("fCountCheck/add_judge")

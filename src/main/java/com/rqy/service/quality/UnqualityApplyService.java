@@ -14,6 +14,9 @@ public interface UnqualityApplyService {
     List<UnqualifyApply> findUnqualifyApply();
     List<UnqualifyApply> findPageUnqualifyApply(int page,int rows);
 
+    List<UnqualifyApply> searchPageUnqualifyApplyByUnqualifyId(String unqualifyId, int page,int rows);
+    List<UnqualifyApply> searchPageUnqualifyApplyByProductName(String productName, int page,int rows);
+
     int insertUnqualifyApply(UnqualifyApply unqualifyApply);
     int updateUnqualifyApplyByUnqualifyApplyId(UnqualifyApply unqualifyApply);
     int deleteUnqualifyApply(String unqualifyApplyId);

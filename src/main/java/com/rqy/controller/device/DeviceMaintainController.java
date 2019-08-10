@@ -5,7 +5,7 @@ import com.github.pagehelper.PageInfo;
 import com.rqy.domain.DeviceMaintain;
 import com.rqy.domain.DeviceMaintainExample;
 import com.rqy.service.device.DeviceMaintainService;
-import com.rqy.util.PageBean;
+import com.rqy.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

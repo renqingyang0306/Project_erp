@@ -12,6 +12,8 @@ public interface ProcessMeasureCheckService {
     List<ProcessMeasureCheck> findProcessMeasureCheckList();
     List<ProcessMeasureCheck> findPageProcessMeasureCheck(int page,int rows);
 
+    List<ProcessMeasureCheck> searchPageProcessMeasureCheckByPMeansureCheckId(String pMeansureCheckId, int page,int rows);
+
     int insertProcessMeasureCheck(ProcessMeasureCheck processMeasureCheck);
     int updateProcessMeasureCheckByPMeasureCheckId(ProcessMeasureCheck processMeasureCheck);
     int deleteProcessMeasureCheck(String pMeasureCheckId);

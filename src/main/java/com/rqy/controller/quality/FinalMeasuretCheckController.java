@@ -1,7 +1,9 @@
 package com.rqy.controller.quality;
 
+import com.github.pagehelper.PageInfo;
 import com.rqy.domain.FinalMeasuretCheck;
 import com.rqy.service.quality.FinalMeasuretCheckService;
+import com.rqy.utils.PageBean;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,10 +33,34 @@ public class FinalMeasuretCheckController {
 
     @RequestMapping("measure/list")
     @ResponseBody
-    public List<FinalMeasuretCheck> findFinalMeasuretCheckList(@RequestParam("page")int page, @RequestParam("rows")int rows) {
+    public PageBean findFinalMeasuretCheckList(@RequestParam("page")int page, @RequestParam("rows")int rows) {
         List<FinalMeasuretCheck> finalMeasuretCheck = finalMeasuretCheckService.findPageFinalMeasuretCheck(page, rows);
-        return finalMeasuretCheck;
+        PageInfo<FinalMeasuretCheck> pageInfo = new PageInfo<>(finalMeasuretCheck);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(finalMeasuretCheck,total);
+        return pageResult;
     }
+
+    @RequestMapping("measure/search_fMeasureCheck_by_fMeasureCheckId")
+    @ResponseBody
+    public PageBean searchFinalMeasuretCheckByFMeasureCheckId(@RequestParam("searchValue")String searchValue,@RequestParam("page")int page, @RequestParam("rows")int rows) {
+        List<FinalMeasuretCheck> finalMeasuretChecks = finalMeasuretCheckService.searchPageFinalMeasuretCheckByFMeasureCheckId(searchValue, page, rows);
+        PageInfo<FinalMeasuretCheck> pageInfo = new PageInfo(finalMeasuretChecks);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(finalMeasuretChecks,total);
+        return pageResult;
+    }
+
+    @RequestMapping("measure/search_fMeasureCheck_by_orderId")
+    @ResponseBody
+    public PageBean searchFinalMeasuretCheckByOrderId(@RequestParam("searchValue")String searchValue,@RequestParam("page")int page, @RequestParam("rows")int rows) {
+        List<FinalMeasuretCheck> finalMeasuretChecks = finalMeasuretCheckService.searchPageFinalMeasuretCheckByOrderId(searchValue, page, rows);
+        PageInfo<FinalMeasuretCheck> pageInfo = new PageInfo(finalMeasuretChecks);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean(finalMeasuretChecks,total);
+        return pageResult;
+    }
+
 
     @RequestMapping("fMeasureCheck/add_judge")
     @ResponseBody

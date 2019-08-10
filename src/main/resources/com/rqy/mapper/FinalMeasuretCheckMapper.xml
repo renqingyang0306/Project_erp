@@ -10,6 +10,7 @@
     <result column="emp_id" jdbcType="VARCHAR" property="empId" />
     <result column="result" jdbcType="VARCHAR" property="result" />
     <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -86,6 +87,31 @@
       order by ${orderByClause}
     </if>
   </select>
+
+  <select id="selectByExampleLiftJoin" parameterType="com.rqy.domain.FinalMeasuretCheckExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    fmc.f_measure_check_id,
+    fmc.order_id,
+    fmc.check_item,
+    fmc.cdate,
+    fmc.measure_data,
+    fmc.emp_id,
+    fmc.result,
+    fmc.note,
+    emp.emp_name
+    from final_measuret_check fmc
+    left join employee emp on fmc.emp_id = emp.emp_id
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

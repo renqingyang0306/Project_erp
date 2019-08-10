@@ -1,7 +1,7 @@
 package com.rqy.mapper;
 
-import com.rqy.domain.Employee;
-import com.rqy.domain.EmployeeExample;
+import com.rqy.domain.employee.Employee;
+import com.rqy.domain.employee.EmployeeExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -18,6 +18,8 @@ public interface EmployeeMapper {
     int insertSelective(Employee record);
 
     List<Employee> selectByExample(EmployeeExample example);
+    //分页处理：
+    //List<Employee> selectEmployeeByPage(@Param("rows")int rows, @Param("offset")int offset);
 
     Employee selectByPrimaryKey(String empId);
 

@@ -35,8 +35,30 @@ public class UnqualityApplyServiceImpl implements UnqualityApplyService {
         PageHelper.startPage(page, rows);
         UnqualifyApplyExample unqualifyApplyExample = new UnqualifyApplyExample();
         //UnqualifyApplyExample.Criteria criteria = unqualifyApplyExample.createCriteria();
-        List<UnqualifyApply> unqualifyApplies = unqualifyApplyMapper.selectByExample(unqualifyApplyExample);
-//        List<UnqualifyApply> unqualifyApplies = unqualifyApplyMapper.selectByExampleLiftJoin(unqualifyApplyExample);
+//        List<UnqualifyApply> unqualifyApplies = unqualifyApplyMapper.selectByExample(unqualifyApplyExample);
+        List<UnqualifyApply> unqualifyApplies = unqualifyApplyMapper.selectByExampleLiftJoin(unqualifyApplyExample);
+
+        return unqualifyApplies;
+    }
+
+    @Override
+    public List<UnqualifyApply> searchPageUnqualifyApplyByUnqualifyId(String unqualifyId, int page, int rows) {
+        //查询条件
+        PageHelper.startPage(page, rows);
+        UnqualifyApplyExample unqualifyApplyExample = new UnqualifyApplyExample();
+        unqualifyId = "%" + unqualifyId + "%";
+        unqualifyApplyExample.createCriteria().andUnqualifyApplyIdLike(unqualifyId);
+        List<UnqualifyApply> unqualifyApplies = unqualifyApplyMapper.selectByExampleLiftJoin(unqualifyApplyExample);
+        return unqualifyApplies;
+    }
+
+    @Override
+    public List<UnqualifyApply> searchPageUnqualifyApplyByProductName(String productName, int page, int rows) {
+        //查询条件
+        PageHelper.startPage(page, rows);
+        //UnqualifyApplyExample unqualifyApplyExample = new UnqualifyApplyExample();
+        productName = "%" + productName + "%";
+        List<UnqualifyApply> unqualifyApplies = unqualifyApplyMapper.searchByProductNameLiftJoin(productName);
         return unqualifyApplies;
     }
 

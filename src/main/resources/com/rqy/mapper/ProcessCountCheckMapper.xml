@@ -14,6 +14,7 @@
     <result column="emp_id" jdbcType="VARCHAR" property="empId" />
     <result column="result" jdbcType="VARCHAR" property="result" />
     <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -78,12 +79,40 @@
     cdate, measure_data, emp_id, result, note
   </sql>
   <select id="selectByExample" parameterType="com.rqy.domain.ProcessCountCheckExample" resultMap="BaseResultMap">
+  select
+  <if test="distinct">
+    distinct
+  </if>
+  <include refid="Base_Column_List" />
+  from process_count_check
+  <if test="_parameter != null">
+    <include refid="Example_Where_Clause" />
+  </if>
+  <if test="orderByClause != null">
+    order by ${orderByClause}
+  </if>
+</select>
+
+  <select id="selectByExampleLiftJoin" parameterType="com.rqy.domain.ProcessCountCheckExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
-    <include refid="Base_Column_List" />
-    from process_count_check
+    pcc.p_count_check_id,
+    pcc.process_id,
+    pcc.check_item,
+    pcc.sample,
+    pcc.check_number,
+    pcc.unqualify,
+    pcc.qualify,
+    pcc.cdate,
+    pcc.measure_data,
+    pcc.emp_id,
+    pcc.result,
+    pcc.note,
+    emp.emp_name
+    from process_count_check pcc
+    left join employee emp on pcc.emp_id = emp.emp_id
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -91,6 +120,7 @@
       order by ${orderByClause}
     </if>
   </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

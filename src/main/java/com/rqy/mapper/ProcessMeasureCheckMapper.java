@@ -18,6 +18,7 @@ public interface ProcessMeasureCheckMapper {
     int insertSelective(ProcessMeasureCheck record);
 
     List<ProcessMeasureCheck> selectByExample(ProcessMeasureCheckExample example);
+    List<ProcessMeasureCheck> selectByExampleLiftJoin(ProcessMeasureCheckExample example);
 
     ProcessMeasureCheck selectByPrimaryKey(String pMeasureCheckId);
 

@@ -1,4 +1,4 @@
-package com.rqy.domain;
+package com.rqy.domain.employee;
 
 import java.util.ArrayList;
 import java.util.Date;
