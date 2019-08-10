@@ -19,7 +19,11 @@
 	        <tr>
 	            <td>收入数量:</td>
 	            <td>
+<<<<<<< HEAD
 	            	<input class="easyui-numberbox" type="text" name="amount" style="width: 160px;"/>
+=======
+	            	<input class="easyui-numberbox" type="text" name="ammount" style="width: 160px;"/>
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 	            </td>
 	        </tr>
 	        </tr>

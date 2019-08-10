@@ -147,8 +147,13 @@ function doSearch_materialReceive(value,name){ //用户输入用户名,点击搜
 	        columns : [ [ 	       
 				{field : 'ck', checkbox:true },
 				{field : 'receiveId', width : 100, title : '物料收入编号', align:'center'},
+<<<<<<< HEAD
 				{field : 'materialId', width : 100, align : 'center', title : '物料', formatter:formatMaterial},
 				{field : 'amount', width : 100, align : 'center', title : '收入数量'},
+=======
+				{field : 'material', width : 100, align : 'center', title : '物料', formatter:formatMaterial},
+				{field : 'ammount', width : 100, align : 'center', title : '收入数量'},
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 				{field : 'receiveDate', width : 130, title : '收入日期', align:'center',formatter:TAOTAO.formatDateTime},
 				{field : 'sender', width : 100, title : '发送者', align:'center'},
 				{field : 'receiver', width : 100, title : '接收者', align:'center'},
@@ -163,8 +168,13 @@ function doSearch_materialReceive(value,name){ //用户输入用户名,点击搜
 	        columns : [ [ 
 				{field : 'ck', checkbox:true },
 				{field : 'receiveId', width : 100, title : '物料收入编号', align:'center'},
+<<<<<<< HEAD
 				{field : 'materialId', width : 100, align : 'center', title : '物料', formatter:formatMaterial},
 				{field : 'amount', width : 100, align : 'center', title : '收入数量'},
+=======
+				{field : 'material', width : 100, align : 'center', title : '物料', formatter:formatMaterial},
+				{field : 'ammount', width : 100, align : 'center', title : '收入数量'},
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 				{field : 'receiveDate', width : 130, title : '收入日期', align:'center',formatter:TAOTAO.formatDateTime},
 				{field : 'sender', width : 100, title : '发送者', align:'center'},
 				{field : 'receiver', width : 100, title : '接收者', align:'center'},
@@ -324,9 +334,15 @@ function doSearch_materialReceive(value,name){ //用户输入用户名,点击搜
         	    		onLoad :function(){
         	    			//回显数据
         	    			var data = $("#materialReceiveList").datagrid("getSelections")[0];
+<<<<<<< HEAD
         	    			// if(data.material.materialId !=null && data.material.materialId != ''){
                 			// 	data.materialId = data.material.materialId;
                 			// }
+=======
+        	    			if(data.material.materialId !=null && data.material.materialId != ''){
+                				data.materialId = data.material.materialId;
+                			}
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
         	    			data.receiveDate = TAOTAO.formatDateTime(data.receiveDate);
         	    			$("#materialReceiveEditForm").form("load", data);
         	    			materialReceiveEditEditor.html(data.note);

@@ -22,8 +22,11 @@ public interface TechnologyService {
 
     int updateByPrimaryKeySelective(Technology technology);
 
-    int deleteByPrimaryKey(String ids);
+    int deleteByPrimaryKey(String[] ids);
 
     List<Technology> selectByIdLike(String id);
 
+    List<Technology> selectByNameLike(String name);
+
+    Technology selectByPrimaryKey(String id);
 }

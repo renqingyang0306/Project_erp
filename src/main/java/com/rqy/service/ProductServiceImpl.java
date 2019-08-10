@@ -1,5 +1,6 @@
 package com.rqy.service;
 
+import com.github.pagehelper.PageHelper;
 import com.rqy.domain.Product;
 import com.rqy.domain.ProductExample;
 import com.rqy.mapper.ProductMapper;
@@ -50,5 +51,21 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public int updateByPrimaryKey(Product record) {
         return productMapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public List<Product> findAllProduct(int page, int rows) {
+        //将参数传给方法实现分页
+        PageHelper.startPage(page, rows);
+        ProductExample productExample=new ProductExample();
+        List<Product> products = productMapper.selectByExample(productExample);
+        return products;
+    }
+
+    @Override
+    public List<Product> findAllProductByIdOrNameOrType(int page, int rows, ProductExample productExample) {
+        PageHelper.startPage(page,rows);
+        List<Product> products = productMapper.selectByExample(productExample);
+        return products;
     }
 }

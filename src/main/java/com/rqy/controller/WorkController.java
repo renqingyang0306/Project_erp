@@ -146,4 +146,60 @@ public class WorkController {
         Work work = workServcie.selectByPrimaryKey(id);
         return work;
     }
+<<<<<<< HEAD
+=======
+    //模糊查询search_work_by_workId，workProduct,workDevice,workProcess
+    @RequestMapping("search_work_by_workId")
+    @ResponseBody
+    public PageBean<Work> search_work_by_workId(int page,int rows,String searchValue){
+        WorkExample workExample = new WorkExample();
+        workExample.createCriteria().andWorkIdLike("%"+searchValue+"%");
+        List<Work> works = workServcie.findAllWorkByIdOrProcessId( page,rows,workExample);
+        //查询到的数据给到PageInfo  pagehelper的封装的对象，只需要把结果集给到该对象，
+        // 就可以通过该对象get方法拿到总页数，总记录数，
+        PageInfo<Work> pageInfo=new PageInfo<>(works);
+        //在自定义一个分页对象，就可以传入页面需要的list集合，和total，同时json形式返回
+        PageBean<Work> pageBean=new PageBean<>(works,pageInfo.getTotal());
+
+        return  pageBean;
+    }
+    @RequestMapping("search_work_by_workProduct")
+    @ResponseBody
+    public PageBean<Work> search_work_by_workProduct(int page,int rows,String searchValue){
+        List<Work> works = workServcie.findAllWorkByProductName( page,rows,"%"+searchValue+"%");
+        //查询到的数据给到PageInfo  pagehelper的封装的对象，只需要把结果集给到该对象，
+        // 就可以通过该对象get方法拿到总页数，总记录数，
+        PageInfo<Work> pageInfo=new PageInfo<>(works);
+        //在自定义一个分页对象，就可以传入页面需要的list集合，和total，同时json形式返回
+        PageBean<Work> pageBean=new PageBean<>(works,pageInfo.getTotal());
+
+        return  pageBean;
+    }
+    @RequestMapping("search_work_by_workDevice")
+    @ResponseBody
+    public PageBean<Work> search_work_by_workDevice(int page,int rows,String searchValue){
+        List<Work> works = workServcie.findAllWorkByDeviceName( page,rows,"%"+searchValue+"%");
+        //查询到的数据给到PageInfo  pagehelper的封装的对象，只需要把结果集给到该对象，
+        // 就可以通过该对象get方法拿到总页数，总记录数，
+        PageInfo<Work> pageInfo=new PageInfo<>(works);
+        //在自定义一个分页对象，就可以传入页面需要的list集合，和total，同时json形式返回
+        PageBean<Work> pageBean=new PageBean<>(works,pageInfo.getTotal());
+
+        return  pageBean;
+    }
+    @RequestMapping("search_work_by_workProcess")
+    @ResponseBody
+    public PageBean<Work> search_work_by_workProcess(int page,int rows,String searchValue){
+        WorkExample workExample = new WorkExample();
+        workExample.createCriteria().andProcessIdLike("%"+searchValue+"%");
+        List<Work> works = workServcie.findAllWorkByIdOrProcessId( page,rows,workExample);
+        //查询到的数据给到PageInfo  pagehelper的封装的对象，只需要把结果集给到该对象，
+        // 就可以通过该对象get方法拿到总页数，总记录数，
+        PageInfo<Work> pageInfo=new PageInfo<>(works);
+        //在自定义一个分页对象，就可以传入页面需要的list集合，和total，同时json形式返回
+        PageBean<Work> pageBean=new PageBean<>(works,pageInfo.getTotal());
+
+        return  pageBean;
+    }
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 }

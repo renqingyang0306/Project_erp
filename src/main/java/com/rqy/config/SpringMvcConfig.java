@@ -62,5 +62,8 @@ public class SpringMvcConfig implements WebMvcConfigurer {
         internalResourceViewResolver.setSuffix(".jsp");
         return internalResourceViewResolver;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 }

@@ -11,7 +11,10 @@
         	<th data-options="field:'ck',checkbox:true"></th>
         	<th data-options="field:'consumeId',align:'center',width:100">物料消耗编号</th>
             <th data-options="field:'work',align:'center',width:100,formatter:formatWork">所属作业</th>
+<<<<<<< HEAD
             <%--<th data-options="field:'workId',align:'center',width:100">所属作业</th>--%>
+=======
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
             <th data-options="field:'material',align:'center',width:100,formatter:formatMaterial">物料</th>
             <th data-options="field:'consumeAmount',align:'center',width:100">消耗数量</th>
             <th data-options="field:'consumeDate',width:130,align:'center',formatter:TAOTAO.formatDateTime">
@@ -26,28 +29,48 @@
 
 <div  id="toolbar_materialConsume" style=" height: 22px; padding: 3px 11px; background: #fafafa;">  
 	
+<<<<<<< HEAD
 	<%--<c:forEach items="${sessionScope.sysPermissionList}" var="per" >--%>
 		<%--<c:if test="${per=='materialConsume:add' }" >--%>
+=======
+	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
+		<c:if test="${per=='materialConsume:add' }" >
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="materialConsume_add()">
 					新增
 				</a>
 		    </div>  
+<<<<<<< HEAD
 		<%--</c:if>--%>
 		<%--<c:if test="${per=='materialConsume:edit' }" >--%>
+=======
+		</c:if>
+		<c:if test="${per=='materialConsume:edit' }" >
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit" onclick="materialConsume_edit()">
 					编辑
 				</a>
 		    </div>  
+<<<<<<< HEAD
 		<%--</c:if>--%>
 		<%--<c:if test="${per=='materialConsume:delete' }" >--%>
+=======
+		</c:if>
+		<c:if test="${per=='materialConsume:delete' }" >
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel"
 				   onclick="materialConsume_delete()">删除</a>
 		    </div>  
+<<<<<<< HEAD
 		<%--</c:if>--%>
 	<%--</c:forEach>--%>
+=======
+		</c:if>
+	</c:forEach>
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 	
 	<div class="datagrid-btn-separator"></div>  
 	

@@ -45,7 +45,11 @@ public class DepartmentController
         //封装获取页面上的department总信息：
         PageInfo<Department> departmentPageInfo = new PageInfo<Department>(departmentList);
         //构造pageBean:
+<<<<<<< HEAD
         PageBean<Department> departmentPageBean = new PageBean<>(departmentList,departmentPageInfo.getTotal());
+=======
+        PageBean<Department> departmentPageBean = new PageBean<>( departmentList,departmentPageInfo.getTotal());
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
         return departmentPageBean;
     }
 

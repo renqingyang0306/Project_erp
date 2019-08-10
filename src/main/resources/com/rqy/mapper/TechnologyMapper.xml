@@ -94,6 +94,12 @@
     from technology
     where technology_id like #{id}
   </select>
+  <select id="selectByNameLike" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from technology
+    where technology_name like #{name}
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

@@ -8,6 +8,12 @@
     <result column="process_id" jdbcType="VARCHAR" property="processId" />
     <result column="device_id" jdbcType="VARCHAR" property="deviceId" />
     <result column="rating" jdbcType="INTEGER" property="rating" />
+<<<<<<< HEAD
+=======
+    <association property="product" column="product_id" select="com.rqy.mapper.ProductMapper.selectByPrimaryKey"/>
+    <association property="device" column="device_id" select="com.rqy.mapper.DeviceMapper.selectByPrimaryKey"/>
+    <association property="process" column="process_id" select="com.rqy.mapper.ProcessMapper.selectByPrimaryKey"/>
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -84,6 +90,33 @@
       order by ${orderByClause}
     </if>
   </select>
+<<<<<<< HEAD
+=======
+
+  <!--模糊查询：通过该表的外键对应的name查询当前表的listjihe -->
+  <sql id="Base_Column_List1">
+    work_id, process_number, product_id, process_id, w.device_id, rating
+  </sql>
+  <select id="findAllWorkByDeviceName" parameterType="string" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List1" />
+    from work w,device d
+    WHERE  w.device_id=d.device_id and d.device_name LIKE  #{name}
+  </select>
+
+
+  <sql id="Base_Column_List2">
+    work_id, process_number, w.product_id, process_id, device_id, rating
+  </sql>
+  <select id="findAllWorkByProductName" parameterType="string" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List2" />
+    from work w,product p
+    where w.product_id = p.product_id and p.product_name LIKE  #{name}
+  </select>
+
+
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

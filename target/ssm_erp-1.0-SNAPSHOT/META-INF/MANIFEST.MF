@@ -1,5 +1,11 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: wzf
 Created-By: IntelliJ IDEA
 Build-Jdk: 1.8
+=======
+Built-By: Administrator
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_131
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 

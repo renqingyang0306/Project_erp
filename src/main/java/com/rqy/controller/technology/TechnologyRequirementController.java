@@ -4,6 +4,10 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.rqy.domain.*;
 import com.rqy.service.technology.TechnologyRequirementService;
+<<<<<<< HEAD
+=======
+import com.rqy.service.technology.TechnologyService;
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 import com.rqy.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,11 +32,47 @@ public class TechnologyRequirementController {
 
     @Autowired
     TechnologyRequirementService technologyRequirementService;
+    @Autowired
+    TechnologyService technologyService;
 
     @RequestMapping("find")
     public String technologyRequirementFind() {
         return "technologyRequirement_list";
     }
+
+    /*模糊查询*/
+    @RequestMapping("search_technologyRequirement_by_technologyRequirementId")
+    @ResponseBody
+    public PageBean<TechnologyRequirement> search_technologyRequirement_by_technologyRequirementId(
+            @RequestParam(value = "searchValue")String id,@RequestParam(value = "page") int page, @RequestParam(value = "rows") int rows
+    ){
+        //模糊查询
+        PageHelper.startPage(page,rows);
+        List<TechnologyRequirement> technologyRequirements = technologyRequirementService.selectByIdLike(id);
+        PageInfo<TechnologyRequirement> pageInfo = new PageInfo<>(technologyRequirements);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean();
+        pageResult.setTotal(total);
+        pageResult.setRows(technologyRequirements);
+        return pageResult;
+    }
+    /*模糊查询*/
+    @RequestMapping("search_technologyRequirement_by_technologyName")
+    @ResponseBody
+    public PageBean<TechnologyRequirement> search_technologyRequirement_by_technologyName(
+            @RequestParam(value = "searchValue")String name,@RequestParam(value = "page") int page, @RequestParam(value = "rows") int rows
+    ){
+        //模糊查询
+        PageHelper.startPage(page,rows);
+        List<TechnologyRequirement> technologyRequirements = technologyRequirementService.selectByNameLike(name);
+        PageInfo<TechnologyRequirement> pageInfo = new PageInfo<>(technologyRequirements);
+        long total = pageInfo.getTotal();
+        PageBean pageResult = new PageBean();
+        pageResult.setTotal(total);
+        pageResult.setRows(technologyRequirements);
+        return pageResult;
+    }
+
 
     @RequestMapping("list")
     @ResponseBody
@@ -63,15 +103,26 @@ public class TechnologyRequirementController {
 
     /*接受insert的数据，执行添加操作*/
     @RequestMapping("insert")
+    @ResponseBody
     public Map insert(TechnologyRequirement technologyRequirement){
         int i = technologyRequirementService.insertSelective(technologyRequirement);
         Map<String,String> map = new HashMap<>();
         if (i == 1){
             map.put("status","200");
+            map.put("msg","ok");
         }else {
             map.put("status","302");
         }
         return map;
+    }
+
+    //insert的下拉框
+    @RequestMapping("get_data")
+    @ResponseBody
+    public List<Technology> get_data(){
+        TechnologyExample technologyExample = new TechnologyExample();
+        List<Technology> technologies = technologyService.selectByExample(technologyExample);
+        return technologies;
     }
 
     //修改前的判断
@@ -108,10 +159,10 @@ public class TechnologyRequirementController {
     }
     @RequestMapping("delete_batch")
     @ResponseBody
-    public Map delete_batch(String ids){
+    public Map delete_batch(String[] ids){
         int i = technologyRequirementService.deleteByPrimaryKey(ids);
         Map<String,Object> map=new HashMap<>();
-        if (i == 1){
+        if (i != 0){
             map.put("status","200");
         }else {
             map.put("status","302");

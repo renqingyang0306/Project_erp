@@ -28,4 +28,13 @@ public interface WorkServcie {
     int updateByPrimaryKey(Work record);
 
     List<Work> findAllWork(int page, int rows);
+<<<<<<< HEAD
+=======
+
+    List<Work> findAllWorkByIdOrProcessId(int page, int rows, WorkExample workExample);
+
+    List<Work> findAllWorkByProductName(int page, int rows, String s);
+
+    List<Work> findAllWorkByDeviceName(int page, int rows, String s);
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 }

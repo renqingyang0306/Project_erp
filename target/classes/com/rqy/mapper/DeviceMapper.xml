@@ -81,6 +81,17 @@
     d.device_purchase_price, d.device_manufacture_date, d.device_service_life, d.device_keeper_id,
     d.note,e.emp_name,t.device_type_name
   </sql>
+<<<<<<< HEAD
+=======
+
+  <sql id="Base_Column_List1">
+    device_id, device_name, device_type_id, device_status_id, device_status, device_purchase_date,
+    device_purchase_price, device_manufacture_date, device_service_life, device_keeper_id,
+    note
+  </sql>
+
+
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
   <select id="selectByExample" parameterType="com.rqy.domain.DeviceExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -105,10 +116,25 @@
     WHERE t.device_type_name like #{deviceTypeName,jdbcType=VARCHAR}
   </select>
 
+<<<<<<< HEAD
 
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
+=======
+  <select id="selectByLikeName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from device d inner join employee e on d.device_keeper_id = e.emp_id inner join device_type t on t.device_type_id = d.device_type_id
+    WHERE d.device_name like #{deviceName,jdbcType=VARCHAR}
+  </select>
+
+
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List1" />
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
     from device
     where device_id = #{deviceId,jdbcType=VARCHAR}
   </select>

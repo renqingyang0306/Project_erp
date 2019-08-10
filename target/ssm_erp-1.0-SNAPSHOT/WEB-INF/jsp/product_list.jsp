@@ -33,29 +33,45 @@
 
 <div  id="toolbar_product" style=" height: 22px; padding: 3px 11px; background: #fafafa;">  
 	
+<<<<<<< HEAD
 	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
 		<c:if test="${per=='product:add' }" >
+=======
+
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="product_add()">
 					新增
 				</a>
 		    </div>  
+<<<<<<< HEAD
 		</c:if>
 		<c:if test="${per=='product:edit' }" >
+=======
+
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit" onclick="product_edit()">
 					编辑
 				</a>
 		    </div>  
+<<<<<<< HEAD
 		</c:if>
 		<c:if test="${per=='product:delete' }" >
+=======
+
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel" onclick="product_delete()">
 					删除
 				</a>
+<<<<<<< HEAD
 		    </div>  
 		</c:if>
 	</c:forEach>
+=======
+		    </div>
+>>>>>>> cdfeb3f536dd5ea1a6c36da8d2550c3972d3bbba
 	
 	<div class="datagrid-btn-separator"></div>  
 	
