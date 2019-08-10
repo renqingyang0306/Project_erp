@@ -26,6 +26,14 @@ public class ProcessController {
     @Autowired
     ProcessService processService;
 
+    //填充下拉表get_data
+    @RequestMapping("get_data")
+    @ResponseBody
+    public List<Process> get_data(){
+        List<Process> processes = processService.selectByExample(new ProcessExample());
+        return processes;
+    }
+
     @RequestMapping("find")
     public String processFind() {
         return "process_list";

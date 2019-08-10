@@ -7,7 +7,7 @@ import com.rqy.domain.Device;
 import com.rqy.domain.Technology;
 import com.rqy.domain.TechnologyExample;
 import com.rqy.service.technology.TechnologyService;
-import com.rqy.util.PageBean;
+import com.rqy.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

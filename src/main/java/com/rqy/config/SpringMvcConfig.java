@@ -63,10 +63,4 @@ public class SpringMvcConfig implements WebMvcConfigurer {
         return internalResourceViewResolver;
     }
 
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/css/**").addResourceLocations("/WEB-INF/css/");
-        registry.addResourceHandler("/image/**").addResourceLocations("/WEB-INF/image/");
-        registry.addResourceHandler("/js/**").addResourceLocations("/WEB-INF/js/");
-    }
 }

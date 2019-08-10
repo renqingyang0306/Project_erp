@@ -31,7 +31,7 @@ public class SpringConfig {
     public DataSource druidDatasource(){
         DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        druidDataSource.setUrl("jdbc:mysql://localhost:3306/production_ssm");
+        druidDataSource.setUrl("jdbc:mysql://localhost:3306/production_ssm?characterEncoding=utf-8");
         druidDataSource.setUsername("root");
         druidDataSource.setPassword("123456");
         return druidDataSource;
