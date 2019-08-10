@@ -195,26 +195,4 @@ public class DeviceContorller {
 
 
 
-   /*@RequestMapping("/deviceList/search_device_by_deviceTypeName")
-    @ResponseBody
-    public PageBean searchNamelist(@RequestParam(value = "page") int page, @RequestParam(value = "rows") int rows,
-                                   @RequestParam(value = "searchValue") String searchValue){
-        DeviceExample deviceExample = new DeviceExample();
-        DeviceExample.Criteria criteria = deviceExample.createCriteria();
-        criteria.andDeviceTypeIdBetween(searchValue);
-        PageHelper.startPage(page, rows);
-        List<Device> devices = deviceService.selectByExample(deviceExample);
-        PageInfo<Device> pageInfo = new PageInfo<>(devices);
-
-        long total = pageInfo.getTotal();
-
-        PageBean pageResult = new PageBean();
-
-        pageResult.setTotal(total);
-        pageResult.setRows(devices);
-        return pageResult;
-    }
-}
-
-
 
