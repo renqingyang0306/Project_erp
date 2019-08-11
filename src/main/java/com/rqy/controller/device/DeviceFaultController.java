@@ -103,7 +103,18 @@ public class DeviceFaultController {
             return RespondMsg.createSusscess();
         }
         return  RespondMsg.createFail();
+    }  
+    @ResponseBody
+    @RequestMapping("deviceFault/update_note")
+    public RespondMsg updateall(DeviceFault device) {
+        //插入用领域模型
+        int i = deviceFaultService.updateByPrimaryKey(device);
+        if (i==1){
+            return RespondMsg.createSusscess();
+        }
+        return  RespondMsg.createFail();
     }
+    
     //增
     @ResponseBody
     @RequestMapping("deviceFault/insert")
