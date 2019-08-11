@@ -106,7 +106,7 @@ public class DeviceFaultController {
     }  
     @ResponseBody
     @RequestMapping("deviceFault/update_note")
-    public RespondMsg updateall(DeviceFault device) {
+    public RespondMsg updatenote(DeviceFault device) {
         //插入用领域模型
         int i = deviceFaultService.updateByPrimaryKey(device);
         if (i==1){
