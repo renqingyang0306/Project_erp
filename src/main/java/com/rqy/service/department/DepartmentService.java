@@ -29,5 +29,6 @@ public interface DepartmentService
     int updateByPrimaryKeySelective(Department record);
 
     int updateByPrimaryKey(Department record);
+    List<Department> searchDepartmentByBlurcondition(int page,int rows,DepartmentExample departmentExample);
 
 }

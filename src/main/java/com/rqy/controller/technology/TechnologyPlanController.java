@@ -10,6 +10,7 @@ import com.rqy.service.technology.TechnologyPlanService;
 import com.rqy.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -28,6 +29,12 @@ public class TechnologyPlanController {
     @RequestMapping("find")
     public String technologyPlanFind() {
         return "technologyPlan_list";
+    }
+    //通过id查询technologyPlan对象
+    @RequestMapping("get/{id}")
+    @ResponseBody
+    public TechnologyPlan get(@PathVariable String id){
+        return technologyPlanService.selectByPrimaryKey(id);
     }
 
     /*模糊查询*/

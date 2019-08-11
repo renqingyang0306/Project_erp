@@ -15,7 +15,7 @@ public interface DeviceService {
     int insert(Device record);
 
     List<Device> selectByExample(DeviceExample deviceExample);
-
+    List<Device> selectByLikeName(String deviceName);
     List<Device> selectByLike(String deviceTypeName);
 
     Device selectByPrimaryKey(String deviceId);

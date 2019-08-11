@@ -13,7 +13,7 @@ public interface DeviceMapper {
 
     int deleteByPrimaryKey(String deviceId);
     List<Device> selectByLike(String deviceTypeName);
-
+    List<Device> selectByLikeName(String deviceName);
     int insert(Device record);
 
     int insertSelective(Device record);

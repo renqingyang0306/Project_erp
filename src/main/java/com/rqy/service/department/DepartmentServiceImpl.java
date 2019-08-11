@@ -1,5 +1,6 @@
 package com.rqy.service.department;
 
+import com.github.pagehelper.PageHelper;
 import com.rqy.domain.department.Department;
 import com.rqy.domain.department.DepartmentExample;
 import com.rqy.mapper.DepartmentMapper;
@@ -81,6 +82,15 @@ public class DepartmentServiceImpl implements DepartmentService
     public int updateByPrimaryKey(Department record)
     {
         return departmentMapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public List<Department> searchDepartmentByBlurcondition(int page, int rows, DepartmentExample departmentExample)
+    {
+        PageHelper.startPage(page,rows);
+        //通过查询条件封装对象departmentExample，实现不同查询条件id 和 name的封装！！
+        List<Department> departmentList = departmentMapper.selectByExample(departmentExample);
+        return departmentList;
     }
 
     /*@Override

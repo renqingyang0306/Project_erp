@@ -3,8 +3,6 @@ package com.rqy.controller.material;
 import com.github.pagehelper.PageInfo;
 import com.rqy.domain.Material;
 import com.rqy.domain.MaterialExample;
-import com.rqy.domain.MaterialReceive;
-import com.rqy.domain.MaterialReceiveExample;
 import com.rqy.service.material.MaterialService;
 import com.rqy.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;

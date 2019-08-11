@@ -35,6 +35,11 @@ public class DeviceServiceImpl implements DeviceService {
         List<Device> devices = deviceMapper.selectByExample(deviceExample);
         return devices;
     }
+    @Override
+    public List<Device> selectByLikeName(String deviceName) {
+        return deviceMapper.selectByLikeName(deviceName);
+    }
+
 
     @Override
     public List<Device> selectByLike(String deviceTypeName) {
@@ -50,78 +55,5 @@ public class DeviceServiceImpl implements DeviceService {
     public int updateByPrimaryKey(Device record) {
         return deviceMapper.updateByPrimaryKey(record);
     }
-
-
-
-
-
-
-
-/*
-
-    //第一栏
-    @Override
-    public List<Device> selectAllDeviceList(int page, int row) {
-       page = (page - 1) * 20;
-        List<Device> devices = deviceMapper.selectAll(page, row);
-        return devices;
-    }
-
-    @Override
-    public long countAllDeviceList() {
-        return deviceMapper.countAll();
-    }
-
-    @Override
-    public int insertDeviceList(Device device) {
-        int insert = deviceMapper.insert(device);
-        return insert;
-    }
-
-    @Override
-    public void updateByPrimaryKeySelectiveDeviceList(Device device) {
-        deviceMapper.updateByPrimaryKeySelective(device);
-    }
-
-    @Override
-    public void deleteByPrimaryKeyDeviceList(String deviceId) {
-        deviceMapper.deleteByPrimaryKey(deviceId);
-    }
-
-
-    //第二栏
-    @Override
-    public List<DeviceType> selectAllDeviceType(int page, int row) {
-        page = (page - 1) * 20;
-        List<DeviceType> devices = deviceTypeMapper.selectAll(page, row);
-        return devices;
-    }
-
-    @Override
-    public long countAllDeviceType() {
-        return deviceTypeMapper.countAll();
-    }
-
-    @Override
-    public int insertDeviceType(DeviceType deviceType) {
-        int i = deviceTypeMapper.updateByPrimaryKeySelective(deviceType);
-        return i;
-    }
-
-    @Override
-    public void updateByPrimaryKeySelectiveDeviceType(DeviceType deviceType) {
-        deviceTypeMapper.updateByPrimaryKeySelective(deviceType);
-
-    }
-
-    @Override
-    public void deleteByPrimaryKeyDeviceType(String deviceId) {
-        deviceTypeMapper.deleteByPrimaryKey(deviceId);
-    }
-
-*/
-
-
-
 
 }

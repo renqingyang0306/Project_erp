@@ -4,10 +4,12 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.rqy.domain.department.Department;
 import com.rqy.domain.department.DepartmentExample;
+import com.rqy.domain.employee.Employee;
 import com.rqy.service.department.DepartmentService;
 import com.rqy.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -15,6 +17,8 @@ import java.util.*;
 
 
 @Controller
+//可以通过@RequestMapping("department")实现窄化请求，下面的可以变为：
+//@RequestMapping("find")
 public class DepartmentController
 {
     @Autowired
@@ -161,11 +165,84 @@ public class DepartmentController
         }
         return map;
     }
+    //部门职责删除方法：
+    @RequestMapping("department/update_note")
+     @ResponseBody
+    public Map update_note(Department department)
+    {
+        int updateans = departmentService.updateByPrimaryKeySelective(department);
+        HashMap<String, String> map = new HashMap<>();
+        if(updateans==1)
+        {
+            map.put("status","200");
+        }
+        else
+        {
+            map.put("status","405");
+        }
+        return map;
+    }
 
-    //模糊查询：
-   /* @RequestMapping("search_department_by_departmentId")
+    //模糊查询-按ID：
+    //返回对象要分页展示，返回值是个PageBean:
+    // 抓包可见url传参方式：http://localhost:8080/department/search_department_by_departmentId?searchValue=001&page=1&rows=20
+    //@RequestMapping("department/search_department_by_departmentId/{searchValue}") 这个方式是针对下个方法的传参方式，不要混淆
+    @RequestMapping("department/search_department_by_departmentId")
     @ResponseBody
-    public */
+    public PageBean<Department> search_department_by_departmentId(int page,int rows,String searchValue )
+    {
+        //建立搜索条件对象：
+        DepartmentExample departmentExample = new DepartmentExample();
+        //departmentExample.createCriteria().andDepartmentIdEqualTo(searchValue);
+        //模糊搜索：用like:
+        departmentExample.createCriteria().andDepartmentIdLike("%"+searchValue+"%");
+        //获取搜索结果：注意：搜索条件 可以是id，也可以是name，所以，需要在service层对查询方法进行封装,这样就可以重用了！：
+        List<Department> departmentList = departmentService.searchDepartmentByBlurcondition(page, rows, departmentExample);
+
+        //获取页面信息：
+        PageInfo<Department> departmentPageInfo = new PageInfo<>();
+       /* //获取返回的页面：
+        PageBean<Department> departmentPageBean = new PageBean<>();
+        departmentPageBean.setRows(departmentList);
+        departmentPageBean.setTotal(departmentPageInfo.getTotal());*/
+        //可以简化为一句：
+        PageBean<Department> departmentPageBeanans = new PageBean<>(departmentList, departmentPageInfo.getTotal());
+        return departmentPageBeanans;
+    }
+    //模糊查询--按名字
+    @RequestMapping("department/search_department_by_departmentName")
+    @ResponseBody
+    public PageBean<Department> search_department_by_departmentName(int page,int rows,String searchValue )
+    {
+        //建立搜索条件对象：
+        DepartmentExample departmentExample = new DepartmentExample();
+        //departmentExample.createCriteria().andDepartmentIdEqualTo(searchValue);
+        //模糊搜索：用like:
+        departmentExample.createCriteria().andDepartmentNameLike("%"+searchValue+"%");
+        //获取搜索结果：注意：搜索条件 可以是id，也可以是name，所以，需要在service层对查询方法进行封装，这样就可以重用了！：
+        List<Department> departmentList = departmentService.searchDepartmentByBlurcondition(page, rows, departmentExample);
+
+        //获取页面信息：
+        PageInfo<Department> departmentPageInfo = new PageInfo<>();
+       /* //获取返回的页面：
+        PageBean<Department> departmentPageBean = new PageBean<>();
+        departmentPageBean.setRows(departmentList);
+        departmentPageBean.setTotal(departmentPageInfo.getTotal());*/
+        //可以简化为一句：
+        PageBean<Department> departmentPageBeanans = new PageBean<>(departmentList, departmentPageInfo.getTotal());
+        return departmentPageBeanans;
+    }
+
+
+   //供employee_list.jsp中页面链接查询用：抓包可见链接方式：http://8080/employee/get/002
+    //注意：接收参数的方式！
+    @RequestMapping("department/get/{id}")
+    @ResponseBody
+    public Department get(@PathVariable String id)
+    {
+        Department department = departmentService.selectByPrimaryKey(id);
+        return department;
+    }
 
     @RequestMapping("department/get_data")
     @ResponseBody

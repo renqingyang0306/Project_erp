@@ -1,5 +1,6 @@
 package com.rqy.service.employee;
 
+import com.github.pagehelper.PageHelper;
 import com.rqy.domain.employee.Employee;
 import com.rqy.domain.employee.EmployeeExample;
 import com.rqy.mapper.EmployeeMapper;
@@ -87,6 +88,16 @@ public class EmployeeServiceImpl implements EmployeeService
         EmployeeExample employeeExample = new EmployeeExample();
         return employeeMapper.selectByExample(employeeExample);
     }
+
+    @Override
+    public List<Employee> searchEmployeeByBlurCondition(int page, int rows, EmployeeExample employeeExample)
+    {
+        //开启分页，抓取分页信息：
+        PageHelper.startPage(page,rows);
+        List<Employee> employeeList = employeeMapper.selectByExample(employeeExample);
+        return employeeList;
+    }
+
 
     /*@Override
     public PageBean<Employee> selectEmployeeByPage(int page, int rows)

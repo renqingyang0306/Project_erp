@@ -53,7 +53,7 @@
 			$.messager.alert('提示','表单还未填写完成!');
 			return ;
 		}
-		$.post("user/update_all",$("#userEditForm").serialize(), function(data){
+		$.post("sysuser/update_all",$("#userEditForm").serialize(), function(data){
 			if(data.status == 200){
 				$.messager.alert('提示', data.msg);
 				$("#userEditWindow").window('close');

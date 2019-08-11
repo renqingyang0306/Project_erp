@@ -116,14 +116,14 @@
 	}
 	
 	/**
-	 * called when user inputs some value in text box
+	 * called when sysuser inputs some value in text box
 	 */
 	function doQuery(target, q){
 		setValue(target, q, true);
 	}
 	
 	/**
-	 * called when user press enter key
+	 * called when sysuser press enter key
 	 */
 	function doEnter(target){
 		var state = $.data(target, 'datebox');

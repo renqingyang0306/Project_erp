@@ -66,4 +66,9 @@ public class TechnologyPlanServiceImpl implements TechnologyPlanService {
         return technologyPlanMapper.selectLeftJoin();
     }
 
+    @Override
+    public TechnologyPlan selectByPrimaryKey(String id) {
+        return technologyPlanMapper.selectByPrimaryKey(id);
+    }
+
 }
