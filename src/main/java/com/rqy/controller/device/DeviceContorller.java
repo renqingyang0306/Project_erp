@@ -173,7 +173,7 @@ public class DeviceContorller {
     }
      @ResponseBody
     @RequestMapping("deviceList/update_note")
-    public RespondMsg updateall(Device device) {
+    public RespondMsg updatenote(Device device) {
         //插入用领域模型
         int i = deviceService.updateByPrimaryKey(device);
         if (i==1){
