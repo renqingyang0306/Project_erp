@@ -160,7 +160,16 @@ public class DeviceContorller {
         }
         return  RespondMsg.createFail();
         }
-//增
+//增 @ResponseBody
+    @RequestMapping("deviceList/update_all")
+    public RespondMsg updateall(Device device) {
+        //插入用领域模型
+        int i = deviceService.updateByPrimaryKey(device);
+        if (i==1){
+            return RespondMsg.createSusscess();
+        }
+        return  RespondMsg.createFail();
+    }
     @ResponseBody
     @RequestMapping("deviceList/insert")
     public RespondMsg insert(Device device) {
