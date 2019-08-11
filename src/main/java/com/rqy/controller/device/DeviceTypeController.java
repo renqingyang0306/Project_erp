@@ -97,6 +97,17 @@ public class DeviceTypeController {
         }
         return  RespondMsg.createFail();
     }
+   
+   @ResponseBody
+    @RequestMapping("deviceType/update_all")
+    public RespondMsg updateall(DeviceType device) {
+        //插入用领域模型
+        int i = deviceTypeService.updateByPrimaryKey(device);
+        if (i==1){
+            return RespondMsg.createSusscess();
+        }
+        return  RespondMsg.createFail();
+    }
     //增
     @ResponseBody
     @RequestMapping("deviceType/insert")
