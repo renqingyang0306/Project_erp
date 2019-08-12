@@ -11,7 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import javax.validation.Valid;
+import org.springframework.validation.BindingResult;
 import java.util.List;
 @Controller
 public class DeviceCheckController {
@@ -86,12 +87,13 @@ public class DeviceCheckController {
     //改
     @ResponseBody
     @RequestMapping("deviceCheck/update")
-    public RespondMsg update(DeviceCheck device) {
+    public RespondMsg update(@Valid DeviceCheck device,BindingResult bindingResult) {
         //插入用领域模型
+        if(!bindingResult.hasErrors()){
         int i = deviceCheckService.updateByPrimaryKey(device);
         if (i==1){
             return RespondMsg.createSusscess();
-        }
+        }}
         return  RespondMsg.createFail();
     }
     @ResponseBody
@@ -107,12 +109,13 @@ public class DeviceCheckController {
     //增
     @ResponseBody
     @RequestMapping("deviceCheck/insert")
-    public RespondMsg insert(DeviceCheck device) {
+    public RespondMsg insert(@Valid DeviceCheck device,BindingResult bindingResult) {
         //插入用领域模型
+        if(!bindingResult.hasErrors()){
         int i = deviceCheckService.insert(device);
         if (i==1){
             return RespondMsg.createSusscess();
-        }
+        }}
         return  RespondMsg.createFail();
     }
 
