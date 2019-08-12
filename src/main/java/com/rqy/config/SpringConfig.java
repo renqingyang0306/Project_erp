@@ -33,7 +33,7 @@ public class SpringConfig {
         druidDataSource.setDriverClassName("com.mysql.jdbc.Driver");
         druidDataSource.setUrl("jdbc:mysql://localhost:3306/production_ssm?characterEncoding=utf8");
         druidDataSource.setUsername("root");
-        druidDataSource.setPassword("123456");
+        druidDataSource.setPassword("12345678");
         return druidDataSource;
     }
 

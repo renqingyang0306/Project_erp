@@ -1,4 +1,4 @@
-package com.rqy.service.user;
+package com.rqy.service.sysuser;
 
 import com.rqy.domain.SysUserExample;
 import com.rqy.domain.sysuser.SysUser;

@@ -1,4 +1,4 @@
-package com.rqy.service.user;
+package com.rqy.service.sysuser;
 
 import com.github.pagehelper.PageHelper;
 import com.rqy.domain.SysUserExample;

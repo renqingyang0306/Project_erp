@@ -3,9 +3,8 @@ package com.rqy.controller.sysuser;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.rqy.domain.SysUserExample;
-import com.rqy.domain.employee.Employee;
 import com.rqy.domain.sysuser.SysUser;
-import com.rqy.service.user.SysUserService;
+import com.rqy.service.sysuser.SysUserService;
 import com.rqy.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -83,10 +82,10 @@ public class SysUserController
         HashMap<String, String> map = new HashMap<>();
         return map;
     }
-    @RequestMapping("sysuser/edit")
+    @RequestMapping("user/edit")
     public String edit()
     {
-        return "sysuser_edit";
+        return "user_edit";
     }
     @RequestMapping("sysuser/update_all")
     @ResponseBody
