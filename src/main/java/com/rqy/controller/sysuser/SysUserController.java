@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 
 @Controller
 public class SysUserController
@@ -49,7 +54,7 @@ public class SysUserController
     }
 
     @RequestMapping("user/add")
-    public MysqlxDatatypes.Scalar.String add()
+    public String add()
     {
         return "user_add";
     }
