@@ -10,6 +10,7 @@ import com.rqy.service.device.DeviceTypeService;
 import com.rqy.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -152,23 +153,25 @@ public class DeviceContorller {
 //改
     @ResponseBody
     @RequestMapping("deviceList/update")
-    public RespondMsg update(Device device) {
+    public RespondMsg update(@Valid Device device, BindingResult bindingResult) {
         //插入用领域模型
+          if(!bindingResult.hasErrors()){
         int i = deviceService.updateByPrimaryKey(device);
         if (i==1){
             return RespondMsg.createSusscess();
-        }
+        }}
         return  RespondMsg.createFail();
         }
 //增 
     @ResponseBody
     @RequestMapping("deviceList/update_all")
-    public RespondMsg updateall(Device device) {
+    public RespondMsg updateall(@Valid Device device, BindingResult bindingResult) {
         //插入用领域模型
+        if(!bindingResult.hasErrors()){
         int i = deviceService.updateByPrimaryKey(device);
         if (i==1){
             return RespondMsg.createSusscess();
-        }
+        }}
         return  RespondMsg.createFail();
     }
      @ResponseBody
@@ -183,12 +186,13 @@ public class DeviceContorller {
     }
     @ResponseBody
     @RequestMapping("deviceList/insert")
-    public RespondMsg insert(Device device) {
+    public RespondMsg insert(@Valid Device device, BindingResult bindingResult) {
         //插入用领域模型
+         if(!bindingResult.hasErrors()){
         int i = deviceService.insert(device);
         if (i==1){
             return RespondMsg.createSusscess();
-        }
+        }}
         return  RespondMsg.createFail();
     }
 
