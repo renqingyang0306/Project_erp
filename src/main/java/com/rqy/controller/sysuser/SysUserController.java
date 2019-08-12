@@ -2,7 +2,6 @@ package com.rqy.controller.sysuser;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import com.rqy.domain.SysUserExample;
 import com.rqy.domain.sysuser.SysUser;
 import com.rqy.service.sysuser.SysUserService;
@@ -49,7 +48,7 @@ public class SysUserController
     @ResponseBody
     public Map add_judge()
     {
-        HashMap<MysqlxDatatypes.Scalar.String, MysqlxDatatypes.Scalar.String> map = new HashMap<>();
+        HashMap<String, String> map = new HashMap<>();
         return map;
     }
 
