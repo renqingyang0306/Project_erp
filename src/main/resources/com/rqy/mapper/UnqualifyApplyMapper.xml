@@ -121,7 +121,7 @@
     from unqualify_apply unq
     left join product pro on unq.product_id = pro.product_id
     left join employee emp on unq.emp_id = emp.emp_id
-    where pro.product_name like #{productName,jdbcType=VARCHAR};
+    where pro.product_name like #{productName,jdbcType=VARCHAR}
 
   </select>
 

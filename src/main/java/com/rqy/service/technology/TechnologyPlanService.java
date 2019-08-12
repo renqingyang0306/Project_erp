@@ -19,6 +19,8 @@ public interface TechnologyPlanService {
 
     List<TechnologyPlan> selectLeftJoin();
 
+    TechnologyPlan selectByPrimaryKey(String id);
+
     int deleteByPrimaryKey(String[] ids);
 
     int updateByPrimaryKeySelective(TechnologyPlan technologyPlan);

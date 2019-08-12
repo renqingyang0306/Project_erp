@@ -4,12 +4,19 @@ import com.rqy.converter.String2DateConverter;
 import com.rqy.intercepter.MyFirstInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.convert.support.ConfigurableConversionService;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.config.annotation.*;
+import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.hibernate.validator.HibernateValidator;
 
 import javax.annotation.PostConstruct;
+
+import java.util.Locale;
+
 
 
 /**
@@ -53,6 +60,8 @@ public class SpringMvcConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/css/**").addResourceLocations("/WEB-INF/css/");
         registry.addResourceHandler("/image/**").addResourceLocations("/WEB-INF/image/");
         registry.addResourceHandler("/js/**").addResourceLocations("/WEB-INF/js/");
+        registry.addResourceHandler("/pic/**").addResourceLocations("/WEB-INF/pic/");
+
     }
     //配置视图解析器
     @Bean
@@ -61,5 +70,32 @@ public class SpringMvcConfig implements WebMvcConfigurer {
         internalResourceViewResolver.setPrefix("/WEB-INF/jsp/");
         internalResourceViewResolver.setSuffix(".jsp");
         return internalResourceViewResolver;
+    }
+    //校验
+    @Bean
+    public LocalValidatorFactoryBean localValidatorFactoryBean(ReloadableResourceBundleMessageSource messageSource){
+        LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
+        localValidatorFactoryBean.setProviderClass(HibernateValidator.class);
+        localValidatorFactoryBean.setValidationMessageSource(messageSource);
+        return localValidatorFactoryBean;
+    }
+    //加载国际化的配置文件
+    @Bean
+    public ReloadableResourceBundleMessageSource reloadableResourceBundleMessageSource(){
+        ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
+        messageSource.setBasename("classpath:message");
+        //reloadableResourceBundleMessageSource.setFileEncodings(new Properties());
+        messageSource.setDefaultEncoding("utf-8");
+        messageSource.setCacheSeconds(120);
+        messageSource.setUseCodeAsDefaultMessage(false);
+        return messageSource;
+    }
+    @Bean
+    public CookieLocaleResolver cookieLocaleResolver(){
+        CookieLocaleResolver cookieLocaleResolver = new CookieLocaleResolver();
+        cookieLocaleResolver.setCookieMaxAge(604800);
+        cookieLocaleResolver.setDefaultLocale(new Locale("en_US"));
+        cookieLocaleResolver.setCookieName("resource");
+        return cookieLocaleResolver;
     }
 }

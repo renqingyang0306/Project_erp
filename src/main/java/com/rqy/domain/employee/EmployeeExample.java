@@ -996,6 +996,11 @@ public class EmployeeExample {
             addCriterion("department_id like", value, "departmentId");
             return (Criteria) this;
         }
+       /* //使用部门名称查找员工：
+        public Criteria andDepartmentNameLike(String value) {
+            addCriterion("department_Name like", value, "departmentName");
+            return (Criteria) this;
+        }*/
 
         public Criteria andDepartmentIdNotLike(String value) {
             addCriterion("department_id not like", value, "departmentId");

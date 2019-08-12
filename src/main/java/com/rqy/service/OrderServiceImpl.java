@@ -47,7 +47,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public COrder selectByPrimaryKey(String orderId) {
-        return selectByPrimaryKey(orderId);
+        return cOrderMapper.selectByPrimaryKey(orderId);
     }
 
     @Override

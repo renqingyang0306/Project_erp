@@ -96,6 +96,17 @@ public class DeviceMaintainController {
         }
         return  RespondMsg.createFail();
     }
+    
+     @ResponseBody
+    @RequestMapping("deviceMaintain/update_note")
+    public RespondMsg updatenote(DeviceMaintain device) {
+        //插入用领域模型
+        int i = deviceMaintainService.updateByPrimaryKey(device);
+        if (i==1){
+            return RespondMsg.createSusscess();
+        }
+        return  RespondMsg.createFail();
+    }
     //增
     @ResponseBody
     @RequestMapping("deviceMaintain/insert")

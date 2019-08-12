@@ -65,7 +65,7 @@
 		
 		//ajax的post方式提交表单
 		//$("#userAddForm").serialize()将表单序列号为key-value形式的字符串
-		$.post("user/insert",$("#userAddForm").serialize(), function(data){
+		$.post("sysuser/insert",$("#userAddForm").serialize(), function(data){
 			if(data.status == 200){
 				$.messager.alert('提示', data.msg);
 				clearUserAddForm();

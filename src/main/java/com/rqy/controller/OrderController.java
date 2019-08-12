@@ -3,7 +3,6 @@ package com.rqy.controller;
 import com.github.pagehelper.PageInfo;
 import com.rqy.domain.COrder;
 import com.rqy.domain.COrderExample;
-import com.rqy.domain.Custom;
 import com.rqy.service.OrderService;
 import com.rqy.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +38,7 @@ public class OrderController {
         // 就可以通过该对象get方法拿到总页数，总记录数，
         PageInfo<COrder> pageInfo=new PageInfo<>(cOrders);
         //在自定义一个分页对象，就可以传入页面需要的list集合，和total，同时json形式返回
-        PageBean<COrder> pageBean=new PageBean<>(cOrders,pageInfo.getTotal());
+        PageBean<COrder> pageBean=new PageBean<COrder>(cOrders,pageInfo.getTotal());
 
         return  pageBean;
     }

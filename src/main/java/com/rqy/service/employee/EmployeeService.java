@@ -36,5 +36,7 @@ public interface EmployeeService
     //注意：mapper层，返回的都是List<Employee>,在service封装为EmployPageBean
     //PageBean<Employee> selectEmployeeByPage(int page, int rows);
 
+    List<Employee> searchEmployeeByBlurCondition(int page,int rows, EmployeeExample employeeExample);
+
 
 }

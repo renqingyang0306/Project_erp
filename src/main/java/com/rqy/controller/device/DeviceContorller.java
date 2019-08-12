@@ -108,7 +108,26 @@ public class DeviceContorller {
         pageResult.setRows(devices);
         return pageResult;
     }
+    
+   @RequestMapping("/deviceList/search_device_by_deviceName")
+    @ResponseBody
+    public PageBean searchNamelistName(@RequestParam(value = "page") int page, @RequestParam(value = "rows") int rows,
+                                       @RequestParam(value = "searchValue") String searchValue){
 
+        PageHelper.startPage(page, rows);
+        searchValue = "%"+searchValue+"%";
+        List<Device> devices = deviceService.selectByLikeName(searchValue);
+
+        PageInfo<Device> pageInfo = new PageInfo<>(devices);
+
+        long total = pageInfo.getTotal();
+
+        PageBean pageResult = new PageBean();
+
+        pageResult.setTotal(total);
+        pageResult.setRows(devices);
+        return pageResult;
+    }
 
 
     //删
@@ -141,7 +160,27 @@ public class DeviceContorller {
         }
         return  RespondMsg.createFail();
         }
-//增
+//增 
+    @ResponseBody
+    @RequestMapping("deviceList/update_all")
+    public RespondMsg updateall(Device device) {
+        //插入用领域模型
+        int i = deviceService.updateByPrimaryKey(device);
+        if (i==1){
+            return RespondMsg.createSusscess();
+        }
+        return  RespondMsg.createFail();
+    }
+     @ResponseBody
+    @RequestMapping("deviceList/update_note")
+    public RespondMsg updatenote(Device device) {
+        //插入用领域模型
+        int i = deviceService.updateByPrimaryKey(device);
+        if (i==1){
+            return RespondMsg.createSusscess();
+        }
+        return  RespondMsg.createFail();
+    }
     @ResponseBody
     @RequestMapping("deviceList/insert")
     public RespondMsg insert(Device device) {
@@ -176,137 +215,4 @@ public class DeviceContorller {
 
 
 
-   /*@RequestMapping("/deviceList/search_device_by_deviceTypeName")
-    @ResponseBody
-    public PageBean searchNamelist(@RequestParam(value = "page") int page, @RequestParam(value = "rows") int rows,
-                                   @RequestParam(value = "searchValue") String searchValue){
-        DeviceExample deviceExample = new DeviceExample();
-        DeviceExample.Criteria criteria = deviceExample.createCriteria();
-        criteria.andDeviceTypeIdBetween(searchValue);
-        PageHelper.startPage(page, rows);
-        List<Device> devices = deviceService.selectByExample(deviceExample);
-        PageInfo<Device> pageInfo = new PageInfo<>(devices);
 
-        long total = pageInfo.getTotal();
-
-        PageBean pageResult = new PageBean();
-
-        pageResult.setTotal(total);
-        pageResult.setRows(devices);
-        return pageResult;
-    }
-}
-
-
-
-
-/*
-    @RequestMapping("/erp/deviceList/insert")
-    public ReturnTextMsg insert(@ModelAttribute DeviceListVo deviceListVo){
-        //插入用领域模型
-        Device device = new Device();
-        BeanUtils.copyProperties(deviceListVo,device);
-        //插入成功if()
-        if(deviceService.insertDeviceList(device) != 0 ) {
-            return ReturnTextMsg.createBySuccessMessage();
-        } //不成功返回ErrorMessage
-        return ReturnTextMsg.createByErrorMessage();
-    }
-
-
-
-
-    @RequestMapping("/erp/deviceList/update")
-    public ReturnTextMsg update(@ModelAttribute DeviceListVo deviceListVo){
-        //更新
-        Device device = new Device();
-        BeanUtils.copyProperties(deviceListVo, device);
-        deviceService.updateByPrimaryKeySelectiveDeviceList(device);
-        return ReturnTextMsg.createBySuccessMessage();
-    }
-
-
-
-
-    @RequestMapping("/erp/deviceList/delete_batch")
-    public ReturnTextMsg delete_batch(@RequestParam(value = "ids") String ids){
-        //如果是数组
-        if (ids.contains(",")) {
-            String[] split = ids.split(",");
-            for (int i = 0; i < split.length; i++) {
-                deviceService.deleteByPrimaryKeyDeviceList(split[0]);
-            }
-        }else {
-            //如果不是数组
-            deviceService.deleteByPrimaryKeyDeviceList(ids);
-        }
-        return ReturnTextMsg.createBySuccessMessage();
-        //不成功返回ErrorMessage
-    }*/
-
-
-
-
-
-
-
-
-
-
-
-   /* @RequestMapping("/erp/deviceType/list")
-    public ReturnMessage deviceTypeList(@RequestParam(value = "page") int page, @RequestParam(value = "rows") int rows){
-        // 1.数据库查多少条数据 total
-        // 2.数据库查出每个对象，返回数组对象，用一个Array[object]接收 array
-        //3.返回的是total，array
-        List<DeviceType> devices = deviceService.selectAllDeviceType(page, rows);
-        DeviceTypeListVo[] array = new DeviceTypeListVo[devices.size()];
-        for (int i = 0; i < devices.size(); i++) {
-            //把集合变数组
-            BeanUtils.copyProperties(devices.get(i),array[i]);
-        }
-        //总条数
-        int count = (int) deviceService.countAllDeviceType();
-        return ReturnMessage.create(count,array);
-
-    }
-    @RequestMapping("/erp/deviceType/insert")
-    public ReturnTextMsg insert(@ModelAttribute DeviceTypeListVo deviceTypeListVo){
-        //插入用领域模型
-        DeviceType deviceType = new DeviceType();
-        BeanUtils.copyProperties(deviceTypeListVo,deviceType);
-        //插入成功if()
-        if(deviceService.insertDeviceType(deviceType) != 0 ) {
-            return ReturnTextMsg.createBySuccessMessage();
-        }
-        return ReturnTextMsg.createByErrorMessage();
-        //不成功返回ErrorMessage
-    }
-    @RequestMapping("/erp/deviceType/update")
-    public ReturnTextMsg update(@ModelAttribute DeviceTypeListVo deviceTypeListVo){
-        //如果成功，返回
-        //插入成功if()
-        DeviceType deviceType = new DeviceType();
-        BeanUtils.copyProperties(deviceTypeListVo,deviceType);
-        deviceService.updateByPrimaryKeySelectiveDeviceType(deviceType);
-        return ReturnTextMsg.createBySuccessMessage();
-        //不成功返回ErrorMessage
-    }
-    @RequestMapping("/erp/deviceType/delete_batch")
-    public ReturnTextMsg deleteType(@RequestParam(value = "ids") String typeList){
-        //如果成功，返回
-        //插入成功if()
-        if (typeList.contains(",")) {
-            String[] split = typeList.split(",");
-            for (int i = 0; i < split.length; i++) {
-                deviceService.deleteByPrimaryKeyDeviceList(split[0]);
-            }
-        }else {
-            //如果不是数组
-            deviceService.deleteByPrimaryKeyDeviceList(typeList);
-        }
-        return ReturnTextMsg.createBySuccessMessage();
-        //不成功返回ErrorMessage
-    }
-}
-*/

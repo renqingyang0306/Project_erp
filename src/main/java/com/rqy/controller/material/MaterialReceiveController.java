@@ -1,7 +1,6 @@
 package com.rqy.controller.material;
 
 import com.github.pagehelper.PageInfo;
-import com.rqy.domain.Material;
 import com.rqy.domain.MaterialReceive;
 import com.rqy.domain.MaterialReceiveExample;
 import com.rqy.service.material.MaterialReceiveService;

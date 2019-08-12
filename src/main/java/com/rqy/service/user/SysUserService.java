@@ -1,12 +1,13 @@
-package com.rqy.mapper;
+package com.rqy.service.user;
 
-import com.rqy.domain.sysuser.SysUser;
 import com.rqy.domain.SysUserExample;
+import com.rqy.domain.sysuser.SysUser;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface SysUserMapper {
+public interface SysUserService
+{
     long countByExample(SysUserExample example);
 
     int deleteByExample(SysUserExample example);
@@ -28,4 +29,7 @@ public interface SysUserMapper {
     int updateByPrimaryKeySelective(SysUser record);
 
     int updateByPrimaryKey(SysUser record);
+
+    List<SysUser> searchEmployeeByBlurCondition(int page, int rows, SysUserExample sysUserExample);
+
 }

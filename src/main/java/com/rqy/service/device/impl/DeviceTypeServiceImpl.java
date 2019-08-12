@@ -40,6 +40,6 @@ public class DeviceTypeServiceImpl implements DeviceTypeService {
 
     @Override
     public int updateByPrimaryKey(DeviceType record) {
-        return updateByPrimaryKey(record);
+        return deviceTypeMapper.updateByPrimaryKey(record);
     }
 }

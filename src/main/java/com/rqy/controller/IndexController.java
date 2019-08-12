@@ -1,6 +1,5 @@
 package com.rqy.controller;
 
-import com.rqy.domain.SysUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

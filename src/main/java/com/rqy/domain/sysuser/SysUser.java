@@ -1,4 +1,4 @@
-package com.rqy.domain;
+package com.rqy.domain.sysuser;
 
 public class SysUser {
     private String id;
