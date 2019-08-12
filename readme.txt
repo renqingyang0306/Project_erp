@@ -1,0 +1,5 @@
+1、依赖使用spring相关的依赖使用同一个版本（spring-aspect）
+PageHelper的依赖出现了两次
+2、Json返回值封装的不错，也可以去封装对应的javabean
+3、注意日期转换器中的format和前端提交的格式的匹配
+4、整体完成度不错，继续加油
